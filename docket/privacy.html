@@ -1,149 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Docket</title>
-<meta name="description" content="Docket privacy policy. Docket processes all documents on your device. Nothing is uploaded, collected, or shared.">
-<style>
-  :root { --ink:#14171a; --muted:#5b6570; --line:#e4e7ea; --accent:#0f6b5c; }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; padding:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink); background:#fff; line-height:1.65;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Docket Offline Scanner</title>
+  <meta name="description" content="Docket Privacy Policy. 100% on-device document scanning, local OCR, zero tracking, and no external data collection." />
+  <link rel="canonical" href="https://apps.rapidops.io/docket/privacy.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Docket Privacy Policy — 100% On-Device & Zero Tracking" />
+  <meta property="og:description" content="Docket operates entirely on-device with zero telemetry, zero servers, and zero cloud uploads." />
+  <meta property="og:url" content="https://apps.rapidops.io/docket/privacy.html" />
+  <meta property="og:site_name" content="Docket" />
+  <meta property="og:image" content="https://apps.rapidops.io/docket/screenshots/01_instant_scanner.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Docket Privacy Policy" />
+  <meta name="twitter:description" content="Docket operates entirely on-device with zero telemetry, zero servers, and zero cloud uploads." />
+  <meta name="twitter:image" content="https://apps.rapidops.io/docket/screenshots/01_instant_scanner.png" />
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "RapidOps Apps",
+        "item": "https://apps.rapidops.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Docket",
+        "item": "https://apps.rapidops.io/docket/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Privacy Policy",
+        "item": "https://apps.rapidops.io/docket/privacy.html"
+      }
+    ]
   }
-  .wrap { max-width:720px; margin:0 auto; padding:56px 24px 96px; }
-  h1 { font-size:2rem; line-height:1.2; margin:0 0 8px; letter-spacing:-0.02em; }
-  h2 { font-size:1.15rem; margin:44px 0 12px; letter-spacing:-0.01em; }
-  .updated { color:var(--muted); font-size:0.9rem; margin:0 0 40px; }
-  p, li { color:#2b3138; }
-  ul { padding-left:20px; }
-  li { margin-bottom:8px; }
-  .lead {
-    font-size:1.1rem; padding:20px 24px; background:#f4f8f7;
-    border-left:3px solid var(--accent); border-radius:4px; margin:0 0 8px;
-  }
-  hr { border:0; border-top:1px solid var(--line); margin:48px 0 24px; }
-  footer { color:var(--muted); font-size:0.9rem; }
-  a { color:var(--accent); }
-</style>
+  </script>
+  
+  <!-- Favicon (Docket Viewfinder Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Urbanist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0B57D0',
+              pressed: '#0842A0',
+              tint: '#D3E3FD',
+              glow: 'rgba(11, 87, 208, 0.25)',
+              dark: '#111318',
+            },
+            mint: {
+              DEFAULT: '#0C7A5C',
+              tint: '#E3F8F1',
+              dark: '#0C7A5C'
+            }
+          },
+          fontFamily: {
+            urbanist: ['Urbanist', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+      letter-spacing: -0.01em;
+    }
+  </style>
 </head>
-<body>
-<div class="wrap">
- 
-  <h1>Privacy Policy for Docket</h1>
-  <p class="updated">Last updated: 4 September 2026</p>
- 
-  <p class="lead">
-    Docket does not collect your data. Every document you scan is processed and stored
-    on your device only. Nothing is uploaded to us or to anyone else, and there is no
-    server holding your files.
-  </p>
- 
-  <h2>Who we are</h2>
-  <p>
-    Docket is developed and published by rapidops For Online Selling ("RapidOps"), a business
-    registered in Dubai, United Arab Emirates. You can reach us at
-    <a href="mailto:hello@rapidops.io">hello@rapidops.io</a>.
-  </p>
- 
-  <h2>What Docket does with your documents</h2>
-  <p>
-    When you scan a document, receipt, or warranty card, the image is captured, processed,
-    and saved entirely on your device. Text recognition runs on your device. Receipt parsing
-    runs on your device. Search runs on your device.
-  </p>
-  <p>
-    We never see your documents. We have no ability to see them. Docket does not transmit
-    document images, extracted text, file names, or any content derived from your documents
-    to us or to any third party.
-  </p>
- 
-  <h2>Information we collect</h2>
-  <p>
-    We do not collect personal information. Specifically, Docket does not collect or transmit:
-  </p>
-  <ul>
-    <li>Your documents, images, or any text extracted from them</li>
-    <li>Your name, email address, phone number, or contact details</li>
-    <li>Your location</li>
-    <li>Your device identifiers or advertising identifiers</li>
-    <li>Your usage behaviour or analytics</li>
-    <li>Your contacts, calendar, or other apps' data</li>
-  </ul>
-  <p>
-    Docket does not require an account. There is nothing to sign up for and no profile to create.
-  </p>
- 
-  <h2>Usage statistics stay on your device</h2>
-  <p>
-    Docket keeps a small local record of how often you use certain features, such as how many
-    documents you have scanned. This is stored on your device, is visible to you in the app's
-    settings, can be cleared by you at any time, and is never transmitted anywhere.
-  </p>
- 
-  <h2>Purchases</h2>
-  <p>
-    Docket offers an optional one-time purchase to unlock premium features. Purchases are
-    handled entirely by Google Play Billing. When you make or restore a purchase, Google
-    receives the information needed to process and verify that transaction, in line with
-    Google's own privacy policy.
-  </p>
-  <p>
-    We receive confirmation that a purchase was made. We do not receive your payment card
-    details, and we do not link purchases to any of your documents or activity in the app.
-  </p>
- 
-  <h2>Permissions Docket requests</h2>
-  <ul>
-    <li><strong>Camera</strong> — to scan documents. Images go straight into the app's private storage on your device.</li>
-    <li><strong>Storage / Photos</strong> — only when you choose to import an existing image or PDF, or export a file to a location you pick.</li>
-    <li><strong>Notifications</strong> — only if you enable warranty expiry reminders. These are generated on your device.</li>
-  </ul>
-  <p>Docket does not request location, contacts, microphone, or any other sensitive permission.</p>
- 
-  <h2>Where your data is stored</h2>
-  <p>
-    All Docket data lives in your device's private app storage, which other apps cannot read.
-    If you use the optional backup feature, Docket creates an encrypted archive and you choose
-    where to save it — your own cloud storage, an SD card, or anywhere else you select. That
-    file never passes through us, and we cannot read it.
-  </p>
- 
-  <h2>Deleting your data</h2>
-  <p>
-    You can delete any document from within the app. Uninstalling Docket removes all of its
-    data from your device permanently. Because we hold nothing, there is no account to close
-    and no deletion request to send us.
-  </p>
- 
-  <h2>Children</h2>
-  <p>
-    Docket is a general-purpose utility and is not directed at children. We do not knowingly
-    collect information from anyone, including children, because we do not collect information
-    at all.
-  </p>
- 
-  <h2>Changes to this policy</h2>
-  <p>
-    If Docket ever changes in a way that affects this policy, we will update this page and
-    revise the date above. If a future version of Docket introduced any feature that
-    transmitted data, we would state that plainly here and in the app before it took effect.
-  </p>
- 
-  <h2>Contact</h2>
-  <p>
-    Questions about this policy or about Docket: <a href="mailto:hello@rapidops.io">hello@rapidops.io</a>
-  </p>
- 
-  <hr>
-  <footer>
-    rapidops For Online Selling · Dubai, United Arab Emirates<br>
-    <a href="https://rapidops.io">rapidops.io</a>
+
+<body class="bg-[#F8FAFC] dark:bg-[#111318] text-slate-800 dark:text-gray-100 min-h-screen selection:bg-brand selection:text-white transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-white/5 bg-white/80 dark:bg-[#111318]/80 backdrop-blur-xl transition-colors duration-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand flex items-center justify-center shadow-lg shadow-brand/30 group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6 text-white" viewBox="0 0 108 108" fill="none">
+            <path d="M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-none">Docket</span>
+          <span class="text-[10px] font-semibold text-brand tracking-wider uppercase mt-1">Privacy Policy</span>
+        </div>
+      </a>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 text-slate-700 dark:text-gray-200 flex items-center justify-center transition-colors" title="Toggle Light / Dark theme">
+          <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Back to App Link -->
+        <a href="index.html" class="px-4 py-2 rounded-full bg-slate-200/80 hover:bg-slate-300 dark:bg-white/10 dark:hover:bg-white/15 text-xs font-bold text-slate-800 dark:text-gray-200 transition-colors">
+          ← Back to Overview
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    
+    <!-- Title Area -->
+    <div class="mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mint/15 text-mint text-xs font-bold uppercase tracking-wider mb-4">
+        100% On-Device Privacy
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+        Privacy Policy
+      </h1>
+      <p class="text-sm sm:text-base text-slate-500 dark:text-gray-400 font-medium">
+        Last updated: September 3, 2026 · App: <strong>Docket</strong> (io.rapidops.docket)
+      </p>
+    </div>
+
+    <!-- Core Principle Card -->
+    <div class="p-6 rounded-3xl bg-brand/5 dark:bg-brand/10 border border-brand/20 mb-10 flex items-start gap-4">
+      <div class="w-10 h-10 rounded-xl bg-brand text-white flex items-center justify-center shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div>
+        <h3 class="text-base font-extrabold text-slate-900 dark:text-white mb-1">Our Fundamental Privacy Commitment</h3>
+        <p class="text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
+          Docket is built on an offline-first, on-device architecture. We do not operate remote document servers, we do not require account registration, and we do not sync or upload your document images or text to the cloud. Your scans stay on your phone.
+        </p>
+      </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="space-y-8 text-sm sm:text-base text-slate-700 dark:text-gray-300 leading-relaxed">
+      
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+          <span>1. Document Images and Extracted Text</span>
+        </h2>
+        <p class="mb-3">
+          All document scanning, image enhancement, perspective correction, optical character recognition (OCR), and full-text library indexing occur strictly within the local hardware of your device.
+        </p>
+        <p>
+          Docket has no backend server or cloud sync service. There is no remote database or infrastructure where your files could be received or stored.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          2. Tracking, Advertising & Analytics
+        </h2>
+        <p class="mb-3">
+          Docket contains <strong>zero third-party advertising SDKs</strong>, zero advertising identifiers, and zero behavioral tracking networks. We do not track what you scan, when you scan, or who you share documents with.
+        </p>
+        <p>
+          The app maintains a minimal local-only usage log (such as total documents scanned) solely to display personal storage and usage metrics in your on-device Settings screen. This data is stored in your private local app database and can be cleared by you at any time.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          3. Transparency Regarding Google Play & ML Kit Libraries
+        </h2>
+        <p class="mb-3">
+          Docket’s own codebase declares no internet access and opens zero network sockets. However, the app includes official Google Play libraries for:
+        </p>
+        <ul class="list-disc list-inside space-y-2 mb-3 text-slate-600 dark:text-gray-400 pl-2">
+          <li><strong>Google Play Billing:</strong> To process and verify your one-time lifetime Premium purchase.</li>
+          <li><strong>Google ML Kit Document Scanner:</strong> To deliver fast on-device page edge detection and optical character recognition.</li>
+        </ul>
+        <p>
+          These official Google libraries contribute the internet permission in the merged application manifest for license verification and diagnostics. Docket will never transmit your document images, recognized text, or library data across any network.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          4. Device Permissions Requested
+        </h2>
+        <div class="space-y-3">
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Camera (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">android.permission.CAMERA</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Strictly used to capture pages when you activate the scanner. Camera frames are processed in memory and never streamed elsewhere.</span>
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Storage (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">WRITE_EXTERNAL_STORAGE</code> on Android 9 and older):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Only requested on legacy Android versions when you explicitly choose to export a PDF or image to your device's Downloads directory.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          5. Backups & Data Ownership
+        </h2>
+        <p class="mb-3">
+          Docket provides an optional <strong>Encrypted Local Backup</strong> tool. When you create a backup, you choose the destination (such as an external SD card, USB storage, or your private cloud drive) and provide a passphrase.
+        </p>
+        <p>
+          The backup file is encrypted on-device. Docket does not hold or store your passphrase; we cannot read, recover, or access your backup files.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          6. Contact & Source Inquiries
+        </h2>
+        <p>
+          If you have questions about this privacy statement or Docket's architecture, you can inspect the open codebase or submit questions directly on our GitHub repository:
+          <a href="https://github.com/kamidani711/docket" target="_blank" rel="noopener noreferrer" class="text-brand font-bold underline ml-1">
+            github.com/kamidani711/docket
+          </a>.
+        </p>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200/80 dark:border-white/5 py-12 bg-white dark:bg-[#090B12] text-xs text-slate-500 dark:text-gray-400 transition-colors duration-300">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 font-bold text-slate-800 dark:text-white">
+        <span>Docket</span>
+        <span>— Offline Document Scanner</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="hover:underline">Google Play</a>
+        <a href="https://github.com/kamidani711/docket" target="_blank" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+      </div>
+    </div>
   </footer>
- 
-</div>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    
+    // Check saved theme or system preference
+    const savedTheme = localStorage.getItem('docket_theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('docket_theme', isDark ? 'dark' : 'light');
+      });
+    }
+  </script>
+
 </body>
 </html>
- 

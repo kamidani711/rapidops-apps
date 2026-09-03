@@ -1,0 +1,9 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
