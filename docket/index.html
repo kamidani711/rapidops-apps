@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docket — Offline On-Device Document Scanner for Android | No Cloud, No Accounts</title>
+  <meta name="description" content="Docket is a private, 100% on-device document scanner for Android. Scan pages, run instant local OCR, search inside documents, and export clean PDFs. No cloud, no account, no subscriptions." />
+  <meta name="keywords" content="offline document scanner, android document scanner, private scanner app, on-device OCR, receipt scanner, no account scanner, offline pdf scanner, searchable pdf android, local ml kit scanner" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Docket" />
+  <meta name="application-name" content="Docket" />
+  <meta name="apple-mobile-web-app-title" content="Docket" />
+  
+  <!-- Google Play Smart App Banner (Renders native install prompt in Chrome on Android) -->
+  <meta name="google-play-app" content="app-id=io.rapidops.docket" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Docket" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Docket — The Offline Document Scanner for Android" />
+  <meta property="og:description" content="Scan pages, get on-device OCR, and search inside your documents. Zero cloud sync, no tracking, and no subscriptions." />
+  <meta property="og:image" content="https://play.google.com/store/apps/details?id=io.rapidops.docket" />
+  
+  <!-- Twitter Cards & App Store Linking -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Docket — The Offline Document Scanner" />
+  <meta name="twitter:description" content="100% on-device scanning and local ML Kit OCR for Android. No servers, no accounts, pay once." />
+  <meta name="twitter:app:name:googleplay" content="Docket" />
+  <meta name="twitter:app:id:googleplay" content="io.rapidops.docket" />
+  <meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=io.rapidops.docket" />
+  
+  <meta name="theme-color" content="#0B57D0" />
+  
+  <!-- Favicon (Docket Viewfinder Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z'/%3E%3C/svg%3E" />
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://play.google.com/store/apps/details?id=io.rapidops.docket#app",
+        "name": "Docket",
+        "operatingSystem": "Android 7.0 and later",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Document & Receipt Scanner",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=io.rapidops.docket",
+        "installUrl": "https://play.google.com/store/apps/details?id=io.rapidops.docket",
+        "description": "An offline, 100% on-device document scanner for Android. Scan pages with the camera, run local on-device OCR, search library content by what documents say, and export clean PDFs without sending data to servers.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "name": "Docket Core (Free Forever)"
+          },
+          {
+            "@type": "Offer",
+            "price": "14.99",
+            "priceCurrency": "USD",
+            "name": "Docket Premium (Lifetime One-Time Purchase)"
+          }
+        ],
+        "featureList": [
+          "100% On-Device Processing (Zero cloud uploads)",
+          "On-device ML Kit Optical Character Recognition (OCR)",
+          "Deep in-document full-text search",
+          "Automatic edge detection and perspective correction",
+          "Searchable PDF export with embedded invisible text layer",
+          "No user account or login required",
+          "Zero third-party tracking or advertising SDKs",
+          "Encrypted local backup to SD card or private storage"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://play.google.com/store/apps/details?id=io.rapidops.docket#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are my documents, receipts, or contracts ever uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Docket has no server, no cloud sync, and no user accounts. All image processing, perspective transformation, edge detection, and text recognition run strictly within the local hardware of your Android device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does the Google Play listing show the Internet permission?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Docket's own application codebase declares no internet access and opens zero network sockets. However, the app integrates official Google Play Billing and Google ML Kit libraries which contribute the internet permission in the merged manifest for license verification and diagnostics. Docket never transmits your document images or text."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I back up my scanned documents if there is no cloud sync?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Docket includes a built-in Encrypted Local Backup tool. You choose the destination (such as an SD card, USB drive, or your own private cloud drive) and enter a passphrase. The backup archive is encrypted on-device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "If I switch to a new phone, do I have to buy Premium again?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Because Premium is purchased through Google Play, your lifetime license is permanently attached to your Google account. Simply install Docket on your new phone and tap Restore purchases in Settings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What languages are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Docket ships with native localized interfaces for English, Arabic, Spanish, French, Hindi, Indonesian, Portuguese (Brazil), and Urdu (with full RTL support). The OCR engine recognizes Latin-based scripts on the free tier, with additional scripts unlocked in Premium."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Urbanist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0B57D0',
+              pressed: '#0842A0',
+              tint: '#D3E3FD',
+              glow: 'rgba(11, 87, 208, 0.25)',
+              dark: '#111318',
+              card: '#1D2024',
+              cardBorder: '#282A2F',
+              tile: '#252930'
+            },
+            coral: {
+              DEFAULT: '#FF6B67',
+              tint: '#FFECEB',
+              glow: 'rgba(255, 107, 103, 0.25)'
+            },
+            mint: {
+              DEFAULT: '#0C7A5C',
+              tint: '#E3F8F1',
+              dark: '#0C7A5C'
+            },
+            amber: {
+              DEFAULT: '#8A5300',
+              tint: '#FFF3E1'
+            },
+            violet: {
+              DEFAULT: '#6C6BF0',
+              tint: '#ECEAFD'
+            },
+          },
+          fontFamily: {
+            urbanist: ['Urbanist', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 10px 30px -4px rgba(11, 87, 208, 0.35)',
+            'coral-glow': '0 10px 30px -4px rgba(255, 107, 103, 0.35)',
+            'card-light': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02)',
+            'phone-light': '0 25px 50px -12px rgba(15, 23, 42, 0.15), 0 0 35px -5px rgba(11, 87, 208, 0.15)',
+            'phone-dark': '0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(11, 87, 208, 0.25)',
+          },
+          animation: {
+            'scan-laser': 'laser 3s ease-in-out infinite',
+            'float-slow': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            laser: {
+              '0%, 100%': { top: '12%', opacity: '0.9' },
+              '50%': { top: '82%', opacity: '0.9' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Urbanist', sans-serif;
+      letter-spacing: -0.01em;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* Radial lighting & gradient backdrops */
+    .hero-gradient-light {
+      background: radial-gradient(circle at 50% -10%, rgba(11, 87, 208, 0.12) 0%, rgba(11, 87, 208, 0.02) 60%, transparent 85%);
+    }
+    .hero-gradient-dark {
+      background: radial-gradient(circle at 50% 0%, rgba(11, 87, 208, 0.22) 0%, rgba(11, 87, 208, 0.05) 50%, transparent 80%);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #282A2F;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0B57D0;
+    }
+  </style>
+
+  <!-- Instant Theme Script to prevent flash of wrong theme -->
+  <script>
+    if (localStorage.getItem('docket_theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+
+<body class="bg-[#F8FAFC] dark:bg-[#0B0D17] text-slate-900 dark:text-gray-100 selection:bg-brand selection:text-white relative min-h-screen overflow-x-hidden">
+
+  <!-- Background Ambient Glows -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-brand/10 dark:bg-brand/15 rounded-full blur-[140px]"></div>
+    <div class="absolute top-[45%] -left-[10%] w-[500px] h-[500px] bg-mint/5 dark:bg-mint/10 rounded-full blur-[130px]"></div>
+    <div class="absolute top-[65%] -right-[10%] w-[600px] h-[600px] bg-coral/5 dark:bg-coral/10 rounded-full blur-[140px]"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-200/80 dark:border-white/5 bg-white/80 dark:bg-[#0B0D17]/80 backdrop-blur-xl transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand flex items-center justify-center shadow-lg shadow-brand/30 group-hover:scale-105 transition-transform">
+          <!-- Viewfinder Frame SVG Logo -->
+          <svg class="w-6 h-6 text-white" viewBox="0 0 108 108" fill="none">
+            <path d="M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-none">Docket</span>
+          <span class="text-[10px] font-semibold text-brand tracking-wider uppercase mt-1">On-Device Scanner</span>
+        </div>
+      </a>
+
+      <!-- Center Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600 dark:text-gray-300">
+        <a href="../" class="hover:text-brand dark:hover:text-white transition-colors flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+          <span>← RapidOps Apps</span>
+        </a>
+        <a href="#features" class="hover:text-brand dark:hover:text-white transition-colors">Features</a>
+        <a href="screenshots/index.html" class="hover:text-brand dark:hover:text-white transition-colors">Screenshots</a>
+        <a href="privacy.html" class="hover:text-brand dark:hover:text-white transition-colors flex items-center gap-1.5">
+          <span>Privacy</span>
+          <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-mint/15 text-mint">100% Local</span>
+        </a>
+        <a href="#comparison" class="hover:text-brand dark:hover:text-white transition-colors">Comparison</a>
+        <a href="#pricing" class="hover:text-brand dark:hover:text-white transition-colors">Pricing</a>
+        <a href="#faq" class="hover:text-brand dark:hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Action Button & Theme Toggle -->
+      <div class="flex items-center gap-3">
+        
+        <!-- Light / Dark Theme Switcher -->
+        <button id="themeToggleBtn" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 text-slate-700 dark:text-gray-200 flex items-center justify-center transition-all" title="Toggle Light / Dark mode">
+          <!-- Sun icon (shown in dark mode to switch to light) -->
+          <svg id="sunIcon" class="w-5 h-5 hidden dark:block text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <!-- Moon icon (shown in light mode to switch to dark) -->
+          <svg id="moonIcon" class="w-5 h-5 block dark:hidden text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- QR Code Trigger (Desktop) -->
+        <button id="openQrBtn" class="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-brand-card dark:hover:bg-brand-tile text-xs font-semibold text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/10 transition-colors" title="Scan QR Code to download on mobile">
+          <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
+          </svg>
+          <span>QR Code</span>
+        </button>
+
+        <!-- Direct Play Store Link -->
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="relative group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-brand hover:bg-brand-pressed text-white text-sm font-bold shadow-brand-glow transition-all duration-200 transform hover:-translate-y-0.5">
+          <!-- Google Play Icon -->
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.61-.924V2.738a2.41 2.41 0 0 1 .609-.924zm11.242 11.245l2.483 2.483-12.87 7.394 10.387-9.877zm0-2.118L4.464 1.064l12.87 7.394-2.483 2.483zm1.485 1.059l3.528 2.028a1.328 1.328 0 0 0 0-2.302l-3.528-2.028 1.485 2.302z"/>
+          </svg>
+          <span>Get on Google Play</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 hero-gradient-light dark:hero-gradient-dark overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 text-center lg:text-left z-10">
+          
+          <!-- Trust Badge Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-brand-card/90 border border-slate-200 dark:border-brand/30 shadow-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-mint animate-pulse"></span>
+            <span class="text-xs font-bold text-slate-700 dark:text-gray-200 uppercase tracking-wider">100% On-Device · Zero Cloud Sync · No Subscriptions</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] mb-6">
+            Scan anything.<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand via-[#7182FF] to-brand-pressed dark:to-white">
+              Keep it on your phone.
+            </span>
+          </h1>
+
+          <!-- Value Subhead -->
+          <p class="text-lg sm:text-xl text-slate-600 dark:text-gray-300 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            Receipts, contracts, warranties, and IDs. Docket captures pages, extracts text with on-device OCR, and indexes everything so you can search inside documents—without sending a single byte to a server.
+          </p>
+
+          <!-- CTAs & Trust Points -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            
+            <!-- Primary Google Play CTA -->
+            <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-brand hover:bg-brand-pressed text-white text-base font-bold shadow-brand-glow transition-all duration-200 transform hover:-translate-y-0.5">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.61-.924V2.738a2.41 2.41 0 0 1 .609-.924zm11.242 11.245l2.483 2.483-12.87 7.394 10.387-9.877zm0-2.118L4.464 1.064l12.87 7.394-2.483 2.483zm1.485 1.059l3.528 2.028a1.328 1.328 0 0 0 0-2.302l-3.528-2.028 1.485 2.302z"/>
+              </svg>
+              <div class="text-left">
+                <div class="text-[10px] uppercase tracking-wider font-semibold opacity-80 leading-none">Download on</div>
+                <div class="text-base font-extrabold leading-none mt-0.5">Google Play</div>
+              </div>
+            </a>
+
+            <!-- Privacy Breakdown Trigger -->
+            <a href="privacy.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white dark:bg-brand-card hover:bg-slate-50 dark:hover:bg-brand-tile border border-slate-200 dark:border-white/10 text-slate-800 dark:text-gray-200 text-sm font-bold shadow-sm transition-all duration-200">
+              <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              <span>Read Privacy Policy</span>
+            </a>
+          </div>
+
+          <!-- Feature Bullets Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-white/10 text-left">
+            <div>
+              <div class="text-xl font-extrabold text-slate-900 dark:text-white">0 KB</div>
+              <div class="text-xs text-slate-500 dark:text-gray-400 font-medium">Uploaded to servers</div>
+            </div>
+            <div>
+              <div class="text-xl font-extrabold text-slate-900 dark:text-white">Local OCR</div>
+              <div class="text-xs text-slate-500 dark:text-gray-400 font-medium">On-device ML Kit</div>
+            </div>
+            <div>
+              <div class="text-xl font-extrabold text-slate-900 dark:text-white">No Account</div>
+              <div class="text-xs text-slate-500 dark:text-gray-400 font-medium">Open & scan instantly</div>
+            </div>
+            <div>
+              <div class="text-xl font-extrabold text-slate-900 dark:text-white">One-Time</div>
+              <div class="text-xs text-slate-500 dark:text-gray-400 font-medium">Never a subscription</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Mockup (High-Fidelity 3D Android Phone Frame with Screen Switcher) -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center relative z-10">
+          
+          <!-- Interactive Screen Switcher Control -->
+          <div class="inline-flex p-1 rounded-full bg-white dark:bg-brand-card/90 border border-slate-200 dark:border-brand/40 shadow-sm mb-4 z-20 backdrop-blur-md">
+            <button id="tabLibraryBtn" class="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold transition-all bg-brand text-white shadow-brand-glow">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <span>Library Screen</span>
+            </button>
+            <button id="tabScanBtn" class="flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 dark:text-gray-400 hover:text-brand dark:hover:text-white transition-all">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Scan & OCR</span>
+            </button>
+          </div>
+
+          <!-- Outer Phone Frame (Matte Titanium Chassis in Light Mode, Dark in Dark Mode) -->
+          <div class="w-[320px] sm:w-[350px] h-[670px] bg-slate-200 dark:bg-[#12141D] rounded-[48px] p-3.5 shadow-phone-light dark:shadow-phone-dark border-[4px] border-slate-300 dark:border-[#2A314D] relative transition-colors duration-300">
+            
+            <!-- Side Hardware Buttons -->
+            <div class="absolute -left-[7px] top-28 w-[3px] h-10 bg-slate-400 dark:bg-[#353D5C] rounded-l"></div>
+            <div class="absolute -left-[7px] top-42 w-[3px] h-14 bg-slate-400 dark:bg-[#353D5C] rounded-l"></div>
+            <div class="absolute -right-[7px] top-32 w-[3px] h-16 bg-slate-400 dark:bg-[#353D5C] rounded-r"></div>
+
+            <!-- Screen Area -->
+            <div class="w-full h-full bg-[#FAFAFA] dark:bg-[#101321] rounded-[38px] overflow-hidden flex flex-col relative text-slate-800 dark:text-white select-none border border-slate-300/40 dark:border-white/5 transition-colors duration-300">
+              
+              <!-- Android Status Bar -->
+              <div class="h-9 px-6 flex items-center justify-between text-[11px] font-bold text-slate-600 dark:text-gray-300 z-30 shrink-0 bg-transparent">
+                <span>09:41</span>
+                <!-- Camera Punch Hole -->
+                <div class="w-3.5 h-3.5 rounded-full bg-black border border-white/20"></div>
+                <div class="flex items-center gap-1.5">
+                  <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                  <span>5G</span>
+                  <div class="w-4 h-2 rounded-sm border border-slate-600 dark:border-white/60 p-0.5 flex items-center">
+                    <div class="w-full h-full bg-slate-600 dark:bg-white rounded-2xs"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- VIEW 1: AUTHENTIC DOCKET LIBRARY SCREEN -->
+              <div id="phoneViewLibrary" class="flex-1 flex flex-col overflow-hidden relative">
+                
+                <!-- Docket Top App Bar -->
+                <div class="h-12 px-4 flex items-center justify-between border-b border-slate-200/80 dark:border-white/5 bg-white dark:bg-transparent shrink-0">
+                  <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center">
+                      <svg class="w-4 h-4 text-white" viewBox="0 0 108 108" fill="none">
+                        <path d="M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <span class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Docket</span>
+                  </div>
+                  
+                  <div class="flex items-center gap-2 text-slate-500 dark:text-gray-400">
+                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center">
+                      <!-- Grid View Toggle Icon -->
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center">
+                      <!-- Settings Gear Icon -->
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Authentic Search Bar Pill (Rounded 20dp) -->
+                <div class="px-3 pt-2.5 pb-2 shrink-0">
+                  <div class="flex items-center gap-2 bg-white dark:bg-[#1A1F36] rounded-2xl px-3 py-2 border border-slate-200 dark:border-white/10 shadow-xs">
+                    <svg class="w-3.5 h-3.5 text-brand shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <span class="text-[11px] text-slate-400 dark:text-gray-400 font-medium truncate">Search documents & scanned text...</span>
+                  </div>
+                </div>
+
+                <!-- Format Chips Row -->
+                <div class="px-3 py-1 flex items-center gap-1.5 shrink-0 text-[10px] font-bold">
+                  <span class="px-2.5 py-1 rounded-full bg-brand text-white shadow-xs">All 148</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-[#181D33] text-slate-600 dark:text-gray-300 border border-slate-300/40 dark:border-white/5">PDF 112</span>
+                  <span class="px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-[#181D33] text-slate-600 dark:text-gray-300 border border-slate-300/40 dark:border-white/5">Images 36</span>
+                </div>
+
+                <!-- Folders Horizontal Scroll Strip -->
+                <div class="px-3 pt-2 pb-1 flex items-center gap-2 overflow-x-hidden shrink-0">
+                  <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1A1F36] border border-slate-200 dark:border-white/5 shadow-2xs text-[10px] font-bold">
+                    <svg class="w-3.5 h-3.5 text-brand" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    <span class="text-slate-800 dark:text-white">Household</span>
+                    <span class="text-[9px] text-slate-400 dark:text-gray-400">(34)</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white dark:bg-[#1A1F36] border border-slate-200 dark:border-white/5 shadow-2xs text-[10px] font-bold">
+                    <svg class="w-3.5 h-3.5 text-coral" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    <span class="text-slate-800 dark:text-white">Tax 2026</span>
+                    <span class="text-[9px] text-slate-400 dark:text-gray-400">(21)</span>
+                  </div>
+                  <div class="px-2 py-1.5 rounded-xl border border-dashed border-slate-300 dark:border-white/20 text-[10px] text-slate-500 dark:text-gray-400 font-bold">
+                    + New
+                  </div>
+                </div>
+
+                <!-- Document List (DocketListRow) -->
+                <div class="flex-1 overflow-y-auto px-3 py-2 space-y-2">
+                  
+                  <!-- Document Item 1 -->
+                  <div class="p-2.5 rounded-2xl bg-white dark:bg-[#181D33] hover:bg-slate-50 dark:hover:bg-[#202642] border border-slate-200/80 dark:border-white/5 shadow-xs transition-colors flex items-center justify-between gap-2.5 cursor-pointer">
+                    <div class="w-10 h-13 rounded-lg bg-slate-50 dark:bg-white p-1 border border-slate-200 dark:border-gray-300 shadow-2xs flex flex-col justify-between shrink-0">
+                      <div class="space-y-1">
+                        <div class="h-1 bg-slate-700 dark:bg-gray-800 rounded w-full"></div>
+                        <div class="h-0.5 bg-slate-300 dark:bg-gray-300 rounded w-4/5"></div>
+                        <div class="h-0.5 bg-slate-300 dark:bg-gray-300 rounded w-full"></div>
+                      </div>
+                      <span class="text-[6px] font-black text-white bg-coral px-1 rounded-xs self-start">PDF</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-[12px] font-bold text-slate-900 dark:text-white truncate">Whirlpool fridge receipt</div>
+                      <div class="text-[9px] text-slate-500 dark:text-gray-400 mt-0.5">12 Mar 2026 · 2 pages · 1.4 MB</div>
+                      <div class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-mint/15 text-mint-dark dark:text-mint text-[8px] font-extrabold">
+                        <span>OCR: $1,249.00 · Warranty 2029</span>
+                      </div>
+                    </div>
+                    <button class="w-6 h-6 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center text-slate-400 dark:text-gray-400">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Document Item 2 -->
+                  <div class="p-2.5 rounded-2xl bg-white dark:bg-[#181D33] hover:bg-slate-50 dark:hover:bg-[#202642] border border-slate-200/80 dark:border-white/5 shadow-xs transition-colors flex items-center justify-between gap-2.5 cursor-pointer">
+                    <div class="w-10 h-13 rounded-lg bg-slate-50 dark:bg-white p-1 border border-slate-200 dark:border-gray-300 shadow-2xs flex flex-col justify-between shrink-0">
+                      <div class="space-y-1">
+                        <div class="h-1 bg-slate-700 dark:bg-gray-800 rounded w-full"></div>
+                        <div class="h-0.5 bg-slate-300 dark:bg-gray-300 rounded w-3/4"></div>
+                        <div class="h-0.5 bg-slate-300 dark:bg-gray-300 rounded w-full"></div>
+                      </div>
+                      <span class="text-[6px] font-black text-white bg-brand px-1 rounded-xs self-start">PDF</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-[12px] font-bold text-slate-900 dark:text-white truncate">Apartment lease agreement</div>
+                      <div class="text-[9px] text-slate-500 dark:text-gray-400 mt-0.5">09 Mar 2026 · 4 pages · 3.8 MB</div>
+                      <div class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-brand/10 text-brand text-[8px] font-extrabold">
+                        <span>OCR: Section 4 · Rent terms</span>
+                      </div>
+                    </div>
+                    <button class="w-6 h-6 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center text-slate-400 dark:text-gray-400">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Document Item 3 -->
+                  <div class="p-2.5 rounded-2xl bg-white dark:bg-[#181D33] hover:bg-slate-50 dark:hover:bg-[#202642] border border-slate-200/80 dark:border-white/5 shadow-xs transition-colors flex items-center justify-between gap-2.5 cursor-pointer">
+                    <div class="w-10 h-13 rounded-lg bg-slate-50 dark:bg-white p-1 border border-slate-200 dark:border-gray-300 shadow-2xs flex flex-col justify-between shrink-0">
+                      <div class="space-y-1">
+                        <div class="h-1 bg-slate-700 dark:bg-gray-800 rounded w-full"></div>
+                        <div class="h-0.5 bg-slate-300 dark:bg-gray-300 rounded w-4/5"></div>
+                      </div>
+                      <span class="text-[6px] font-black text-white bg-amber px-1 rounded-xs self-start">PDF</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-[12px] font-bold text-slate-900 dark:text-white truncate">Dell XPS warranty card</div>
+                      <div class="text-[9px] text-slate-500 dark:text-gray-400 mt-0.5">04 Mar 2026 · 1 page · 840 KB</div>
+                      <div class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-mint/15 text-mint-dark dark:text-mint text-[8px] font-extrabold">
+                        <span>OCR: S/N 8829-XPS</span>
+                      </div>
+                    </div>
+                    <button class="w-6 h-6 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center text-slate-400 dark:text-gray-400">
+                      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/></svg>
+                    </button>
+                  </div>
+
+                </div>
+
+                <!-- Authentic Scan FAB (Floating Action Button) -->
+                <div class="absolute bottom-4 right-4 z-20">
+                  <button id="phoneScanFab" class="flex items-center gap-1.5 pl-3 pr-4 py-2.5 rounded-full bg-brand hover:bg-brand-pressed text-white text-xs font-black shadow-brand-glow transition-all transform hover:scale-105" title="Tap to simulate scanning">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span>Scan</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- VIEW 2: AUTHENTIC SCAN & OCR REVIEW SCREEN -->
+              <div id="phoneViewScan" class="flex-1 flex flex-col overflow-hidden relative hidden bg-slate-100 dark:bg-[#141622] transition-colors duration-300">
+                
+                <!-- Scan Top Bar with Back Arrow -->
+                <div class="h-12 px-3 flex items-center justify-between border-b border-slate-200 dark:border-white/5 bg-white dark:bg-transparent shrink-0">
+                  <button id="scanBackToLibraryBtn" class="flex items-center gap-1 text-xs font-bold text-slate-700 dark:text-gray-300 hover:text-brand dark:hover:text-white px-2 py-1 rounded-lg bg-slate-100 dark:bg-white/5">
+                    <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                    <span>Library</span>
+                  </button>
+                  <span class="text-xs font-extrabold text-slate-900 dark:text-white">Review & OCR</span>
+                  <div class="px-2 py-0.5 rounded bg-mint/15 text-mint-dark dark:text-mint text-[9px] font-bold">On-Device</div>
+                </div>
+
+                <!-- Document Review Surface -->
+                <div class="flex-1 p-3 flex flex-col justify-between overflow-hidden">
+                  
+                  <!-- Detected Paper Frame -->
+                  <div class="relative w-full h-[260px] bg-white rounded-xl shadow-lg p-4 flex flex-col justify-between border-2 border-brand/80">
+                    
+                    <!-- Corner Detection Brackets -->
+                    <div class="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-4 border-l-4 border-brand"></div>
+                    <div class="absolute -top-1.5 -right-1.5 w-4 h-4 border-t-4 border-r-4 border-brand"></div>
+                    <div class="absolute -bottom-1.5 -left-1.5 w-4 h-4 border-b-4 border-l-4 border-brand"></div>
+                    <div class="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-4 border-r-4 border-brand"></div>
+
+                    <!-- Scanning Beam Animation -->
+                    <div class="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand to-transparent shadow-[0_0_12px_#0B57D0] animate-scan-laser pointer-events-none z-10"></div>
+
+                    <!-- Simulated Paper Layout -->
+                    <div class="space-y-2.5">
+                      <div class="flex items-center justify-between border-b pb-1.5 border-gray-200">
+                        <span class="text-[10px] font-black text-gray-900 tracking-tight">WHIRLPOOL STORE</span>
+                        <span class="text-[8px] font-mono text-gray-500">INV #8829</span>
+                      </div>
+                      
+                      <!-- OCR Highlight Strip -->
+                      <div class="bg-brand-tint border border-brand/30 rounded p-1">
+                        <div class="text-[8px] font-bold text-brand uppercase">Recognized Text Layer</div>
+                        <div class="text-[7px] text-gray-700 font-medium">Model: WRX735SDHZ French Door Refrigerator</div>
+                      </div>
+
+                      <div class="space-y-1 opacity-70">
+                        <div class="h-1.5 bg-gray-300 rounded w-full"></div>
+                        <div class="h-1.5 bg-gray-300 rounded w-4/5"></div>
+                      </div>
+
+                      <div class="pt-2 border-t border-dashed border-gray-300 flex items-center justify-between">
+                        <span class="text-[8px] font-bold text-gray-600">Total Amount</span>
+                        <span class="text-[10px] font-black text-brand bg-brand-tint px-1.5 py-0.5 rounded">$1,249.00</span>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-[7px] text-gray-400 font-bold">
+                      <span>Auto Perspective: 100% Corrected</span>
+                      <span>Page 1 of 2</span>
+                    </div>
+                  </div>
+
+                  <!-- Quick Tool Actions (Crop / Rotate / Retake) -->
+                  <div class="grid grid-cols-3 gap-2 text-center text-[10px] font-bold py-1">
+                    <div class="py-1.5 rounded-xl bg-white dark:bg-[#1A1F36] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/5 shadow-2xs">Crop</div>
+                    <div class="py-1.5 rounded-xl bg-white dark:bg-[#1A1F36] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/5 shadow-2xs">Rotate</div>
+                    <div class="py-1.5 rounded-xl bg-white dark:bg-[#1A1F36] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-white/5 shadow-2xs">Filters</div>
+                  </div>
+
+                  <!-- Save / Export Action Buttons -->
+                  <div class="space-y-1.5">
+                    <button id="scanSaveBtn" class="w-full py-2.5 rounded-xl bg-brand text-white text-xs font-extrabold shadow-brand-glow flex items-center justify-center gap-1.5">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                      <span>Save to Library</span>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Decorative Glow Behind Phone -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[720px] bg-brand/10 dark:bg-brand/20 rounded-[60px] blur-3xl -z-10"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST ARCHITECTURE STRIP -->
+  <section class="py-10 bg-white/70 dark:bg-brand-card/60 border-y border-slate-200/80 dark:border-white/5 relative z-20 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-brand/10 border border-brand/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Zero Cloud Middleman</h4>
+          <p class="text-xs text-slate-500 dark:text-gray-400 mt-1 max-w-[200px]">Docket’s code opens no network sockets. Your scans never touch the web.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-mint/10 border border-mint/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Local ML Kit OCR</h4>
+          <p class="text-xs text-slate-500 dark:text-gray-400 mt-1 max-w-[200px]">Google’s on-device neural model runs on your phone’s silicon in milliseconds.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-coral/10 border border-coral/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          </div>
+          <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">0 Ads, 0 Trackers</h4>
+          <p class="text-xs text-slate-500 dark:text-gray-400 mt-1 max-w-[200px]">No advertising SDKs. No analytics beacons reporting your scan habits.</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-amber/10 border border-amber/20 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">One-Time Purchase</h4>
+          <p class="text-xs text-slate-500 dark:text-gray-400 mt-1 max-w-[200px]">No predatory $9.99/month subscriptions. Free core; $14.99 lifetime power tier.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE FEATURES BENTO GRID -->
+  <section id="features" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest mb-3">Engineered for Privacy & Speed</h2>
+        <p class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Everything you need.<br />
+          Nothing sent to the cloud.
+        </p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        
+        <!-- Bento Card 1: Instant In-Document Search -->
+        <div class="md:col-span-7 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Search by what a document says, not where you filed it</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+              The moment you save a scan, Docket's on-device neural engine indexes every readable word. Search for "Dell warranty", a receipt total "$1,249", or an apartment clause—and find the exact page instantly.
+            </p>
+          </div>
+
+          <!-- Interactive Search Demo UI -->
+          <div class="bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 rounded-2xl p-4">
+            <div class="flex items-center gap-3 bg-white dark:bg-[#111422] rounded-xl px-3.5 py-2.5 border border-brand/40 text-xs shadow-2xs">
+              <svg class="w-4 h-4 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span class="text-slate-800 dark:text-white font-semibold">"serial number 8829"</span>
+              <span class="ml-auto text-[10px] text-mint-dark dark:text-mint font-bold uppercase bg-mint/15 px-2 py-0.5 rounded">3 matches</span>
+            </div>
+            
+            <div class="mt-3 space-y-2">
+              <div class="flex items-center justify-between p-2.5 rounded-lg bg-white dark:bg-[#20253D] border border-slate-200/60 dark:border-transparent text-xs shadow-2xs">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-9 bg-slate-100 dark:bg-white rounded border border-gray-300 flex items-center justify-center text-[7px] text-gray-800 font-bold">PDF</div>
+                  <div>
+                    <div class="font-bold text-slate-800 dark:text-white">Dell XPS Warranty Card.pdf</div>
+                    <div class="text-[10px] text-slate-500 dark:text-gray-400">Match on page 1: "...Serial Number: 8829-XPS..."</div>
+                  </div>
+                </div>
+                <span class="text-[10px] text-slate-400 dark:text-gray-400 font-mono">14:56</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Studio Quality Image Processing & Filters -->
+        <div class="md:col-span-5 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber/15 border border-amber/30 flex items-center justify-center text-amber mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Studio-Grade Enhancements</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+              Turn crumpled receipts and yellowed paper into laser-crisp documents. Crop perspective distortions, rotate, and choose tailored filters.
+            </p>
+          </div>
+
+          <!-- Interactive Filter Selector UI -->
+          <div class="bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 rounded-2xl p-4">
+            <div class="grid grid-cols-4 gap-2 text-center text-[11px] font-bold">
+              <button class="filter-btn active py-2 rounded-xl bg-brand text-white shadow-xs" data-filter="enhance">Enhance</button>
+              <button class="filter-btn py-2 rounded-xl bg-white dark:bg-[#20253D] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-transparent" data-filter="bw">B & W</button>
+              <button class="filter-btn py-2 rounded-xl bg-white dark:bg-[#20253D] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-transparent" data-filter="greyscale">Grey</button>
+              <button class="filter-btn py-2 rounded-xl bg-white dark:bg-[#20253D] text-slate-700 dark:text-gray-300 border border-slate-200 dark:border-transparent" data-filter="original">Original</button>
+            </div>
+            <div id="filterPreviewBox" class="mt-3 h-28 rounded-xl bg-[#FCFCFD] text-gray-900 p-3 shadow-xs flex flex-col justify-between transition-all duration-300 border border-slate-200/80">
+              <div class="flex items-center justify-between">
+                <span class="text-[9px] font-bold tracking-tight">LEASE AGREEMENT · SEC 4</span>
+                <span id="filterLabel" class="text-[8px] font-bold uppercase bg-brand/15 text-brand px-1.5 py-0.5 rounded">Enhanced Contrast</span>
+              </div>
+              <div class="space-y-1.5 opacity-80">
+                <div class="h-1.5 bg-gray-900 rounded w-full"></div>
+                <div class="h-1.5 bg-gray-900 rounded w-5/6"></div>
+                <div class="h-1.5 bg-gray-900 rounded w-4/6"></div>
+              </div>
+              <div class="text-[8px] text-gray-500 font-mono">Page 1 of 4 · Crisp text output</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Pro Export with Embedded Searchable PDF Layer -->
+        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-violet/15 border border-violet/30 flex items-center justify-center text-violet mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Searchable PDF Layer</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+              Export multi-page documents as standard PDFs with an invisible, selectable text layer embedded directly beneath the image. Select, copy, and search inside exported PDFs in Acrobat, Chrome, or any viewer.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 text-xs">
+            <div class="w-8 h-8 rounded-lg bg-coral/20 text-coral flex items-center justify-center font-bold">PDF</div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-800 dark:text-white">Full Text Selectable & Copyable</div>
+              <div class="text-[10px] text-slate-500 dark:text-gray-400">Standard PDF/A compliant · No cloud conversion</div>
+            </div>
+            <span class="text-[10px] font-bold text-brand bg-brand-tint px-2 py-1 rounded-full">Pro Tier</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: Local Encrypted Backups -->
+        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-mint/15 border border-mint/30 flex items-center justify-center text-mint mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Your Backup, Under Your Key</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+              Never get locked into a proprietary cloud. Export your entire library into an encrypted archive with a passphrase only you hold. Store it on your SD card, USB drive, or personal storage.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 text-xs">
+            <div class="w-8 h-8 rounded-lg bg-mint/20 text-mint-dark dark:text-mint flex items-center justify-center font-bold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-800 dark:text-white">Zero-Knowledge Architecture</div>
+              <div class="text-[10px] text-slate-500 dark:text-gray-400">Even the Docket developers cannot read your archives</div>
+            </div>
+            <span class="text-[10px] font-bold text-mint-dark dark:text-mint bg-mint-tint px-2 py-1 rounded-full">AES Encrypted</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY STATEMENT & COMPARISON SECTION -->
+  <section id="comparison" class="py-24 bg-slate-100/70 dark:bg-brand-card/40 border-y border-slate-200/80 dark:border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mint/15 text-mint-dark dark:text-mint text-xs font-bold uppercase tracking-wider mb-3">
+          Uncompromising Privacy
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          How Docket Compares to Conventional Scanner Apps
+        </h2>
+        <p class="text-slate-600 dark:text-gray-400 mt-4 text-base sm:text-lg">
+          Most document scanner apps monetize your personal documents, push $9.99/week subscriptions, and force account registrations. Docket does none of that.
+        </p>
+      </div>
+
+      <!-- Side-by-Side Comparison Table -->
+      <div class="overflow-x-auto rounded-3xl border border-slate-200/80 dark:border-white/10 bg-white dark:bg-[#121626] shadow-card-light dark:shadow-2xl">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-slate-200/80 dark:border-white/10 bg-slate-50 dark:bg-[#15192C]">
+              <th class="py-5 px-6 font-bold text-slate-600 dark:text-gray-400 text-xs uppercase tracking-wider">Feature / Policy</th>
+              <th class="py-5 px-6 font-extrabold text-brand text-base flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand"></span>
+                <span>Docket</span>
+              </th>
+              <th class="py-5 px-6 font-bold text-slate-500 dark:text-gray-400 text-sm">Typical Cloud Scanner Apps</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200/60 dark:divide-white/5 text-slate-700 dark:text-gray-300">
+            
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Document Storage</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>100% on-device (Never leaves phone)</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Uploaded to remote cloud servers</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Account Requirement</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>No account, no email, no sign-up</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Mandatory login to unlock saving</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Optical Character Recognition (OCR)</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>On-device ML Kit neural model</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Server-side OCR (reads your documents)</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Third-Party Tracking & Ads</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Zero trackers, zero ads</span>
+              </td>
+              <td class="py-4 px-6 text-coral font-medium">Interstitials, analytics beacons, ad SDKs</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Pricing Model</td>
+              <td class="py-4 px-6 text-slate-900 dark:text-white font-bold flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-brand/15 text-brand text-xs font-extrabold">$14.99 One-Time (Lifetime)</span>
+              </td>
+              <td class="py-4 px-6 text-coral font-medium">$4.99/week or $49.99/year subscription trap</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Offline Capability</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Works anywhere with Airplane Mode on</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Requires active internet connection</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSPARENT PRICING -->
+  <section id="pricing" class="py-24 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest mb-3">Honest Monetization</h2>
+        <p class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Pay once. Own forever.<br />
+          Never a recurring subscription.
+        </p>
+        <p class="text-slate-600 dark:text-gray-400 mt-4 text-base">
+          We believe the core scanner loop should be free for everyone. We charge only for power-user features.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Free Tier Card -->
+        <div class="bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Docket Core</h3>
+              <span class="text-xs font-bold text-slate-500 dark:text-gray-400 uppercase bg-slate-100 dark:bg-white/5 px-2.5 py-1 rounded-full">Free Forever</span>
+            </div>
+            
+            <div class="mb-6">
+              <span class="text-5xl font-black text-slate-900 dark:text-white">$0</span>
+              <span class="text-slate-500 dark:text-gray-400 font-semibold text-sm">/ forever</span>
+            </div>
+
+            <p class="text-slate-600 dark:text-gray-300 text-sm mb-6">
+              Full-featured scanner for daily use. No artificial scan caps or watermark penalties.
+            </p>
+
+            <ul class="space-y-3 text-sm text-slate-700 dark:text-gray-300 mb-8">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span><strong>Unlimited</strong> document scans & pages</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Full on-device ML Kit OCR</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Full-text in-document library search</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>All enhancement filters (B&W, enhance, grey)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Standard PDF & image export</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Up to 3 custom organizational folders</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-white/10 dark:hover:bg-white/15 text-slate-800 dark:text-white font-bold text-center block transition-colors">
+            Install Free
+          </a>
+        </div>
+
+        <!-- Premium Lifetime Card -->
+        <div class="relative rounded-3xl p-8 bg-gradient-to-b from-[#FF6B67]/15 via-white dark:via-brand-card to-white dark:to-brand-card border-2 border-coral shadow-coral-glow flex flex-col justify-between">
+          
+          <!-- Accent Slivers Badge -->
+          <div class="absolute -top-3 right-8 bg-coral text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow">
+            Power User Unlock
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Docket Premium</h3>
+              <span class="text-xs font-bold text-amber bg-amber/15 px-2.5 py-1 rounded-full">Single Purchase</span>
+            </div>
+            
+            <div class="mb-6">
+              <span class="text-5xl font-black text-slate-900 dark:text-white">$14.99</span>
+              <span class="text-slate-500 dark:text-gray-300 font-semibold text-sm">/ once, forever</span>
+            </div>
+
+            <p class="text-slate-600 dark:text-gray-300 text-sm mb-6">
+              Unlock the complete power-user toolbox. Buy once, restore anytime on any Android phone tied to your Google Play account.
+            </p>
+
+            <ul class="space-y-3 text-sm text-slate-700 dark:text-gray-200 mb-8">
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Searchable PDF invisible text layer</span>
+              </li>
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Batch export multiple documents simultaneously</span>
+              </li>
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Additional OCR languages & scripts</span>
+              </li>
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Unlimited custom folders & tags</span>
+              </li>
+              <li class="flex items-center gap-3 text-slate-600 dark:text-gray-300">
+                <div class="w-5 h-5 rounded-full bg-mint/20 text-mint flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Includes all future core & premium updates</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-full bg-coral hover:bg-[#F25A56] text-white font-extrabold text-center block shadow-coral-glow transition-all transform hover:-translate-y-0.5">
+            Get Lifetime Access
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FAQ SECTION -->
+  <section id="faq" class="py-24 bg-slate-100/70 dark:bg-brand-card/40 border-t border-slate-200/80 dark:border-white/5 relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold text-brand uppercase tracking-widest mb-3">Frequently Asked Questions</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Everything You Need to Know
+        </p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- Q1 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">Are my documents, receipts, or contracts ever uploaded to a server?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            No. Docket has <strong>no server, no cloud sync, and no user accounts</strong>. All image processing, perspective transformation, edge detection, and text recognition run strictly within the local hardware of your Android device. There is literally nowhere for your documents to go.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">Why does the Google Play listing show the Internet permission?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Docket’s own application codebase declares no internet access and opens zero network sockets. However, the app integrates official Google Play Billing (to process and verify the one-time Premium unlock) and Google ML Kit (for high-speed local OCR models). These official Google libraries include the internet permission in their merged manifest for license verification and diagnostics. Docket will never transmit your document images or text.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">How do I back up my scanned documents if there is no cloud sync?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Docket includes a built-in <strong>Encrypted Local Backup</strong> tool. You choose the destination (such as an external SD card, USB-OTG drive, or your own private Google Drive/Nextcloud folder) and enter a passphrase. The backup archive is encrypted on-device. Docket cannot read your backup and does not store your passphrase.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">If I switch to a new phone, do I have to buy Premium again?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            No! Because Premium is purchased through Google Play, your lifetime license is permanently attached to your Google account. Simply install Docket on your new phone and tap <strong>"Restore purchases"</strong> in Settings.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">What languages are supported?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Docket ships with native localized interfaces for English, Arabic, Spanish, French, Hindi, Indonesian, Portuguese (Brazil), and Urdu (with full RTL support). The OCR engine recognizes Latin-based scripts on the free tier, with additional scripts unlocked in Premium.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CONVERSION BANNER -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-3xl p-10 sm:p-14 bg-gradient-to-r from-brand to-[#7A8CFF] shadow-2xl text-center overflow-hidden">
+        
+        <!-- Subtle Pattern Background -->
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 opacity-15 pointer-events-none">
+          <svg viewBox="0 0 108 108" fill="white">
+            <path d="M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z"/>
+          </svg>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+          Ready for a scanner that respects your privacy?
+        </h2>
+        <p class="text-brand-tint text-base sm:text-lg max-w-2xl mx-auto mb-8 font-medium">
+          Get Docket on Google Play today. Free forever, no subscription traps, zero data harvest.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-slate-900 hover:bg-slate-50 text-base font-extrabold shadow-xl transition-all transform hover:-translate-y-0.5">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a2.41 2.41 0 0 1-.61-.924V2.738a2.41 2.41 0 0 1 .609-.924zm11.242 11.245l2.483 2.483-12.87 7.394 10.387-9.877zm0-2.118L4.464 1.064l12.87 7.394-2.483 2.483zm1.485 1.059l3.528 2.028a1.328 1.328 0 0 0 0-2.302l-3.528-2.028 1.485 2.302z"/>
+            </svg>
+            <span>Download on Google Play</span>
+          </a>
+        </div>
+
+        <div class="mt-6 text-xs text-white/80 font-medium">
+          Requires Android 7.0 (API 24) or later · ~25 MB download
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200/80 dark:border-white/5 py-12 bg-white dark:bg-[#090B12] text-xs text-slate-500 dark:text-gray-400 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center text-white">
+          <svg class="w-4 h-4" viewBox="0 0 108 108" fill="currentColor">
+            <path d="M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z"/>
+          </svg>
+        </div>
+        <span class="font-bold text-slate-900 dark:text-white text-sm">Docket</span>
+        <span>— Offline Document Scanner for Android</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="privacy.html" class="hover:text-brand dark:hover:text-white transition-colors font-semibold">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="hover:text-brand dark:hover:text-white transition-colors">Play Store Listing</a>
+        <a href="https://github.com/kamidani711/docket" target="_blank" rel="noopener noreferrer" class="hover:text-brand dark:hover:text-white transition-colors flex items-center gap-1">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- QR CODE MODAL (Desktop install shortcut) -->
+  <div id="qrModal" class="fixed inset-0 z-50 bg-black/60 dark:bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-[#121626] max-w-sm w-full rounded-3xl p-6 border border-slate-200 dark:border-brand/40 shadow-2xl text-center relative">
+      <button id="closeQrBtn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:text-gray-400 dark:hover:text-white">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-brand/15 text-brand mx-auto flex items-center justify-center mb-4">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
+      </div>
+
+      <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Scan to Install on Android</h3>
+      <p class="text-xs text-slate-500 dark:text-gray-400 mb-6">Point your phone's camera at this QR code to open Docket directly in the Google Play Store.</p>
+
+      <!-- Dynamic QR Code pointing to Play Store link -->
+      <div class="p-3 bg-white rounded-2xl inline-block shadow-inner mx-auto mb-6 border border-slate-200">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.rapidops.docket" alt="Docket Play Store QR Code" class="w-44 h-44 rounded-lg" />
+      </div>
+
+      <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="block w-full py-3 rounded-full bg-brand hover:bg-brand-pressed text-white text-xs font-bold transition-colors">
+        Or open direct link
+      </a>
+    </div>
+  </div>
+
+  <!-- SCRIPT FOR INTERACTIONS -->
+  <script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('docket_theme', isDark ? 'dark' : 'light');
+      });
+    }
+
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+        
+        // If wasn't open, open this one
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // QR Code Modal logic
+    const qrModal = document.getElementById('qrModal');
+    const openQrBtn = document.getElementById('openQrBtn');
+    const closeQrBtn = document.getElementById('closeQrBtn');
+
+    if (openQrBtn) {
+      openQrBtn.addEventListener('click', () => qrModal.classList.remove('hidden'));
+    }
+    if (closeQrBtn) {
+      closeQrBtn.addEventListener('click', () => qrModal.classList.add('hidden'));
+    }
+    qrModal.addEventListener('click', (e) => {
+      if (e.target === qrModal) qrModal.classList.add('hidden');
+    });
+
+    // Filter Playground interactive preview
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterBox = document.getElementById('filterPreviewBox');
+    const filterLabel = document.getElementById('filterLabel');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-brand', 'text-white');
+          b.classList.add('bg-white', 'dark:bg-[#20253D]', 'text-slate-700', 'dark:text-gray-300');
+        });
+        btn.classList.remove('bg-white', 'dark:bg-[#20253D]', 'text-slate-700', 'dark:text-gray-300');
+        btn.classList.add('active', 'bg-brand', 'text-white');
+
+        const mode = btn.dataset.filter;
+        if (mode === 'enhance') {
+          filterBox.style.backgroundColor = '#FCFCFD';
+          filterBox.style.filter = 'contrast(1.15)';
+          filterLabel.textContent = 'Enhanced Contrast';
+          filterLabel.className = 'text-[8px] font-bold uppercase bg-brand/15 text-brand px-1.5 py-0.5 rounded';
+        } else if (mode === 'bw') {
+          filterBox.style.backgroundColor = '#FFFFFF';
+          filterBox.style.filter = 'grayscale(1) contrast(2)';
+          filterLabel.textContent = 'High-Contrast B & W';
+          filterLabel.className = 'text-[8px] font-bold uppercase bg-gray-200 text-gray-900 px-1.5 py-0.5 rounded';
+        } else if (mode === 'greyscale') {
+          filterBox.style.backgroundColor = '#EAEAEA';
+          filterBox.style.filter = 'grayscale(1)';
+          filterLabel.textContent = 'Greyscale Neutral';
+          filterLabel.className = 'text-[8px] font-bold uppercase bg-gray-300 text-gray-700 px-1.5 py-0.5 rounded';
+        } else if (mode === 'original') {
+          filterBox.style.backgroundColor = '#F5EFE6';
+          filterBox.style.filter = 'none';
+          filterLabel.textContent = 'Camera Original';
+          filterLabel.className = 'text-[8px] font-bold uppercase bg-amber/20 text-amber px-1.5 py-0.5 rounded';
+        }
+      });
+    });
+
+    // Interactive Phone Screen Switcher (Library Screen <-> Scan Review)
+    const tabLibraryBtn = document.getElementById('tabLibraryBtn');
+    const tabScanBtn = document.getElementById('tabScanBtn');
+    const phoneViewLibrary = document.getElementById('phoneViewLibrary');
+    const phoneViewScan = document.getElementById('phoneViewScan');
+    const phoneScanFab = document.getElementById('phoneScanFab');
+    const scanBackToLibraryBtn = document.getElementById('scanBackToLibraryBtn');
+    const scanSaveBtn = document.getElementById('scanSaveBtn');
+
+    function switchToLibrary() {
+      phoneViewLibrary.classList.remove('hidden');
+      phoneViewScan.classList.add('hidden');
+      
+      tabLibraryBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold transition-all bg-brand text-white shadow-brand-glow';
+      tabScanBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 dark:text-gray-400 hover:text-brand dark:hover:text-white transition-all';
+    }
+
+    function switchToScan() {
+      phoneViewLibrary.classList.add('hidden');
+      phoneViewScan.classList.remove('hidden');
+      
+      tabScanBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-extrabold transition-all bg-brand text-white shadow-brand-glow';
+      tabLibraryBtn.className = 'flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-slate-600 dark:text-gray-400 hover:text-brand dark:hover:text-white transition-all';
+    }
+
+    if (tabLibraryBtn) tabLibraryBtn.addEventListener('click', switchToLibrary);
+    if (tabScanBtn) tabScanBtn.addEventListener('click', switchToScan);
+    if (phoneScanFab) phoneScanFab.addEventListener('click', switchToScan);
+    if (scanBackToLibraryBtn) scanBackToLibraryBtn.addEventListener('click', switchToLibrary);
+    if (scanSaveBtn) scanSaveBtn.addEventListener('click', switchToLibrary);
+  </script>
+
+</body>
+</html>
