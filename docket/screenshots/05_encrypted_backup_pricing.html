@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Urbanist', sans-serif; letter-spacing: -0.02em; }
+body {
+  width: 1080px;
+  height: 2400px;
+  background: #F4F7FC;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(11, 87, 208, 0.12) 0%, rgba(11, 87, 208, 0.02) 60%, transparent 80%);
+  z-index: 0;
+}
+
+.header-box {
+  width: 1000px;
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 60px;
+  z-index: 10;
+}
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #D3E3FD;
+  color: #041E49;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 26px;
+}
+.tag-badge.mint {
+  background: #E3F8F1;
+  color: #0C7A5C;
+}
+.headline {
+  font-size: 76px;
+  font-weight: 900;
+  color: #191C20;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+.headline span.accent {
+  color: #0B57D0;
+}
+.subhead {
+  font-size: 34px;
+  font-weight: 600;
+  color: #565E71;
+  line-height: 1.4;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.phone-mockup {
+  width: 860px;
+  height: 1740px;
+  background: #FFFFFF;
+  border-radius: 90px;
+  padding: 16px;
+  box-shadow: 0 45px 90px -20px rgba(15, 23, 42, 0.2), 0 0 60px -10px rgba(11, 87, 208, 0.18);
+  border: 10px solid #CBD5E1;
+  position: relative;
+  z-index: 10;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 74px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #E2E8F0;
+}
+
+.status-bar {
+  height: 65px;
+  padding: 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 800;
+  color: #191C20;
+  background: #FFFFFF;
+}
+.punch-hole {
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+
+.backup-top-bar {
+  height: 85px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #EEEEEE;
+}
+.docket-section-card {
+  margin: 0 32px 24px;
+  background: #FFFFFF;
+  border: 2px solid #EEEEEE;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+}
+.card-header {
+  font-size: 28px;
+  font-weight: 900;
+  color: #191C20;
+  margin-bottom: 12px;
+}
+.m3-input {
+  width: 100%;
+  border: 2px solid #CBD5E1;
+  border-radius: 16px;
+  padding: 18px 20px;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #191C20;
+  background: #FAFAFA;
+}
+.primary-btn {
+  background: #0B57D0;
+  color: white;
+  padding: 20px;
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+}
+.unlock-strip {
+  margin: 0 32px;
+  background: linear-gradient(135deg, #0B57D0, #0842A0);
+  border-radius: 28px;
+  padding: 28px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 16px 36px rgba(11, 87, 208, 0.3);
+}
+</style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="header-box">
+    <div class="tag-badge mint">🔒 Local Backup & Lifetime License</div>
+    <h1 class="headline">Your Scans. <span class="accent">Under Your Key.</span></h1>
+    <p class="subhead">Zero-knowledge AES encrypted local backups. Buy once forever with no recurring subscriptions.</p>
+  </div>
+
+  <div class="phone-mockup">
+    <div class="phone-screen" style="background:#F8FAFC;">
+      <div class="status-bar">
+        <span>09:41</span>
+        <div class="punch-hole"></div>
+        <span>5G · 100%</span>
+      </div>
+
+      <div class="backup-top-bar">
+        <span style="font-size:32px; color:#191C20;">←</span>
+        <span style="font-size:32px; font-weight:900; color:#191C20;">Encrypted Backup</span>
+      </div>
+
+      <div style="padding: 20px 32px 16px; font-size:22px; color:#565E71; line-height:1.4;">
+        Backups are encrypted on-device with your passphrase. Store anywhere without cloud lock-in.
+      </div>
+
+      <div class="docket-section-card">
+        <div class="card-header">Create Encrypted Backup</div>
+        <input class="m3-input" type="password" value="••••••••••••" placeholder="Enter passphrase" />
+        <input class="m3-input" type="password" value="••••••••••••" placeholder="Confirm passphrase" />
+        <div class="primary-btn">Create & Export Backup</div>
+      </div>
+
+      <div class="unlock-strip">
+        <div>
+          <div style="font-size:20px; font-weight:800; opacity:0.85; text-transform:uppercase;">Lifetime License</div>
+          <div style="font-size:38px; font-weight:900;">$14.99 <span style="font-size:22px; font-weight:600; opacity:0.85;">one-time</span></div>
+        </div>
+        <div style="background:white; color:#0B57D0; font-size:20px; font-weight:900; padding:10px 22px; border-radius:999px;">
+          No Subscriptions
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
