@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Urbanist', sans-serif; letter-spacing: -0.02em; }
+body {
+  width: 1080px;
+  height: 2400px;
+  background: #F4F7FC;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(11, 87, 208, 0.12) 0%, rgba(11, 87, 208, 0.02) 60%, transparent 80%);
+  z-index: 0;
+}
+
+.header-box {
+  width: 1000px;
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 60px;
+  z-index: 10;
+}
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #D3E3FD;
+  color: #041E49;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 26px;
+}
+.tag-badge.mint {
+  background: #E3F8F1;
+  color: #0C7A5C;
+}
+.headline {
+  font-size: 76px;
+  font-weight: 900;
+  color: #191C20;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+.headline span.accent {
+  color: #0B57D0;
+}
+.subhead {
+  font-size: 34px;
+  font-weight: 600;
+  color: #565E71;
+  line-height: 1.4;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.phone-mockup {
+  width: 860px;
+  height: 1740px;
+  background: #FFFFFF;
+  border-radius: 90px;
+  padding: 16px;
+  box-shadow: 0 45px 90px -20px rgba(15, 23, 42, 0.2), 0 0 60px -10px rgba(11, 87, 208, 0.18);
+  border: 10px solid #CBD5E1;
+  position: relative;
+  z-index: 10;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 74px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #E2E8F0;
+}
+
+.status-bar {
+  height: 65px;
+  padding: 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 800;
+  color: #191C20;
+  background: #FFFFFF;
+}
+.punch-hole {
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+
+.sheet-modal {
+  margin: auto 0 0;
+  background: #FFFFFF;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  padding: 36px 36px 48px;
+  box-shadow: 0 -20px 60px rgba(0,0,0,0.15);
+  border-top: 2px solid #E2E8F0;
+}
+.sheet-handle {
+  width: 60px;
+  height: 6px;
+  background: #CBD5E1;
+  border-radius: 3px;
+  margin: 0 auto 28px;
+}
+.format-tile {
+  padding: 24px;
+  background: #FAFAFA;
+  border: 2px solid #EEEEEE;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+.format-tile.active {
+  background: #D3E3FD;
+  border-color: #0B57D0;
+}
+.tile-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+}
+.btn-export {
+  margin-top: 24px;
+  background: #0B57D0;
+  color: white;
+  padding: 24px;
+  border-radius: 999px;
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(11, 87, 208, 0.35);
+}
+</style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="header-box">
+    <div class="tag-badge">📄 Export Options</div>
+    <h1 class="headline">Export Pro-Grade <span class="accent">Searchable PDFs</span></h1>
+    <p class="subhead">Select, copy, and search text in any PDF reader. Embedded invisible OCR text layer with zero cloud sync.</p>
+  </div>
+
+  <div class="phone-mockup">
+    <div class="phone-screen" style="background:#E2E8F0;">
+      <div class="status-bar" style="background:#E2E8F0;">
+        <span>09:41</span>
+        <div class="punch-hole"></div>
+        <span>5G · 100%</span>
+      </div>
+
+      <div style="flex:1; padding:32px; opacity:0.35;">
+        <div style="height:180px; background:white; border-radius:24px; margin-bottom:20px;"></div>
+        <div style="height:180px; background:white; border-radius:24px;"></div>
+      </div>
+
+      <div class="sheet-modal">
+        <div class="sheet-handle"></div>
+        
+        <div style="font-size:32px; font-weight:900; color:#191C20; margin-bottom:8px;">Export Document</div>
+        <div style="font-size:22px; color:#565E71; margin-bottom:24px;">Whirlpool fridge receipt (2 pages)</div>
+
+        <div class="format-tile active">
+          <div class="tile-icon" style="background:#0B57D0;">PDF</div>
+          <div style="flex:1;">
+            <div style="font-size:26px; font-weight:800; color:#041E49;">Searchable PDF</div>
+            <div style="font-size:20px; color:#565E71;">Embedded invisible OCR text layer</div>
+          </div>
+          <span style="font-size:28px; color:#0B57D0;">✓</span>
+        </div>
+
+        <div class="format-tile">
+          <div class="tile-icon" style="background:#565E71;">JPG</div>
+          <div style="flex:1;">
+            <div style="font-size:26px; font-weight:800; color:#191C20;">Original Images (ZIP)</div>
+            <div style="font-size:20px; color:#565E71;">Full resolution JPEG per page</div>
+          </div>
+        </div>
+
+        <div class="format-tile">
+          <div class="tile-icon" style="background:#0C7A5C;">TXT</div>
+          <div style="flex:1;">
+            <div style="font-size:26px; font-weight:800; color:#191C20;">Plain OCR Text</div>
+            <div style="font-size:20px; color:#565E71;">Raw extracted text without images</div>
+          </div>
+        </div>
+
+        <div class="btn-export">Share or Save PDF</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Urbanist', sans-serif; letter-spacing: -0.02em; }
+body {
+  width: 1080px;
+  height: 2400px;
+  background: #F4F7FC;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-glow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1100px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(11, 87, 208, 0.12) 0%, rgba(11, 87, 208, 0.02) 60%, transparent 80%);
+  z-index: 0;
+}
+
+.header-box {
+  width: 1000px;
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 60px;
+  z-index: 10;
+}
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: #D3E3FD;
+  color: #041E49;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 26px;
+}
+.tag-badge.mint {
+  background: #E3F8F1;
+  color: #0C7A5C;
+}
+.headline {
+  font-size: 76px;
+  font-weight: 900;
+  color: #191C20;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+.headline span.accent {
+  color: #0B57D0;
+}
+.subhead {
+  font-size: 34px;
+  font-weight: 600;
+  color: #565E71;
+  line-height: 1.4;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.phone-mockup {
+  width: 860px;
+  height: 1740px;
+  background: #FFFFFF;
+  border-radius: 90px;
+  padding: 16px;
+  box-shadow: 0 45px 90px -20px rgba(15, 23, 42, 0.2), 0 0 60px -10px rgba(11, 87, 208, 0.18);
+  border: 10px solid #CBD5E1;
+  position: relative;
+  z-index: 10;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 74px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid #E2E8F0;
+}
+
+.status-bar {
+  height: 65px;
+  padding: 0 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 800;
+  color: #191C20;
+  background: #FFFFFF;
+}
+.punch-hole {
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+
+.detail-top-bar {
+  height: 85px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EEEEEE;
+}
+.back-btn {
+  font-size: 34px;
+  color: #191C20;
+  font-weight: 700;
+}
+.top-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 28px;
+  color: #565E71;
+}
+
+.detail-header {
+  padding: 26px 32px 18px;
+}
+.detail-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #191C20;
+  margin-bottom: 8px;
+}
+.detail-meta {
+  font-size: 22px;
+  color: #565E71;
+  font-weight: 600;
+}
+
+.action-row {
+  padding: 0 32px 20px;
+  display: flex;
+  gap: 14px;
+}
+.detail-btn {
+  padding: 14px 22px;
+  background: #F4F7FC;
+  border: 2px solid #D3E3FD;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0B57D0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.detail-btn.primary {
+  background: #0B57D0;
+  border-color: #0B57D0;
+  color: #FFFFFF;
+}
+
+.page-scroll {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.page-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  padding: 32px;
+  position: relative;
+}
+.page-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #F1F5F9;
+  color: #565E71;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+.ocr-box {
+  border: 2px solid rgba(11, 87, 208, 0.3);
+  background: rgba(211, 227, 253, 0.35);
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 8px 0;
+}
+</style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="header-box">
+    <div class="tag-badge">📄 Page Inspector & OCR</div>
+    <h1 class="headline">Continuous <span class="accent">Document Viewer</span></h1>
+    <p class="subhead">Full-resolution continuous page scrolling, selectable OCR text layers, and instant multi-page export.</p>
+  </div>
+
+  <div class="phone-mockup">
+    <div class="phone-screen" style="background:#FAFAFA;">
+      <div class="status-bar">
+        <span>09:41</span>
+        <div class="punch-hole"></div>
+        <span>5G · 100%</span>
+      </div>
+
+      <div class="detail-top-bar">
+        <span class="back-btn">←</span>
+        <span style="font-size:26px; font-weight:800; color:#565E71;">Document Details</span>
+        <div class="top-menu">
+          <span>✏️</span>
+          <span>🗑️</span>
+        </div>
+      </div>
+
+      <div class="detail-header">
+        <div class="detail-title">Whirlpool fridge receipt</div>
+        <div class="detail-meta">Scanned 12 Mar 2026 · 2 pages · 1.4 MB · Folder: Household</div>
+      </div>
+
+      <div class="action-row">
+        <div class="detail-btn primary">
+          <span>📤</span>
+          <span>Export PDF</span>
+        </div>
+        <div class="detail-btn">
+          <span>📋</span>
+          <span>Copy Text</span>
+        </div>
+        <div class="detail-btn">
+          <span>+</span>
+          <span>Add Page</span>
+        </div>
+      </div>
+
+      <div class="page-scroll">
+        <div class="page-card">
+          <div class="page-badge">Page 1 of 2</div>
+          <div style="font-size:26px; font-weight:900; color:#191C20; margin-bottom:12px;">WHIRLPOOL OFFICIAL STORE</div>
+          <div style="font-size:20px; color:#565E71; font-family:monospace; margin-bottom:18px;">TRANSACTION ID: 2026-0312-8829</div>
+          
+          <div class="ocr-box">
+            <span style="font-size:18px; font-weight:800; color:#0B57D0;">[OCR Text Layer Detected]</span>
+            <div style="font-size:22px; font-weight:700; color:#191C20; margin-top:4px;">Item: WRX735SDHZ French Door Refrigerator</div>
+          </div>
+
+          <div style="height:10px; background:#EEEEEE; border-radius:5px; margin:16px 0 10px; width:92%;"></div>
+          <div style="height:10px; background:#EEEEEE; border-radius:5px; margin-bottom:10px; width:78%;"></div>
+          <div style="height:10px; background:#EEEEEE; border-radius:5px; margin-bottom:24px; width:85%;"></div>
+
+          <div style="border-top:2px dashed #E2E8F0; padding-top:16px; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:22px; font-weight:800; color:#565E71;">Total Paid</span>
+            <span style="font-size:32px; font-weight:900; color:#0B57D0;">$1,249.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
