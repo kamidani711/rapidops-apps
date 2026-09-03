@@ -143,7 +143,7 @@
         Privacy Policy
       </h1>
       <p class="text-sm sm:text-base text-slate-500 dark:text-gray-400 font-medium">
-        Last updated: September 3, 2026 · App: <strong>Docket</strong> (io.rapidops.docket)
+        Last updated: 4 September 2026 &middot; App: <strong>Docket</strong> (io.rapidops.docket)
       </p>
     </div>
 
@@ -162,84 +162,172 @@
 
     <!-- Content Sections -->
     <div class="space-y-8 text-sm sm:text-base text-slate-700 dark:text-gray-300 leading-relaxed">
-      
+
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
-        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-          <span>1. Document Images and Extracted Text</span>
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          1. Your Documents Never Leave Your Device
         </h2>
         <p class="mb-3">
-          All document scanning, image enhancement, perspective correction, optical character recognition (OCR), and full-text library indexing occur strictly within the local hardware of your device.
+          Every page you scan is captured, enhanced, perspective-corrected, read by optical character recognition (OCR), and indexed for search entirely on your own device. Docket has no backend server, no cloud sync, and no account system. There is no remote infrastructure where your files could be received or stored, because none exists.
         </p>
-        <p>
-          Docket has no backend server or cloud sync service. There is no remote database or infrastructure where your files could be received or stored.
+        <p class="">
+          We never see your documents, and we have no technical ability to see them.
         </p>
       </section>
 
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
-          2. Tracking, Advertising & Analytics
+          2. Who We Are
         </h2>
         <p class="mb-3">
-          Docket contains <strong>zero third-party advertising SDKs</strong>, zero advertising identifiers, and zero behavioral tracking networks. We do not track what you scan, when you scan, or who you share documents with.
+          Docket is developed and published by <strong>rapidops For Online Selling</strong> ("RapidOps"), a business registered in Dubai, United Arab Emirates.
         </p>
-        <p>
-          The app maintains a minimal local-only usage log (such as total documents scanned) solely to display personal storage and usage metrics in your on-device Settings screen. This data is stored in your private local app database and can be cleared by you at any time.
+        <p class="">
+          You can reach us at <a href="mailto:hello@rapidops.io" class="text-brand font-bold underline">hello@rapidops.io</a>.
         </p>
       </section>
 
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
-          3. Transparency Regarding Google Play & ML Kit Libraries
+          3. Information We Do Not Collect
         </h2>
         <p class="mb-3">
-          Docket’s own codebase declares no internet access and opens zero network sockets. However, the app includes official Google Play libraries for:
+          Docket does not collect personal information. Specifically, it does not collect or transmit:
         </p>
-        <ul class="list-disc list-inside space-y-2 mb-3 text-slate-600 dark:text-gray-400 pl-2">
-          <li><strong>Google Play Billing:</strong> To process and verify your one-time lifetime Premium purchase.</li>
-          <li><strong>Google ML Kit Document Scanner:</strong> To deliver fast on-device page edge detection and optical character recognition.</li>
+        <ul class="list-disc pl-5 space-y-1 mb-3">
+          <li>Your documents, images, or any text extracted from them</li>
+          <li>Your name, email address, phone number, or contact details</li>
+          <li>Your location</li>
+          <li>Your device identifiers or advertising identifiers</li>
+          <li>Your usage behaviour, for analytics or any other purpose</li>
+          <li>Your contacts, calendar, or data belonging to other apps</li>
         </ul>
-        <p>
-          These official Google libraries contribute the internet permission in the merged application manifest for license verification and diagnostics. Docket will never transmit your document images, recognized text, or library data across any network.
+        <p class="">
+          Docket contains <strong>no advertising SDKs, no advertising identifiers, no behavioural tracking, and no crash-reporting or analytics service</strong>. There is no account to create and nothing to sign up for.
         </p>
       </section>
 
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
-          4. Device Permissions Requested
+          4. Usage Statistics Stay on Your Device
+        </h2>
+        <p class="mb-3">
+          Docket keeps a small local record of your own activity &mdash; scans started, documents saved, documents exported, searches run, features used, and whether a session ended normally or crashed &mdash; so the Settings screen can show you your own storage and usage figures.
+        </p>
+        <p class="">
+          This record lives in the app’s private database on your device, is visible only to you, can be cleared by you at any time, and is never transmitted anywhere.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          5. Google Libraries and the Internet Permission
+        </h2>
+        <p class="mb-3">
+          Docket’s own code contains no networking whatsoever &mdash; it opens no connections and includes no networking library. The app does, however, include two official Google libraries:
+        </p>
+        <div class="space-y-3 mb-3">
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Google ML Kit (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">Document Scanner &amp; Text Recognition</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Performs page edge detection and on-device OCR. Latin script is built in, with Chinese, Devanagari, Japanese, and Korean also supported. Recognition runs on your device; page images are not sent anywhere.</span>
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Google Play Billing (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">com.android.vending.BILLING</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Processes and verifies the optional one-time Premium purchase.</span>
+          </div>
+        </div>
+        <p class="">
+          These two libraries are the reason <code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">android.permission.INTERNET</code> appears in Docket’s permission list on Google Play; they use it for their own licence verification and diagnostics. We state this plainly rather than leave you wondering why an offline app lists internet access. <strong>Docket never transmits your document images, recognised text, file names, or library data across any network.</strong>
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          6. Purchases
+        </h2>
+        <p class="mb-3">
+          Docket offers one optional purchase: a one-time Premium unlock covering batch export, the searchable text layer in exported PDFs, additional OCR languages, and unlimited folders. The free version allows up to three folders and is not time-limited.
+        </p>
+        <p class="">
+          Purchases are handled entirely by Google Play Billing. Google receives the information it needs to process and verify the transaction, under Google’s own privacy policy. We receive only confirmation that a purchase was made and is genuine. We never receive your payment card details, and no purchase is linked to your documents or to anything you do in the app.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          7. Permissions Docket Requests
         </h2>
         <div class="space-y-3">
           <div>
             <span class="font-bold text-slate-900 dark:text-white">Camera (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">android.permission.CAMERA</code>):</span>
-            <span class="text-slate-600 dark:text-gray-400"> Strictly used to capture pages when you activate the scanner. Camera frames are processed in memory and never streamed elsewhere.</span>
+            <span class="text-slate-600 dark:text-gray-400"> Used only to capture pages when you open the scanner. Frames are processed in memory and written straight into the app’s private storage.</span>
           </div>
           <div>
-            <span class="font-bold text-slate-900 dark:text-white">Storage (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">WRITE_EXTERNAL_STORAGE</code> on Android 9 and older):</span>
-            <span class="text-slate-600 dark:text-gray-400"> Only requested on legacy Android versions when you explicitly choose to export a PDF or image to your device's Downloads directory.</span>
+            <span class="font-bold text-slate-900 dark:text-white">Storage (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">WRITE_EXTERNAL_STORAGE</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Requested only on Android 9 and older, and only when you choose to export a PDF or image to a location you pick. Newer Android versions do not need it.</span>
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Biometrics (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">USE_BIOMETRIC</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Used only if you turn on App lock. Your fingerprint, face, or device PIN is checked by Android itself and never leaves the system; Docket receives only a yes or no, and stores no biometric data of any kind.</span>
+          </div>
+          <div>
+            <span class="font-bold text-slate-900 dark:text-white">Background work (<code class="text-xs bg-slate-100 dark:bg-white/10 px-1.5 py-0.5 rounded">WAKE_LOCK, RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE, ACCESS_NETWORK_STATE</code>):</span>
+            <span class="text-slate-600 dark:text-gray-400"> Standard Android scheduling permissions, so OCR can finish in the background after a scan and deleted items are purged on time. They move no data off your device.</span>
           </div>
         </div>
       </section>
 
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
-          5. Backups & Data Ownership
+          8. Encrypted Backup
         </h2>
         <p class="mb-3">
-          Docket provides an optional <strong>Encrypted Local Backup</strong> tool. When you create a backup, you choose the destination (such as an external SD card, USB storage, or your private cloud drive) and provide a passphrase.
+          Docket includes an optional encrypted backup tool. You choose the destination &mdash; an SD card, USB storage, your own cloud drive, anywhere you like &mdash; and you choose the passphrase.
         </p>
-        <p>
-          The backup file is encrypted on-device. Docket does not hold or store your passphrase; we cannot read, recover, or access your backup files.
+        <p class="">
+          The archive is encrypted on your device before it is written. <strong>We do not hold, store, or transmit your passphrase, and we cannot read, recover, or access your backup files.</strong> If you lose the passphrase, no one &mdash; including us &mdash; can open that archive.
         </p>
       </section>
 
       <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
-          6. Contact & Source Inquiries
+          9. Where Your Data Is Stored and How to Delete It
         </h2>
-        <p>
-          If you have questions about this privacy statement or Docket's architecture, you can inspect the open codebase or submit questions directly on our GitHub repository:
-          <a href="https://github.com/kamidani711/docket" target="_blank" rel="noopener noreferrer" class="text-brand font-bold underline ml-1">
-            github.com/kamidani711/docket
-          </a>.
+        <p class="mb-3">
+          All Docket data lives in your device’s private app storage, which other apps cannot read. Deleting a document moves it to Recently Deleted, where it stays recoverable for 30 days before being removed for good; you can also delete it immediately from there.
+        </p>
+        <p class="">
+          Uninstalling Docket removes all of its data from your device permanently. Because we hold nothing, there is no account to close and no deletion request to send us.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          10. Children
+        </h2>
+        <p class="">
+          Docket is a general-purpose utility and is not directed at children. We do not knowingly collect information from anyone, including children, because we do not collect information at all.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          11. Changes to This Policy
+        </h2>
+        <p class="">
+          If Docket changes in a way that affects this policy, we will update this page and revise the date above. If a future version ever introduced a feature that transmitted data, we would say so plainly here and in the app before it took effect.
+        </p>
+      </section>
+
+      <section class="p-6 rounded-3xl bg-white dark:bg-[#121626] border border-slate-200/80 dark:border-white/5 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+          12. Contact
+        </h2>
+        <p class="mb-3">
+          Questions about this policy or about Docket: <a href="mailto:hello@rapidops.io" class="text-brand font-bold underline">hello@rapidops.io</a>
+        </p>
+        <p class="">
+          rapidops For Online Selling &middot; Dubai, United Arab Emirates &middot; <a href="https://rapidops.io/" target="_blank" rel="noopener noreferrer" class="text-brand font-bold underline">rapidops.io</a>
         </p>
       </section>
 
@@ -257,7 +345,7 @@
       <div class="flex items-center gap-4">
         <a href="index.html" class="hover:underline">Home</a>
         <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="hover:underline">Google Play</a>
-        <a href="https://github.com/kamidani711/docket" target="_blank" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+        <a href="https://rapidops.io/" target="_blank" rel="noopener noreferrer" class="hover:underline">RapidOps</a>
       </div>
     </div>
   </footer>
