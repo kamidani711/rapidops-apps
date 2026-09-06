@@ -1,5 +1,5 @@
 # Cloudflare Pages Headers Configuration
-# Security and performance for the Docket landing page
+# Security and performance for RapidOps Apps
 
 /*
   X-Frame-Options: DENY
@@ -8,19 +8,39 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
+# Always revalidate HTML documents so browsers get fresh updates instantly
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /index.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/docket
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/docket/
+  Cache-Control: no-cache, no-store, must-revalidate
 
 /docket/index.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
 
 /docket/privacy.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
 
-/docket/screenshots/*
+/docket/screenshots
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/docket/screenshots/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/docket/screenshots/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Cache immutable static assets for 1 year
+/docket/screenshots/*.webp
   Cache-Control: public, max-age=31536000, immutable
 
-/*.css
+/docket/screenshots/*.png
   Cache-Control: public, max-age=31536000, immutable
 
 /*.webp
@@ -30,4 +50,7 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
   Cache-Control: public, max-age=31536000, immutable
