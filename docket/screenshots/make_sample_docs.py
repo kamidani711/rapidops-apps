@@ -310,7 +310,7 @@ HTML_DOC_2 = f"""<!DOCTYPE html>
 </html>
 """
 
-# Document 3: Dell Tech Warranty Card
+# Document 3: Studio Tech Warranty Card
 HTML_DOC_3 = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -348,7 +348,7 @@ HTML_DOC_3 = f"""<!DOCTYPE html>
   <div>
     <div class="header">
       <div>
-        <div style="font-size:44px; font-weight:900; letter-spacing:-0.02em;">DELL TECHNOLOGIES</div>
+        <div style="font-size:44px; font-weight:900; letter-spacing:-0.02em;">TECH CORP SOLUTIONS</div>
         <div style="font-size:22px; opacity:0.9; margin-top:6px;">Official Hardware Warranty & Support Certificate</div>
       </div>
       <div class="mono" style="font-size:26px; background:white; color:#0B57D0; font-weight:800; padding:12px 24px; border-radius:12px;">
@@ -359,7 +359,7 @@ HTML_DOC_3 = f"""<!DOCTYPE html>
     <div class="card-content">
       <div class="product-box">
         <div style="font-size:20px; font-weight:800; color:#0B57D0; text-transform:uppercase; letter-spacing:0.05em;">Registered Product</div>
-        <div style="font-size:38px; font-weight:900; color:#111827; margin-top:8px;">Dell XPS 15 9530 Developer Edition</div>
+        <div style="font-size:38px; font-weight:900; color:#111827; margin-top:8px;">Studio Shodwe 15 9530 Developer Edition</div>
 
         <div class="spec-grid">
           <div>
@@ -392,7 +392,7 @@ HTML_DOC_3 = f"""<!DOCTYPE html>
   </div>
 
   <div style="border-top:2px solid #E5E7EB; padding-top:30px; display:flex; justify-content:space-between; align-items:center;">
-    <div style="font-size:18px; color:#6B7280;">Support Portal: dell.com/support · Phone: 1-800-456-3355</div>
+    <div style="font-size:18px; color:#6B7280;">Support Portal: techcorp.example.com/support · Phone: 1-800-456-3355</div>
     <div class="mono" style="font-size:18px; color:#0B57D0; font-weight:700;">REGISTRATION ID: 8829-49B2-2026</div>
   </div>
 </body>
@@ -402,7 +402,7 @@ HTML_DOC_3 = f"""<!DOCTYPE html>
 DOCS = [
     ("whirlpool_invoice.html", "whirlpool_invoice.png", HTML_DOC_1),
     ("lease_agreement.html", "lease_agreement.png", HTML_DOC_2),
-    ("dell_warranty.html", "dell_warranty.png", HTML_DOC_3),
+    ("equipment_warranty.html", "equipment_warranty.png", HTML_DOC_3),
 ]
 
 for html_name, png_name, content in DOCS:
