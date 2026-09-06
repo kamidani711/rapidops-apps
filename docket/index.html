@@ -178,72 +178,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#0B57D0',
-              pressed: '#0842A0',
-              tint: '#D3E3FD',
-              glow: 'rgba(11, 87, 208, 0.25)',
-              dark: '#111318',
-              card: '#1D2024',
-              cardBorder: '#282A2F',
-              tile: '#252930'
-            },
-            coral: {
-              DEFAULT: '#FF6B67',
-              tint: '#FFECEB',
-              glow: 'rgba(255, 107, 103, 0.25)'
-            },
-            mint: {
-              DEFAULT: '#0C7A5C',
-              tint: '#E3F8F1',
-              dark: '#0C7A5C'
-            },
-            amber: {
-              DEFAULT: '#8A5300',
-              tint: '#FFF3E1'
-            },
-            violet: {
-              DEFAULT: '#6C6BF0',
-              tint: '#ECEAFD'
-            },
-          },
-          fontFamily: {
-            urbanist: ['Urbanist', 'sans-serif'],
-          },
-          boxShadow: {
-            'brand-glow': '0 10px 30px -4px rgba(11, 87, 208, 0.35)',
-            'coral-glow': '0 10px 30px -4px rgba(255, 107, 103, 0.35)',
-            'card-light': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02)',
-            'phone-light': '0 25px 50px -12px rgba(15, 23, 42, 0.15), 0 0 35px -5px rgba(11, 87, 208, 0.15)',
-            'phone-dark': '0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(11, 87, 208, 0.25)',
-          },
-          animation: {
-            'scan-laser': 'laser 3s ease-in-out infinite',
-            'float-slow': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            laser: {
-              '0%, 100%': { top: '12%', opacity: '0.9' },
-              '50%': { top: '82%', opacity: '0.9' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-8px)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
-
+  <!-- Precompiled Production CSS (Fast Native Load) -->
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Urbanist', sans-serif;
@@ -914,7 +850,7 @@
         <!-- Slide 1 -->
         <a href="screenshots/01_instant_scanner.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/01_instant_scanner.png" alt="Docket Instant Neural Scanner with Edge Detection" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/01_instant_scanner_thumb.webp" decoding="async" alt="Docket Instant Neural Scanner with Edge Detection" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#1 Neural Scanner</div>
@@ -925,7 +861,7 @@
         <!-- Slide 2 -->
         <a href="screenshots/02_livetext_ocr.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/02_livetext_ocr.png" alt="Docket Live Text OCR and Word Copy" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/02_livetext_ocr_thumb.webp" decoding="async" alt="Docket Live Text OCR and Word Copy" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#2 Live Text OCR</div>
@@ -936,7 +872,7 @@
         <!-- Slide 3 -->
         <a href="screenshots/03_fulltext_search.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/03_fulltext_search.png" alt="Docket Instant In-Document Full-Text Search" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/03_fulltext_search_thumb.webp" decoding="async" alt="Docket Instant In-Document Full-Text Search" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#3 Fast Search</div>
@@ -947,7 +883,7 @@
         <!-- Slide 4 -->
         <a href="screenshots/04_smart_organization.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/04_smart_organization.png" alt="Docket Smart Folders and Category Filters" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/04_smart_organization_thumb.webp" decoding="async" alt="Docket Smart Folders and Category Filters" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#4 Smart Folders</div>
@@ -958,7 +894,7 @@
         <!-- Slide 5 -->
         <a href="screenshots/05_encrypted_backup.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/05_encrypted_backup.png" alt="Docket Local Passphrase Encrypted Backup" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/05_encrypted_backup_thumb.webp" decoding="async" alt="Docket Local Passphrase Encrypted Backup" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#5 Local Backup</div>
@@ -969,7 +905,7 @@
         <!-- Slide 6 -->
         <a href="screenshots/06_lifetime_pricing.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/06_lifetime_pricing.png" alt="Docket Lifetime Purchase Unlock" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/06_lifetime_pricing_thumb.webp" decoding="async" alt="Docket Lifetime Purchase Unlock" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#6 Lifetime Buy</div>
@@ -980,7 +916,7 @@
         <!-- Slide 7 -->
         <a href="screenshots/07_pdf_export.png" target="_blank" class="group block bg-white dark:bg-[#121626] rounded-2xl p-2.5 border border-slate-200/80 dark:border-white/10 hover:border-brand/50 shadow-card-light dark:shadow-none transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="screenshots/07_pdf_export.png" alt="Docket Searchable PDF Export Sheet" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="screenshots/07_pdf_export_thumb.webp" decoding="async" alt="Docket Searchable PDF Export Sheet" width="1080" height="2160" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#7 PDF Export</div>
@@ -1378,7 +1314,7 @@
 
       <!-- Dynamic QR Code pointing to Play Store link -->
       <div class="p-3 bg-white rounded-2xl inline-block shadow-inner mx-auto mb-6 border border-slate-200">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dio.rapidops.docket" alt="Docket Google Play Store install QR code" width="176" height="176" loading="lazy" class="w-44 h-44 rounded-lg" />
+        <img src="screenshots/play_store_qr.png" decoding="async" alt="Docket Google Play Store install QR code" width="176" height="176" loading="lazy" class="w-44 h-44 rounded-lg" />
       </div>
 
       <a href="https://play.google.com/store/apps/details?id=io.rapidops.docket" target="_blank" rel="noopener noreferrer" class="block w-full py-3 rounded-full bg-brand hover:bg-brand-pressed text-white text-xs font-bold transition-colors">
