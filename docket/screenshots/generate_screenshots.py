@@ -352,7 +352,7 @@ HTML_SCREEN_1 = f"""<!DOCTYPE html>
             <div class="badge-pdf" style="background:#8A5300;">PDF</div>
           </div>
           <div class="doc-info">
-            <div class="doc-name">Dell XPS warranty card</div>
+            <div class="doc-name">Studio Shodwe warranty card</div>
             <div class="doc-sub">04 Mar 2026 · 1 page · 840 KB</div>
             <div class="ocr-pill">OCR: S/N 8829-XPS</div>
           </div>
@@ -660,7 +660,7 @@ HTML_SCREEN_3 = f"""<!DOCTYPE html>
         <div class="result-head">
           <div class="tag-type" style="background:#FF6B67;">PDF</div>
           <div>
-            <div style="font-size:28px; font-weight:900; color:#191C20;">Dell XPS Warranty Card.pdf</div>
+            <div style="font-size:28px; font-weight:900; color:#191C20;">Studio Shodwe Warranty Card.pdf</div>
             <div style="font-size:20px; color:#565E71;">Page 1 · Matched in text layer</div>
           </div>
         </div>
