@@ -16,7 +16,7 @@ apps.rapidops.io/
 └── docket/                      # Docket — 100% On-Device Document Scanner
     ├── index.html               # High-conversion product landing page & live UI simulator
     ├── privacy.html             # Standalone, Google Play Store compliant Privacy Policy
-    └── screenshots/             # 7 official 1080×2400 Play Store screenshot assets & gallery
+    └── screenshots/             # 8 official 1080×2160 Play Store screenshot assets & gallery
         ├── index.html           # Interactive web gallery to preview/download all slides
         ├── 01_instant_scanner.png
         ├── 02_livetext_ocr.png
@@ -24,7 +24,8 @@ apps.rapidops.io/
         ├── 04_smart_organization.png
         ├── 05_encrypted_backup.png
         ├── 06_lifetime_pricing.png
-        └── 07_pdf_export.png
+        ├── 07_document_watermark.png
+        └── 08_sign_document.png
 ```
 
 ---
