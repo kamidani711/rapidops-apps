@@ -16,7 +16,12 @@ import glob
 import os
 
 TARGET_W, TARGET_H = 1080, 2160
-SKIP = ('feature_graphic', 'store_icon', 'play_store_qr', 'device_')
+# Anything in this folder that is not a phone screenshot. The glob is indiscriminate and the
+# resize is destructive and in-place, so a non-screenshot that is not listed here gets silently
+# stretched to 1080x2160 and overwritten -- which is exactly what happened to play_store_qr.png
+# on 2026-09-07. A QR stretched 4:1 no longer scans, and the file was untracked, so there was
+# nothing to restore from.
+SKIP = ('feature_graphic', 'store_icon', 'play_store_qr')
 
 for path in sorted(glob.glob(os.path.join(os.path.dirname(__file__), '*.png'))):
     name = os.path.basename(path)

@@ -12,11 +12,16 @@ SLIDES = [
         "badge_color": "#D3E3FD",
         "badge_text": "#041E49",
         "headline": "Scan Paper in <span class='accent'>Seconds</span>",
-        "subhead": "Auto-detects edges, corrects perspective, and eliminates harsh shadows in real-time.",
+        # "in real-time" was wrong: edge detection is live in the viewfinder, but ML Kit's
+        # shadow/stain cleaning pass (SCANNER_MODE_FULL) runs after capture, not on the preview.
+        "subhead": "Auto-detects edges, corrects perspective, and clears harsh shadows on every capture.",
+        # A real viewfinder frame with a document under the lens and the edge-detection quad
+        # locked on. Captured by sampling until the preview surface actually composites into
+        # screencap — it comes back black most attempts.
         "image": os.path.join(DEVICE_DIR, "real_docket_camera_scanner.png"),
         "img_offset_y": "0px",
         "callout_text": "✦ On-Device Edge Detection",
-        "callout_pos": "bottom: 120px; right: -30px;"
+        "callout_pos": "bottom: 780px; right: -30px;"
     },
     {
         "id": "02_livetext_ocr",
@@ -27,20 +32,24 @@ SLIDES = [
         "subhead": "Instant on-device OCR extracts words, totals, and addresses without cloud processing.",
         "image": os.path.join(DEVICE_DIR, "real_docket_livetext.png"),
         "img_offset_y": "-40px",
-        "callout_text": "✦ Zero Cloud · 100% Offline",
+        # Was "Zero Cloud · 100% Offline". Not defensible: the merged manifest carries INTERNET
+        # via ML Kit and Play Billing, the extra OCR script packs are ~25MB downloads, and
+        # billing needs the network. This is the app's own account_tagline, which is both true
+        # and the line the in-app privacy page is already written to support.
+        "callout_text": "✦ No account · No uploads · No tracking",
         "callout_pos": "bottom: 140px; left: -20px;"
     },
     {
         "id": "03_fulltext_search",
-        "badge": "🔍 BLISTERING-FAST SEARCH",
+        "badge": "🔍 SEARCH & INSTANT RESULTS",
         "badge_color": "#E8DEF8",
         "badge_text": "#4A4458",
-        "headline": "Find Anything <span class='accent'>Instantly</span>",
-        "subhead": "Full-text indexing searches through every word inside your documents in milliseconds.",
+        "headline": "Search & Find <span class='accent'>Instantly</span>",
+        "subhead": "Full-text indexing searches through every word inside your documents with live highlighted OCR results.",
         "image": os.path.join(DEVICE_DIR, "real_docket_search_clean.png"),
         "img_offset_y": "-40px",
-        "callout_text": "✦ Searches OCR Text",
-        "callout_pos": "bottom: 140px; right: -20px;"
+        "callout_text": "✦ Search & Highlighted Matches",
+        "callout_pos": "bottom: 700px; right: -20px;"
     },
     {
         "id": "04_smart_organization",
@@ -48,10 +57,17 @@ SLIDES = [
         "badge_color": "#D3E3FD",
         "badge_text": "#041E49",
         "headline": "Your Documents, <span class='accent'>Organized</span>",
-        "subhead": "Two-column folder grid, category filter chips, and high-contrast visual thumbnails.",
+        # Was "PDF and image filters". Those format chips are gone from the library in the
+        # current layout -- filtering by format now lives in search results, not here -- so the
+        # line described controls this very screenshot does not show. What it does show is
+        # folders with counts, the list/grid toggle and the sort control.
+        "subhead": "Custom folders with live counts, list or grid, and sort by date, name or size.",
         "image": os.path.join(DEVICE_DIR, "real_docket_library_with_folders.png"),
         "img_offset_y": "-40px",
-        "callout_text": "✦ 2-Column Folders & Tags",
+        # Docket has no tags. There is no tag entity, DAO or string anywhere in the app -- the
+        # Room schema is Document, DocumentPage, Folder, PageOcr, PageOcrFts, ScanPage,
+        # ScanSession, AnalyticsEvent. Advertising one was a listing misrepresentation.
+        "callout_text": "✦ Folders, Grid & Sort",
         "callout_pos": "bottom: 130px; left: -20px;"
     },
     {
@@ -59,8 +75,12 @@ SLIDES = [
         "badge": "🔒 ZERO-KNOWLEDGE BACKUP",
         "badge_color": "#FEE2E2",
         "badge_text": "#991B1B",
-        "headline": "100% Private. <span class='accent'>Zero Cloud.</span>",
-        "subhead": "Passphrase-encrypted backups stay on your device or go wherever you choose.",
+        # Was "100% Private. Zero Cloud." -- and on the backup slide of all places, where the
+        # app's own copy invites you to save the file to "your own Drive". The honest claim is
+        # the one the app makes: the archive is encrypted with a passphrase Docket never sees,
+        # so the destination does not matter.
+        "headline": "Backups Only <span class='accent'>You</span> Can Open",
+        "subhead": "Encrypted with a passphrase Docket never sees and cannot recover. You choose where the file goes.",
         "image": os.path.join(DEVICE_DIR, "real_docket_backup.png"),
         "img_offset_y": "-40px",
         "callout_text": "✦ AES-256 Passphrase Security",
@@ -73,22 +93,41 @@ SLIDES = [
         "badge_text": "#92400E",
         "headline": "One Purchase. <span class='accent'>Forever.</span>",
         "subhead": "No monthly subscriptions, no recurring fees. Core features free offline forever.",
-        "image": os.path.join(os.path.dirname(__file__), "device_unlock_usd.png"),
+        "image": os.path.join(DEVICE_DIR, "real_docket_unlock.png"),
         "img_offset_y": "-40px",
         "callout_text": "✦ Lifetime Ownership",
         "callout_pos": "bottom: 140px; left: -20px;"
     },
     {
-        "id": "07_pdf_export",
-        "badge": "📄 SEAMLESS SHARING",
-        "badge_color": "#D3E3FD",
-        "badge_text": "#041E49",
-        "headline": "Export Searchable <span class='accent'>PDFs</span>",
-        "subhead": "Share clean multi-page PDFs directly to Drive, Email, WhatsApp, or Quick Share.",
-        "image": os.path.join(DEVICE_DIR, "real_docket_export_sheet.png"),
+        "id": "07_document_watermark",
+        "badge": "🛡️ WATERMARK PROTECTION",
+        "badge_color": "#EDE9FE",
+        "badge_text": "#5B21B6",
+        "headline": "Watermark Every <span class='accent'>Page</span>",
+        "subhead": "Stamp CONFIDENTIAL, DRAFT, or custom text across your documents and exports — watermarking is part of Premium.",
+        "image": os.path.join(DEVICE_DIR, "real_docket_watermark.png"),
         "img_offset_y": "-40px",
-        "callout_text": "✦ Native Android Share Sheet",
-        "callout_pos": "bottom: 140px; right: -20px;"
+        "callout_text": "✦ Diagonal Watermark Stamp",
+        "callout_pos": "bottom: 700px; left: -25px;"
+    },
+    {
+        "id": "08_sign_document",
+        "badge": "✍️ SIGN ON THE PAGE",
+        "badge_color": "#E0F2FE",
+        "badge_text": "#075985",
+        "headline": "Sign It Without <span class='accent'>Printing</span>",
+        # Signing is PremiumFeature-gated, so the slide says so rather than selling a paid
+        # feature as if it were free -- the same correction already made on the export slide.
+        # "travels into every PDF and image you export" is literally what PageOverlays does:
+        # both export paths render the signature from the same stored placement the viewer uses.
+        "subhead": "Draw your signature, drag it onto the line, and it is there in Docket and in everything you export — signing is part of Premium.",
+        # A real residential lease from make_sample_docs.py, signed on its Tenant Signature line
+        # through the app's own pad. Not a mockup: the tenant's printed name was blanked in the
+        # sample so there was a genuinely empty line to sign.
+        "image": os.path.join(DEVICE_DIR, "real_docket_signature.png"),
+        "img_offset_y": "-40px",
+        "callout_text": "✦ Drag it into place",
+        "callout_pos": "bottom: 700px; left: -25px;"
     }
 ]
 
@@ -294,4 +333,4 @@ for slide in SLIDES:
     ], check=True)
     print(f"Generated: {png_path}")
 
-print("All 7 Google Play Store screenshots generated successfully!")
+print("All %d Google Play Store screenshots generated successfully!" % len(SLIDES))
