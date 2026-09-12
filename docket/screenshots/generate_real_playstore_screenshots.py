@@ -73,7 +73,7 @@ SLIDES = [
         "badge_text": "#92400E",
         "headline": "One Purchase. <span class='accent'>Forever.</span>",
         "subhead": "No monthly subscriptions, no recurring fees. Core features free offline forever.",
-        "image": os.path.join(DEVICE_DIR, "real_docket_unlock.png"),
+        "image": os.path.join(os.path.dirname(__file__), "device_unlock_usd.png"),
         "img_offset_y": "-40px",
         "callout_text": "✦ Lifetime Ownership",
         "callout_pos": "bottom: 140px; left: -20px;"

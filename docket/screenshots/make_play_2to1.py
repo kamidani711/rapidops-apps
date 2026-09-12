@@ -16,7 +16,7 @@ import glob
 import os
 
 TARGET_W, TARGET_H = 1080, 2160
-SKIP = ('feature_graphic', 'store_icon')
+SKIP = ('feature_graphic', 'store_icon', 'play_store_qr', 'device_')
 
 for path in sorted(glob.glob(os.path.join(os.path.dirname(__file__), '*.png'))):
     name = os.path.basename(path)
