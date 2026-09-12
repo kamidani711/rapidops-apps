@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Urbanist', sans-serif; letter-spacing: -0.02em; }
+
+body {
+  width: 1080px;
+  height: 2400px;
+  background: #F8FAFC;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bg-radial {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 1100px;
+  background: radial-gradient(circle, rgba(11, 87, 208, 0.15) 0%, rgba(11, 87, 208, 0.03) 60%, transparent 80%);
+  z-index: 0;
+}
+
+.header-container {
+  width: 960px;
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 50px;
+  z-index: 10;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.headline {
+  font-size: 72px;
+  font-weight: 900;
+  color: #0F172A;
+  line-height: 1.14;
+  margin-bottom: 18px;
+}
+
+.headline .accent {
+  color: #0B57D0;
+}
+
+.subhead {
+  font-size: 30px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.45;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.phone-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.phone-mockup {
+  width: 830px;
+  height: 1780px;
+  background: #0F172A;
+  border-radius: 72px;
+  padding: 14px;
+  box-shadow: 
+    0 50px 100px -20px rgba(15, 23, 42, 0.25),
+    0 25px 50px -10px rgba(11, 87, 208, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+}
+
+.notch {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 28px;
+  background: #0F172A;
+  border-radius: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-hole {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1E293B;
+  border: 2px solid #334155;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 58px;
+  overflow: hidden;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.screen-capture {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: top center;
+}
+
+.floating-pill {
+  position: absolute;
+  background: #0B57D0;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 800;
+  padding: 16px 32px;
+  border-radius: 999px;
+  box-shadow: 0 20px 40px rgba(11, 87, 208, 0.4), 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 30;
+  letter-spacing: 0.02em;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+</style>
+</head>
+<body>
+  <div class="bg-radial"></div>
+
+  <div class="header-container">
+    <div class="badge" style="background: #E0F2FE; color: #075985;">
+      ✍️ SIGN ON THE PAGE
+    </div>
+    <h1 class="headline">Sign It Without <span class='accent'>Printing</span></h1>
+    <p class="subhead">Draw your signature, drag it onto the line, and it is there in Docket and in everything you export — signing is part of Premium.</p>
+  </div>
+
+  <div class="phone-wrapper">
+    <div class="phone-mockup">
+      <div class="notch">
+        <div class="camera-hole"></div>
+      </div>
+      <div class="phone-screen">
+        <img src="file:///E:/Docket/device_screenshots/real_docket_signature.png" class="screen-capture" style="margin-top: -40px;" />
+      </div>
+    </div>
+    <div class="floating-pill" style="bottom: 700px; left: -25px;">
+      ✦ Drag it into place
+    </div>
+  </div>
+</body>
+</html>
