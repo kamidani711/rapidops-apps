@@ -70,7 +70,7 @@
           "https://apps.rapidops.io/docket/screenshots/06_lifetime_pricing.png",
           "https://apps.rapidops.io/docket/screenshots/07_pdf_export.png"
         ],
-        "softwareVersion": "1.0.0",
+        "softwareVersion": "1.1.0",
         "fileSize": "25MB",
         "author": {
           "@type": "Organization",
@@ -82,7 +82,7 @@
           "name": "RapidOps Labs",
           "url": "https://apps.rapidops.io/"
         },
-        "description": "An offline, 100% on-device document scanner for Android. Scan pages with the camera, run local on-device OCR, search library content by what documents say, and export clean PDFs without sending data to servers.",
+        "description": "An offline, 100% on-device document scanner for Android. Scan pages with the camera, run local on-device OCR, sign documents, apply custom watermarks, search library content, and export clean PDFs without sending data to servers.",
         "offers": [
           {
             "@type": "Offer",
@@ -101,8 +101,13 @@
           "100% On-Device Processing (Zero cloud uploads)",
           "On-device ML Kit Optical Character Recognition (OCR)",
           "Deep in-document full-text search",
+          "Digital handwritten document signatures (draw, resize, and place on pages)",
+          "Custom PDF and image watermarking with intelligent text fitting",
+          "Recently Deleted 30-day trash safety net with one-tap restore",
+          "Drag-and-drop page reordering with unsaved moves protection",
           "Automatic edge detection and perspective correction",
           "Searchable PDF export with embedded invisible text layer",
+          "Full multilingual and native Arabic (RTL) localization",
           "No user account or login required",
           "Zero third-party tracking or advertising SDKs",
           "Encrypted local backup to SD card or private storage"
@@ -324,7 +329,7 @@ body {
           <!-- Trust Badge Pill -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-brand-card/90 border border-slate-200 dark:border-brand/30 shadow-sm mb-6">
             <span class="w-2 h-2 rounded-full bg-mint animate-pulse"></span>
-            <span class="text-xs font-bold text-slate-700 dark:text-gray-200 uppercase tracking-wider">100% On-Device · Zero Cloud Sync · No Subscriptions</span>
+            <span class="text-xs font-bold text-slate-700 dark:text-gray-200 uppercase tracking-wider">100% On-Device · Zero Cloud Sync · Signatures & Watermarks</span>
           </div>
 
           <!-- Main Title -->
@@ -337,7 +342,7 @@ body {
 
           <!-- Value Subhead -->
           <p class="text-lg sm:text-xl text-slate-600 dark:text-gray-300 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8">
-            Receipts, contracts, warranties, and IDs. Docket captures pages, extracts text with on-device OCR, and indexes everything so you can search inside documents—without sending a single byte to a server.
+            Receipts, contracts, warranties, and IDs. Docket captures pages, extracts text with on-device OCR, signs documents, applies custom watermarks, and indexes everything so you can search inside documents—without sending a single byte to a server.
           </p>
 
           <!-- CTAs & Trust Points -->
@@ -439,14 +444,18 @@ body {
                     <span class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Docket</span>
                   </div>
                   
-                  <div class="flex items-center gap-2 text-slate-500 dark:text-gray-400">
-                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center">
+                  <div class="flex items-center gap-1 text-slate-500 dark:text-gray-400">
+                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center" title="Sort order">
+                      <!-- Sort Order SwapVert Icon -->
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 4v12m0 0l4-4m-4 4l-4-4"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center" title="Grid / List view">
                       <!-- Grid View Toggle Icon -->
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
                     </button>
-                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center">
-                      <!-- Settings Gear Icon -->
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <button class="w-7 h-7 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center" title="More options">
+                      <!-- 3-dot MoreVert Menu Icon -->
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"/></svg>
                     </button>
                   </div>
                 </div>
@@ -540,10 +549,10 @@ body {
                       <span class="text-[6px] font-black text-white bg-amber px-1 rounded-xs self-start">PDF</span>
                     </div>
                     <div class="flex-1 min-w-0">
-                      <div class="text-[12px] font-bold text-slate-900 dark:text-white truncate">Studio Shodwe Invoice</div>
-                      <div class="text-[9px] text-slate-500 dark:text-gray-400 mt-0.5">06 Sep 2026 Â· 2 pages Â· 1.54 MB</div>
+                      <div class="text-[12px] font-bold text-slate-900 dark:text-white truncate">Studio Shadow Invoice</div>
+                      <div class="text-[9px] text-slate-500 dark:text-gray-400 mt-0.5">06 Sep 2026 · 2 pages · 1.54 MB</div>
                       <div class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded bg-mint/15 text-mint-dark dark:text-mint text-[8px] font-extrabold">
-                        <span>OCR: INVOICE Â· ,249.00</span>
+                        <span>OCR: INVOICE · $1,249.00</span>
                       </div>
                     </div>
                     <button class="w-6 h-6 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 flex items-center justify-center text-slate-400 dark:text-gray-400">
@@ -733,7 +742,7 @@ body {
                   <div class="w-7 h-9 bg-slate-100 dark:bg-white rounded border border-gray-300 flex items-center justify-center text-[7px] text-gray-800 font-bold">PDF</div>
                   <div>
                     <div class="font-bold text-slate-800 dark:text-white">Invoice - Sep 6, 2026.pdf</div>
-                    <div class="text-[10px] text-slate-500 dark:text-gray-400">Match on page 1: "...INVOICE #SH-2026-0906 Â· Total Due ,249.00..."</div>
+                    <div class="text-[10px] text-slate-500 dark:text-gray-400">Match on page 1: "...INVOICE #SH-2026-0906 · Total Due $1,249.00..."</div>
                   </div>
                 </div>
                 <span class="text-[10px] text-slate-400 dark:text-gray-400 font-mono">14:56</span>
@@ -823,6 +832,54 @@ body {
           </div>
         </div>
 
+        <!-- Bento Card 5: Digital Handwritten Signatures -->
+        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Digital Handwritten Signatures</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+              Sign contracts and forms without a pen or printer. Draw your signature on screen, reposition it, resize it freely, and stamp it onto any scanned page before exporting.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 text-xs">
+            <div class="w-8 h-8 rounded-lg bg-brand/20 text-brand flex items-center justify-center font-bold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-800 dark:text-white">Vectorized On-Device Stamping</div>
+              <div class="text-[10px] text-slate-500 dark:text-gray-400">Drag, resize & rotate directly on scanned pages</div>
+            </div>
+            <span class="text-[10px] font-bold text-brand bg-brand-tint px-2 py-1 rounded-full">Pro Tool</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 6: Custom Watermarks & 30-Day Trash Safety -->
+        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-coral/15 border border-coral/30 flex items-center justify-center text-coral mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Custom Watermarks & Trash Safety</h3>
+            <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+              Stamp custom confidential or draft watermarks onto PDF and image exports with automatic text fitting. Deleted scans stay in Recently Deleted for 30 days for instant recovery.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181C2E] border border-slate-200 dark:border-white/10 text-xs">
+            <div class="w-8 h-8 rounded-lg bg-coral/20 text-coral flex items-center justify-center font-bold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-800 dark:text-white">Smart Export Branding & Recovery</div>
+              <div class="text-[10px] text-slate-500 dark:text-gray-400">PDF & Image watermarks · One-tap restore</div>
+            </div>
+            <span class="text-[10px] font-bold text-coral bg-coral/15 px-2 py-1 rounded-full">Safety Net</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -838,10 +895,10 @@ body {
             100% Authentic Device Captures
           </div>
           <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-            Official Play Store Showcase ? 7 Live Slides
+            Official Play Store Showcase · 7 Live Slides
           </h2>
           <p class="text-sm sm:text-base text-slate-500 dark:text-slate-400 mt-1 max-w-2xl">
-            Every slide captured live from native Android hardware. Zero synthetic mockups or simulated overlays. 1080?2160 pixel resolution.
+            Every slide captured live from native Android hardware. Zero synthetic mockups or simulated overlays. 1080×2160 pixel resolution.
           </p>
         </div>
         <a href="screenshots/index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand hover:bg-brand-pressed text-white font-bold text-xs shadow-brand-glow transition-all transform hover:-translate-y-0.5">
@@ -1019,6 +1076,33 @@ body {
               <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Requires active internet connection</td>
             </tr>
 
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Document Signing</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Handwritten signatures placed directly on pages (100% local)</span>
+              </td>
+              <td class="py-4 px-6 text-coral font-medium">Paywalled behind $9.99/mo or cloud lock-in</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Custom Watermarks</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Custom text watermarks on PDF & image exports</span>
+              </td>
+              <td class="py-4 px-6 text-coral font-medium">Forces promotional app watermarks on free scans</td>
+            </tr>
+
+            <tr class="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+              <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">Accidental Deletion Protection</td>
+              <td class="py-4 px-6 text-mint-dark dark:text-mint font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Recently Deleted 30-day trash safety net</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500 dark:text-gray-400">Immediate permanent deletion or cloud account sync</td>
+            </tr>
+
           </tbody>
         </table>
       </div>
@@ -1083,6 +1167,10 @@ body {
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Recently Deleted 30-day recovery net</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Up to 3 custom organizational folders</span>
               </li>
             </ul>
@@ -1122,6 +1210,18 @@ body {
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
                 </div>
                 <span>Searchable PDF invisible text layer</span>
+              </li>
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Digital handwritten signatures placement</span>
+              </li>
+              <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
+                <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <span>Custom document watermarks on PDF & images</span>
               </li>
               <li class="flex items-center gap-3 font-semibold text-slate-900 dark:text-white">
                 <div class="w-5 h-5 rounded-full bg-coral/20 text-coral flex items-center justify-center shrink-0">
@@ -1219,11 +1319,44 @@ body {
         <!-- Q5 -->
         <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
           <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4" aria-expanded="false">
-            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">What languages are supported?</span>
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">What languages and scripts are supported?</span>
             <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
-            Docket ships with native localized interfaces for English, Arabic, Spanish, French, Hindi, Indonesian, Portuguese (Brazil), and Urdu (with full RTL support). The OCR engine recognizes Latin-based scripts on the free tier, with additional scripts unlocked in Premium.
+            Docket ships with native localized interfaces for English, Arabic (العربية), Spanish, French, Hindi, Indonesian, Portuguese (Brazil), and Urdu. The app features authentic right-to-left (RTL) mirroring and cursive Arabic font shaping. The on-device OCR engine recognizes Latin-based scripts on the free tier, with additional Asian and Devanagari scripts unlocked in Premium.
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4" aria-expanded="false">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">Can I sign documents directly within Docket?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Yes! Docket includes a built-in signature canvas. You can draw your signature with your finger or stylus, save it securely on your device, and freely place, resize, and position it on any page of your scanned documents before exporting. No cloud account or external signature service is needed.
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4" aria-expanded="false">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">Can I add custom watermarks to my exported scans?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Yes. Premium unlocks custom document watermarks. You can brand or protect your exports with text like "CONFIDENTIAL", "DRAFT", or your company name. Watermarks are rendered on both PDF exports and shared image files, automatically scaling and wrapping to fit the page geometry.
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="bg-white dark:bg-[#121626] rounded-2xl border border-slate-200/80 dark:border-white/10 shadow-card-light dark:shadow-none overflow-hidden">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4" aria-expanded="false">
+            <span class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">What happens if I accidentally delete a document?</span>
+            <svg class="w-5 h-5 text-slate-400 dark:text-gray-400 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-white/5 pt-4">
+            Docket includes a <strong>Recently Deleted</strong> safety net. Deleted documents are safely retained in a holding area for 30 days before permanent deletion. You can access Recently Deleted from Settings at any time to restore documents back to your Library with a single tap.
           </div>
         </div>
 
@@ -1289,7 +1422,7 @@ body {
       </div>
 
       <div class="flex flex-wrap items-center gap-6 font-semibold">
-        <a href="../index.html" class="hover:text-brand dark:hover:text-white transition-colors">? RapidOps Apps Studio</a>
+        <a href="../index.html" class="hover:text-brand dark:hover:text-white transition-colors">← RapidOps Apps Studio</a>
         <a href="#gallery" class="hover:text-brand dark:hover:text-white transition-colors">Play Store Slides</a>
         <a href="screenshots/index.html" class="hover:text-brand dark:hover:text-white transition-colors">Asset Gallery</a>
         <a href="privacy.html" class="hover:text-brand dark:hover:text-white transition-colors">Privacy Policy</a>
@@ -1298,7 +1431,7 @@ body {
       </div>
 
       <div class="text-[11px] text-slate-400">
-        ? 2026 RapidOps Labs.
+        © 2026 RapidOps Labs.
       </div>
 
     </div>
