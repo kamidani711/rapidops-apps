@@ -7,3 +7,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Direct APK downloads are too large for a normal git push (GitHub's 100MB
+# hard limit) and are no longer linked from any page anyway — landing pages
+# link to Google Play instead. Keep locally, don't commit.
+*.apk

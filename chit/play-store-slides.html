@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chit - Google Play Store Slides & Graphics Showcase</title>
+  <meta name="description" content="Official Google Play Store marketing graphics for Chit — icon, feature graphic, and 6 phone screenshot slides at exact Play Store production specs." />
+  <link rel="canonical" href="https://apps.rapidops.io/chit/play-store-slides.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0A14;
+      --card-bg: rgba(26, 24, 44, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #7C5CFF;
+      --primary-light: #A29BFE;
+      --accent: #FF7A59;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --success: #2FD3A6;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 24px;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(124, 92, 255, 0.15);
+      border: 1px solid rgba(124, 92, 255, 0.4);
+      border-radius: 999px;
+      color: var(--primary-light);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #FFF 0%, #CBD5E1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+    .quick-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #5849BE 100%);
+      color: white;
+      box-shadow: 0 4px 20px rgba(124, 92, 255, 0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(124, 92, 255, 0.5);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 48px 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title span {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* Core Graphics Section */
+    .graphics-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 900px) {
+      .graphics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .graphic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .graphic-preview {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .graphic-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .graphic-preview:hover img {
+      transform: scale(1.02);
+    }
+    .graphic-info h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .graphic-info p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .graphic-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--card-border);
+    }
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+    }
+
+    /* Screenshots Slides Grid */
+    .slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .slide-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .slide-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(124, 92, 255, 0.4);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+    .slide-index {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      width: 32px;
+      height: 32px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      z-index: 2;
+    }
+    .slide-image-wrapper {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #11101E;
+      position: relative;
+      cursor: pointer;
+    }
+    .slide-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .slide-image-wrapper:hover img {
+      transform: scale(1.02);
+    }
+    .slide-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .slide-details h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .slide-details p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    /* Modal for inspection */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      max-height: 92vh;
+      max-width: 90vw;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+    .modal-content img {
+      max-height: 92vh;
+      max-width: 90vw;
+      display: block;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:4px"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>Google Play Store Ready</div>
+      <h1>Chit Marketing & Listing Assets</h1>
+      <p class="subtitle">Pixel-perfect, high-resolution promotional graphics and phone slides configured to exact Google Play Store production specifications.</p>
+      <div class="quick-actions">
+        <a href="LISTING_METADATA.md" class="btn btn-primary" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>View Store Listing Metadata</a>
+        <a href="index.html" class="btn btn-secondary" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Preview Landing Page</a>
+      </div>
+    </header>
+
+    <!-- Core Graphics Section -->
+    <h2 class="section-title">Store Identity Graphics <span>Required for Listing</span></h2>
+    <div class="graphics-grid">
+      <!-- App Icon -->
+      <div class="graphic-card">
+        <div class="graphic-preview">
+          <img src="graphics/icon-512x512.png" alt="Chit App Icon 512x512" />
+        </div>
+        <div class="graphic-info">
+          <h3>Hi-Res App Icon</h3>
+          <p>512 x 512 px PNG (32-bit color, no transparency)</p>
+        </div>
+        <div class="graphic-meta">
+          <span class="tag">512 × 512 px</span>
+          <a href="graphics/icon-512x512.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Feature Graphic -->
+      <div class="graphic-card">
+        <div class="graphic-preview" style="background: #0F0E20;">
+          <img src="graphics/feature-graphic-1024x500.png" alt="Chit Feature Graphic 1024x500" />
+        </div>
+        <div class="graphic-info">
+          <h3>Feature Graphic (Hero Banner)</h3>
+          <p>1024 x 500 px PNG promotional banner displayed at the top of the Google Play Store app listing.</p>
+        </div>
+        <div class="graphic-meta">
+          <span class="tag">1024 × 500 px</span>
+          <a href="graphics/feature-graphic-1024x500.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Slides Section -->
+    <h2 class="section-title">Play Store Phone Slides (1080 × 2400) <span>6 High-Converting Slides</span></h2>
+    <div class="slides-grid">
+      <!-- Slide 1 -->
+      <div class="slide-card">
+        <div class="slide-index">1</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-1-scanner.png')">
+          <img src="graphics/slide-1-scanner.png" alt="Slide 1 - Instant OCR Scanner" />
+        </div>
+        <div class="slide-details">
+          <h3>1. Instant Receipt Scanner</h3>
+          <p>Fast optical text extraction powered by on-device ML</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-1-scanner.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide-card">
+        <div class="slide-index">2</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-2-dashboard.png')">
+          <img src="graphics/slide-2-dashboard.png" alt="Slide 2 - Expense Dashboard" />
+        </div>
+        <div class="slide-details">
+          <h3>2. Expense Dashboard</h3>
+          <p>Real-time spending pacing, top categories & 6-month trends</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-2-dashboard.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide-card">
+        <div class="slide-index">3</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-3-extraction.png')">
+          <img src="graphics/slide-3-extraction.png" alt="Slide 3 - Automated Extraction" />
+        </div>
+        <div class="slide-details">
+          <h3>3. Automated Extraction</h3>
+          <p>Detects date, merchant & amount with zero manual typing</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-3-extraction.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide-card">
+        <div class="slide-index">4</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-4-library.png')">
+          <img src="graphics/slide-4-library.png" alt="Slide 4 - Receipts Library" />
+        </div>
+        <div class="slide-details">
+          <h3>4. Receipts Library</h3>
+          <p>Filter by category, search by merchant & sort in milliseconds</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-4-library.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide-card">
+        <div class="slide-index">5</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-5-document.png')">
+          <img src="graphics/slide-5-document.png" alt="Slide 5 - Fullscreen Document Zoom" />
+        </div>
+        <div class="slide-details">
+          <h3>5. Multi-Touch Pinch & Zoom</h3>
+          <p>Fluid pinch-to-zoom (up to 5×) & pan on original paper receipts</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-5-document.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="slide-card">
+        <div class="slide-index">6</div>
+        <div class="slide-image-wrapper" onclick="openModal('graphics/slide-6-privacy.png')">
+          <img src="graphics/slide-6-privacy.png" alt="Slide 6 - 100% Private & Offline" />
+        </div>
+        <div class="slide-details">
+          <h3>6. 100% Private & Offline</h3>
+          <p>No cloud uploads • No account required • Zero ads • SQLite</p>
+        </div>
+        <div class="slide-footer">
+          <span class="tag">1080 × 2400</span>
+          <a href="graphics/slide-6-privacy.png" download class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom Modal -->
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <img id="modalImg" src="" alt="Zoom preview" />
+    </div>
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('imageModal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

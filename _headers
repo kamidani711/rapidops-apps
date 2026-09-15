@@ -36,6 +36,24 @@
 /docket/screenshots/index.html
   Cache-Control: no-cache, no-store, must-revalidate
 
+/chit
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/privacy.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/terms.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/play-store-slides.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
 # Cache immutable static assets for 1 year
 /docket/screenshots/*.webp
   Cache-Control: public, max-age=31536000, immutable

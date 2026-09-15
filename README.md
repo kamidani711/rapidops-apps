@@ -1,6 +1,6 @@
 # apps.rapidops.io — RapidOps Apps Studio & Portfolio
 
-Official website source code for **`apps.rapidops.io`** and all RapidOps mobile utilities (including **Docket**).
+Official website source code for **`apps.rapidops.io`** and all RapidOps mobile utilities (including **Docket** and **Chit**).
 
 ---
 
@@ -13,19 +13,29 @@ apps.rapidops.io/
 ├── robots.txt                   # Standard crawler access rules
 ├── _headers                     # Security & caching headers (Cloudflare Pages / Netlify)
 │
-└── docket/                      # Docket — 100% On-Device Document Scanner
-    ├── index.html               # High-conversion product landing page & live UI simulator
-    ├── privacy.html             # Standalone, Google Play Store compliant Privacy Policy
-    └── screenshots/             # 8 official 1080×2160 Play Store screenshot assets & gallery
-        ├── index.html           # Interactive web gallery to preview/download all slides
-        ├── 01_instant_scanner.png
-        ├── 02_livetext_ocr.png
-        ├── 03_fulltext_search.png
-        ├── 04_smart_organization.png
-        ├── 05_encrypted_backup.png
-        ├── 06_lifetime_pricing.png
-        ├── 07_document_watermark.png
-        └── 08_sign_document.png
+├── docket/                      # Docket — 100% On-Device Document Scanner
+│   ├── index.html               # High-conversion product landing page & live UI simulator
+│   ├── privacy.html             # Standalone, Google Play Store compliant Privacy Policy
+│   └── screenshots/             # 8 official 1080×2160 Play Store screenshot assets & gallery
+│       ├── index.html           # Interactive web gallery to preview/download all slides
+│       ├── 01_instant_scanner.png
+│       ├── 02_livetext_ocr.png
+│       ├── 03_fulltext_search.png
+│       ├── 04_smart_organization.png
+│       ├── 05_encrypted_backup.png
+│       ├── 06_lifetime_pricing.png
+│       ├── 07_document_watermark.png
+│       └── 08_sign_document.png
+│
+└── chit/                        # Chit — Offline Receipt Scanner & Expense Tracker
+    ├── index.html                # Product landing page
+    ├── privacy.html              # Google Play Store compliant Privacy Policy
+    ├── terms.html                # Terms of Service
+    ├── play-store-slides.html    # Play Store marketing asset gallery
+    ├── LISTING_METADATA.md       # Play Store listing copy & submission checklist
+    ├── downloads/chit-v1.0.0.apk # Direct-download signed release APK (no Play Store listing yet)
+    ├── graphics/                 # Play Store icon, feature graphic & 6 phone screenshot slides
+    └── assets/                   # Landing page images (icon, feature graphic, in-app screenshots)
 ```
 
 ---
@@ -63,3 +73,7 @@ apps.rapidops.io/
 | **Docket Product Page** | `https://apps.rapidops.io/docket/` |
 | **Docket Privacy Policy** | `https://apps.rapidops.io/docket/privacy.html` |
 | **Play Store Screenshot Gallery** | `https://apps.rapidops.io/docket/screenshots/index.html` |
+| **Chit Product Page** | `https://apps.rapidops.io/chit/` |
+| **Chit Privacy Policy** | `https://apps.rapidops.io/chit/privacy.html` |
+| **Chit Terms of Service** | `https://apps.rapidops.io/chit/terms.html` |
+| **Chit Direct APK Download** | `https://apps.rapidops.io/chit/downloads/chit-v1.0.0.apk` |
