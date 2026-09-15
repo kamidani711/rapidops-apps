@@ -10,8 +10,18 @@
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
   <style>
+    @font-face {
+      font-family: "Plus Jakarta Sans Fallback";
+      src: local('Arial'), local('ArialMT');
+      ascent-override: 98.8763%;
+      descent-override: 21.147%;
+      line-gap-override: 0%;
+      size-adjust: 104.9796%;
+    }
     :root {
       --bg: #0B0A14;
       --card-bg: rgba(26, 24, 44, 0.7);
@@ -29,7 +39,7 @@
       padding: 0;
     }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', "Plus Jakarta Sans Fallback", -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -195,7 +205,7 @@
     /* Screenshots Slides Grid */
     .slides-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
       gap: 28px;
     }
     .slide-card {
@@ -329,9 +339,11 @@
       <p class="subtitle">Pixel-perfect, high-resolution promotional graphics and phone slides configured to exact Google Play Store production specifications.</p>
       <div class="quick-actions">
         <a href="LISTING_METADATA.md" class="btn btn-primary" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>View Store Listing Metadata</a>
-        <a href="index.html" class="btn btn-secondary" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Preview Landing Page</a>
+        <a href="./" class="btn btn-secondary" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Preview Landing Page</a>
       </div>
     </header>
+
+    <main>
 
     <!-- Core Graphics Section -->
     <h2 class="section-title">Store Identity Graphics <span>Required for Listing</span></h2>
@@ -466,6 +478,7 @@
         </div>
       </div>
     </div>
+    </main>
   </div>
 
   <!-- Zoom Modal -->

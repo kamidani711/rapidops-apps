@@ -22,8 +22,18 @@
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
   <style>
+    @font-face {
+      font-family: "Plus Jakarta Sans Fallback";
+      src: local('Arial'), local('ArialMT');
+      ascent-override: 98.8763%;
+      descent-override: 21.147%;
+      line-gap-override: 0%;
+      size-adjust: 104.9796%;
+    }
     :root {
       --bg: #0B0A14;
       --card-bg: rgba(26, 24, 44, 0.75);
@@ -35,7 +45,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', "Plus Jakarta Sans Fallback", -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.7;
@@ -77,13 +87,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="nav">
-      <a href="index.html" class="logo">
-        <img src="assets/icon.png" alt="Chit Logo" />
+    <nav class="nav" aria-label="Site">
+      <a href="./" class="logo">
+        <img src="assets/icon-96.png" alt="Chit Logo" />
         Chit
       </a>
-      <a href="index.html" class="back-link">&larr; Back to Home</a>
-    </div>
+      <a href="./" class="back-link">&larr; Back to Home</a>
+    </nav>
+
+    <main>
 
     <h1>Terms of Service</h1>
     <div class="meta">Last Updated: September 13, 2026</div>
@@ -112,6 +124,9 @@
 
     <h2>7. Contact Information</h2>
     <p>For any inquiries regarding these Terms, please contact support@rapidops.io.</p>
+
+    </main>
+
 
     <footer>
       &copy; 2026 Chit. All rights reserved.

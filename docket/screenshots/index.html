@@ -10,14 +10,24 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M32 32h9v16h-9zm0 0h16v9H32zm35 0h9v16h-9zm-7 0h16v9H60zm-28 28h9v16h-9zm0 7h16v9H32zm35-7h9v16h-9zm-7 7h16v9H60z'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" /></noscript>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body { font-family: 'Urbanist', sans-serif; }
+    @font-face {
+      font-family: "Urbanist Fallback";
+      src: local('Arial'), local('ArialMT');
+      ascent-override: 95.9254%;
+      descent-override: 25.2435%;
+      line-gap-override: 0%;
+      size-adjust: 99.0353%;
+    }
+    body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
   </style>
 </head>
 <body class="bg-[#0F172A] text-white min-h-screen p-6 sm:p-10">
-  <div class="max-w-7xl mx-auto">
+  <main class="max-w-7xl mx-auto">
     
     <!-- Top Header Bar -->
     <div class="mb-10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6 border-b border-white/10 pb-8">
@@ -29,10 +39,10 @@
         <p class="text-slate-400 text-sm mt-1">Resolution: 1080 × 2160 px · Aspect Ratio: 1:2 (Google Play Store Official Specification) · Authentic on-device Samsung Galaxy captures</p>
       </div>
       <div class="flex items-center gap-3">
-        <a href="../../index.html" class="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-bold transition-all">
+        <a href="../../" class="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-bold transition-all">
           ← RapidOps Apps
         </a>
-        <a href="../index.html" class="px-5 py-2 rounded-full bg-[#0B57D0] hover:bg-[#0842A0] text-white text-xs font-bold transition-all">
+        <a href="../" class="px-5 py-2 rounded-full bg-[#0B57D0] hover:bg-[#0842A0] text-white text-xs font-bold transition-all">
           ← Docket Overview
         </a>
       </div>
@@ -45,7 +55,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#60A5FA]">#1 · ML SCANNER</span>
-          <h3 class="text-sm font-bold text-white truncate">Scan Paper in Seconds</h3>
+          <h2 class="text-sm font-bold text-white truncate">Scan Paper in Seconds</h2>
         </div>
         <a href="01_instant_scanner.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="01_instant_scanner.png?v=1.1.0" alt="Scan Paper in Seconds" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -59,7 +69,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#34D399]">#2 · LIVE TEXT OCR</span>
-          <h3 class="text-sm font-bold text-white truncate">Tap Any Word to Copy</h3>
+          <h2 class="text-sm font-bold text-white truncate">Tap Any Word to Copy</h2>
         </div>
         <a href="02_livetext_ocr.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="02_livetext_ocr.png?v=1.1.0" alt="Tap Any Word to Copy" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -73,7 +83,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#C084FC]">#3 · SEARCH & RESULTS</span>
-          <h3 class="text-sm font-bold text-white truncate">Search & Find Instantly</h3>
+          <h2 class="text-sm font-bold text-white truncate">Search & Find Instantly</h2>
         </div>
         <a href="03_fulltext_search.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="03_fulltext_search.png?v=1.1.0" alt="Search & Find Instantly" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -87,7 +97,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#60A5FA]">#4 · FOLDERS & TAGS</span>
-          <h3 class="text-sm font-bold text-white truncate">Your Documents, Organized</h3>
+          <h2 class="text-sm font-bold text-white truncate">Your Documents, Organized</h2>
         </div>
         <a href="04_smart_organization.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="04_smart_organization.png?v=1.1.0" alt="Your Documents, Organized" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -101,7 +111,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#F87171]">#5 · ENCRYPTED BACKUP</span>
-          <h3 class="text-sm font-bold text-white truncate">100% Private. Zero Cloud.</h3>
+          <h2 class="text-sm font-bold text-white truncate">100% Private. Zero Cloud.</h2>
         </div>
         <a href="05_encrypted_backup.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="05_encrypted_backup.png?v=1.1.0" alt="100% Private. Zero Cloud." class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -115,7 +125,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#FBBF24]">#6 · LIFETIME PRICING</span>
-          <h3 class="text-sm font-bold text-white truncate">One Purchase. Forever.</h3>
+          <h2 class="text-sm font-bold text-white truncate">One Purchase. Forever.</h2>
         </div>
         <a href="06_lifetime_pricing.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="06_lifetime_pricing.png?v=1.1.0" alt="One Purchase. Forever." class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -129,7 +139,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#A78BFA]">#7 · WATERMARK PROTECTION</span>
-          <h3 class="text-sm font-bold text-white truncate">Watermark Every Page</h3>
+          <h2 class="text-sm font-bold text-white truncate">Watermark Every Page</h2>
         </div>
         <a href="07_document_watermark.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="07_document_watermark.png?v=1.1.0" alt="Watermark Every Page" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -143,7 +153,7 @@
       <div class="bg-[#1E293B] rounded-3xl p-4 border border-white/10 flex flex-col justify-between hover:border-[#0B57D0]/50 transition-all">
         <div class="mb-3">
           <span class="text-xs font-bold text-[#60A5FA]">#8 · SIGN ON THE PAGE</span>
-          <h3 class="text-sm font-bold text-white truncate">Sign It Without Printing</h3>
+          <h2 class="text-sm font-bold text-white truncate">Sign It Without Printing</h2>
         </div>
         <a href="08_sign_document.png?v=1.1.0" target="_blank" class="block group overflow-hidden rounded-2xl border border-white/10 bg-slate-900">
           <img src="08_sign_document.png?v=1.1.0" alt="Sign It Without Printing" class="w-full h-auto group-hover:scale-105 transition-transform duration-300" />
@@ -155,6 +165,6 @@
 
     </div>
 
-  </div>
+  </main>
 </body>
 </html>

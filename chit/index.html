@@ -167,9 +167,19 @@
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
 
   <style>
+    @font-face {
+      font-family: "Plus Jakarta Sans Fallback";
+      src: local('Arial'), local('ArialMT');
+      ascent-override: 98.8763%;
+      descent-override: 21.147%;
+      line-gap-override: 0%;
+      size-adjust: 104.9796%;
+    }
     :root {
       --bg: #0B0A14;
       --bg-alt: #100E20;
@@ -181,14 +191,14 @@
       --accent-glow: rgba(255, 122, 89, 0.35);
       --text: #F8FAFC;
       --text-muted: #94A3B8;
-      --text-dim: #64748B;
+      --text-dim: #8190A5;
       --success: #2FD3A6;
       --glow-purple: rgba(124, 92, 255, 0.25);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-x: hidden; overflow-x: clip; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', "Plus Jakarta Sans Fallback", -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -202,7 +212,7 @@
       top: -200px;
       left: 50%;
       transform: translateX(-50%);
-      width: 1000px;
+      width: min(1000px, 100vw);
       height: 600px;
       background: radial-gradient(circle, rgba(124, 92, 255, 0.18) 0%, rgba(255, 122, 89, 0.08) 50%, transparent 70%);
       filter: blur(100px);
@@ -212,8 +222,8 @@
     .ambient-glow-2 {
       position: absolute;
       top: 1400px;
-      right: -200px;
-      width: 700px;
+      right: 0;
+      width: min(700px, 100vw);
       height: 700px;
       background: radial-gradient(circle, rgba(124, 92, 255, 0.12) 0%, transparent 70%);
       filter: blur(120px);
@@ -240,6 +250,7 @@
       max-width: 1200px;
       margin: 0 auto;
       background: rgba(16, 14, 32, 0.75);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border: 1px solid var(--card-border);
       border-radius: 999px;
@@ -591,15 +602,16 @@
       border-radius: 32px;
       padding: 48px;
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: minmax(0, 1fr) 420px;
       gap: 48px;
       align-items: center;
     }
     @media (max-width: 900px) {
       .showcase-wrapper {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding: 24px;
       }
+      .showcase-phone { width: min(340px, 100%); }
     }
     .showcase-tabs {
       display: flex;
@@ -625,7 +637,7 @@
       border-color: rgba(124, 92, 255, 0.4);
       color: #FFF;
     }
-    .tab-btn h4 {
+    .tab-btn h3 {
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 4px;
@@ -657,6 +669,12 @@
     }
 
     /* Comparison Table */
+    .table-scroll {
+      margin-top: 40px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 24px;
+    }
     .comparison-table {
       width: 100%;
       border-collapse: collapse;
@@ -664,7 +682,9 @@
       border: 1px solid var(--card-border);
       border-radius: 24px;
       overflow: hidden;
-      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      .comparison-table th, .comparison-table td { padding: 12px 10px; font-size: 13px; }
     }
     .comparison-table th, .comparison-table td {
       padding: 20px 24px;
@@ -795,7 +815,7 @@
   <div class="nav-wrapper">
     <nav>
       <a href="#" class="brand">
-        <img src="assets/icon.png" alt="Chit Icon" />
+        <img src="assets/icon-96.png" alt="Chit Icon" width="36" height="36" />
         Chit
       </a>
       <ul class="nav-links">
@@ -803,10 +823,10 @@
         <li><a href="#showcase">Screens</a></li>
         <li><a href="#comparison">Why Chit</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="privacy">Privacy Policy</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" aria-label="Get Chit on Google Play" class="btn btn-primary btn-sm">
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
           <span>Get it on Google Play</span>
         </a>
       </div>
@@ -814,6 +834,7 @@
   </div>
 
   <div class="container">
+    <main>
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-badge">
@@ -830,11 +851,11 @@
       </p>
 
       <div class="hero-ctas">
-        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" aria-label="Get Chit on Google Play" class="btn btn-primary">
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
           Get it on Google Play
         </a>
-        <a href="play-store-slides.html" class="btn btn-secondary">
+        <a href="play-store-slides" class="btn btn-secondary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           Play Store Assets
         </a>
@@ -859,11 +880,11 @@
         <div class="hero-mockup-wrapper">
           <!-- Primary phone: Dashboard -->
           <div class="phone-mockup">
-            <img src="assets/screens-v2/dashboard.png" alt="Chit Dashboard on Android" />
+            <img src="assets/screens-v2/dashboard-640.webp" alt="Chit Dashboard on Android" width="640" height="1422" fetchpriority="high" decoding="async" />
           </div>
           <!-- Secondary phone: Scan Result -->
           <div class="phone-mockup phone-mockup-secondary">
-            <img src="assets/screens-v2/scan-result.png" alt="Chit OCR Result" />
+            <img src="assets/screens-v2/scan-result-640.webp" alt="Chit OCR Result" width="640" height="1422" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -941,34 +962,34 @@
       <div class="showcase-wrapper">
         <div class="showcase-tabs">
           <div class="tab-btn active" onclick="switchTab('dashboard', this)">
-            <h4>1. Financial Dashboard</h4>
+            <h3>1. Financial Dashboard</h3>
             <p>Dynamic greeting, monthly budget pacing bar, top categories, and 6-month spending trends at a glance.</p>
           </div>
           <div class="tab-btn" onclick="switchTab('camera', this)">
-            <h4>2. Optical Scanner</h4>
+            <h3>2. Optical Scanner</h3>
             <p>Live camera viewfinder with flashlight toggle, photo library import, and instant optical capture.</p>
           </div>
           <div class="tab-btn" onclick="switchTab('result', this)">
-            <h4>3. Automatic Extraction</h4>
+            <h3>3. Automatic Extraction</h3>
             <p>ML-extracted merchant, total amount, and date with one-tap category assignment.</p>
           </div>
           <div class="tab-btn" onclick="switchTab('library', this)">
-            <h4>4. Receipts Library</h4>
+            <h3>4. Receipts Library</h3>
             <p>Search receipts by merchant name, filter by category chips, and browse itemized history.</p>
           </div>
           <div class="tab-btn" onclick="switchTab('detail', this)">
-            <h4>5. Document Inspection</h4>
+            <h3>5. Document Inspection</h3>
             <p>Multi-touch pinch-to-zoom & pan receipt viewer, line items breakdown, and one-tap sharing or deletion.</p>
           </div>
           <div class="tab-btn" onclick="switchTab('settings', this)">
-            <h4>6. Custom Preferences</h4>
+            <h3>6. Custom Preferences</h3>
             <p>Biometric app lock, multi-currency switcher, custom budget amounts, and PDF/CSV export.</p>
           </div>
         </div>
 
         <div class="showcase-display">
           <div class="showcase-phone">
-            <img id="showcaseImg" src="assets/screens-v2/dashboard.png" alt="Showcase Screen" />
+            <img id="showcaseImg" src="assets/screens-v2/dashboard-640.webp" alt="Showcase Screen" width="640" height="1422" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -982,6 +1003,7 @@
         <p>See how Chit compares against traditional cloud-based expense apps.</p>
       </div>
 
+      <div class="table-scroll">
       <table class="comparison-table">
         <thead>
           <tr>
@@ -1028,6 +1050,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <!-- FAQ Section -->
@@ -1096,15 +1119,17 @@
       <h2>Ready for Clean, Private Receipt Scanning?</h2>
       <p>Get the official release now and take back control of your financial records.</p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" aria-label="Get Chit on Google Play" class="btn btn-primary">
+        <a href="https://play.google.com/store/apps/details?id=io.rapidops.chit" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
           Get it on Google Play
         </a>
-        <a href="privacy.html" class="btn btn-secondary">
+        <a href="privacy" class="btn btn-secondary">
           Read Privacy Policy &rarr;
         </a>
       </div>
     </div>
+
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -1112,21 +1137,21 @@
         <strong>Chit</strong> &bull; Receipt Scanner & Expense Tracker &bull; v1.0.0
       </div>
       <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="play-store-slides.html">Play Store Slides</a>
+        <a href="privacy">Privacy Policy</a>
+        <a href="terms">Terms of Service</a>
+        <a href="play-store-slides">Play Store Slides</a>
       </div>
     </footer>
   </div>
 
   <script>
     const screens = {
-      'dashboard': 'assets/screens-v2/dashboard.png',
-      'camera': 'assets/screens-v2/scan.png',
-      'result': 'assets/screens-v2/scan-result.png',
-      'library': 'assets/screens-v2/library.png',
-      'detail': 'assets/screens-v2/detail.png',
-      'settings': 'assets/screens-v2/settings-r2.png'
+      'dashboard': 'assets/screens-v2/dashboard-640.webp',
+      'camera': 'assets/screens-v2/scan-640.webp',
+      'result': 'assets/screens-v2/scan-result-640.webp',
+      'library': 'assets/screens-v2/library-640.webp',
+      'detail': 'assets/screens-v2/detail-640.webp',
+      'settings': 'assets/screens-v2/settings-r2-640.webp'
     };
 
     function switchTab(name, element) {

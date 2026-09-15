@@ -13,8 +13,18 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M54 22L84 39V73L54 90L24 73V39L54 22ZM54 34L34 45.5V66.5L54 78L74 66.5V45.5L54 34Z'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700;800;900&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700;800;900&display=swap" /></noscript>
   <style>
+    @font-face {
+      font-family: "Urbanist Fallback";
+      src: local('Arial'), local('ArialMT');
+      ascent-override: 95.9254%;
+      descent-override: 25.2435%;
+      line-gap-override: 0%;
+      size-adjust: 99.0353%;
+    }
     :root {
       --brand: #0B57D0;
       --brand-hover: #0842A0;
@@ -40,7 +50,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
-      font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Urbanist', "Urbanist Fallback", -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--bg);
       color: var(--text);
       display: flex;
@@ -151,7 +161,7 @@
   <header>
     <!-- Root-relative links: this page is served at whatever missing URL was requested,
          at any folder depth, so relative links would resolve to the wrong place. -->
-    <a href="/" class="logo" aria-label="RapidOps Apps Home">
+    <a href="/" class="logo">
       <span class="logo-mark">
         <svg viewBox="0 0 108 108" fill="none" aria-hidden="true">
           <path d="M54 22L84 39V73L54 90L24 73V39L54 22ZM54 34L34 45.5V66.5L54 78L74 66.5V45.5L54 34Z" fill="#FFFFFF"/>
