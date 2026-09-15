@@ -71,9 +71,9 @@ apps.rapidops.io/
 | :--- | :--- |
 | **RapidOps Apps Studio & Portfolio** | `https://apps.rapidops.io/` |
 | **Docket Product Page** | `https://apps.rapidops.io/docket/` |
-| **Docket Privacy Policy** | `https://apps.rapidops.io/docket/privacy.html` |
-| **Play Store Screenshot Gallery** | `https://apps.rapidops.io/docket/screenshots/index.html` |
+| **Docket Privacy Policy** | `https://apps.rapidops.io/docket/privacy` |
+| **Play Store Screenshot Gallery** | `https://apps.rapidops.io/docket/screenshots/` |
 | **Chit Product Page** | `https://apps.rapidops.io/chit/` |
-| **Chit Privacy Policy** | `https://apps.rapidops.io/chit/privacy.html` |
-| **Chit Terms of Service** | `https://apps.rapidops.io/chit/terms.html` |
+| **Chit Privacy Policy** | `https://apps.rapidops.io/chit/privacy` |
+| **Chit Terms of Service** | `https://apps.rapidops.io/chit/terms` |
 | **Chit Direct APK Download** | `https://apps.rapidops.io/chit/downloads/chit-v1.0.0.apk` |

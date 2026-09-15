@@ -27,6 +27,9 @@
 /docket/privacy.html
   Cache-Control: no-cache, no-store, must-revalidate
 
+/docket/privacy
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /docket/screenshots
   Cache-Control: no-cache, no-store, must-revalidate
 
@@ -48,10 +51,19 @@
 /chit/privacy.html
   Cache-Control: no-cache, no-store, must-revalidate
 
+/chit/privacy
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /chit/terms.html
   Cache-Control: no-cache, no-store, must-revalidate
 
+/chit/terms
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /chit/play-store-slides.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/chit/play-store-slides
   Cache-Control: no-cache, no-store, must-revalidate
 
 # Cache immutable static assets for 1 year
