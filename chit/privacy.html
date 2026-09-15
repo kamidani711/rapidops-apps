@@ -139,7 +139,7 @@
     </div>
 
     <h1>Privacy Policy</h1>
-    <div class="meta">Last Updated: September 13, 2026 • Applies to Chit for Android (Package: io.rapidops.chit)</div>
+    <div class="meta">Last Updated: September 15, 2026 • Applies to Chit for Android (Package: io.rapidops.chit)</div>
 
     <div class="highlight-card">
       <h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px;margin-right:6px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Our Privacy Pledge</h3>
@@ -159,8 +159,10 @@
     <p>To deliver core functionality, Chit requests the following device permissions:</p>
     <ul>
       <li><strong>Camera (<code>android.permission.CAMERA</code>):</strong> This permission is required exclusively to enable you to photograph paper receipts and invoices using your device camera. Photos captured by the camera are processed on-device using local optical character recognition (OCR) and saved only in your private application storage sandbox. Camera captures are never uploaded to any remote server.</li>
-      <li><strong>Vibration (<code>android.permission.VIBRATE</code>):</strong> Used solely to provide subtle haptic feedback when tapping buttons and upon successful receipt scans.</li>
-      <li><strong>Storage / Media:</strong> Complies with Android 13+ scoped storage policies (capped at API 32 for legacy compatibility) to allow saving receipt images locally and exporting CSV reports to your device's download folder when requested by you.</li>
+      <li><strong>Biometrics (<code>android.permission.USE_BIOMETRIC</code>):</strong> Used only if you turn on the optional app lock in Settings. Unlocking is handled by Android's own fingerprint / face unlock / screen-lock prompt; Chit never receives or stores any biometric data.</li>
+      <li><strong>Photo import (no permission required):</strong> "Import photo" uses Android's system photo picker, which gives Chit access only to the single image you choose. Chit does not request storage or media-library permissions, and photos taken inside Chit are not added to your gallery.</li>
+      <li><strong>Internet (<code>android.permission.INTERNET</code>):</strong> Declared by the underlying app framework and on-device libraries. Chit never sends your receipts, images, amounts, or other financial data over the internet (see Section 5 for the limited diagnostics sent by Google ML Kit).</li>
+      <li><strong>Vibration (<code>android.permission.VIBRATE</code>) and screen-capture detection (<code>android.permission.DETECT_SCREEN_CAPTURE</code>):</strong> Declared by bundled libraries. Chit does not use vibration; screenshots and screen recordings of the app are blocked to protect your financial data.</li>
     </ul>
 
     <h2>3. Local Storage & Data Security</h2>
@@ -170,12 +172,14 @@
     <p>Because all data resides exclusively on your device, you maintain 100% control over your data at all times:</p>
     <ul>
       <li><strong>Delete Individual Receipts:</strong> Tap any receipt in the app and select "Delete" to permanently remove it and its associated image from your device.</li>
-      <li><strong>Reset All Data:</strong> You can clear all receipts, categories, and custom preferences directly through the app settings or via Android system settings (Settings &gt; Apps &gt; Chit &gt; Clear Storage).</li>
+      <li><strong>Delete All Receipts:</strong> Settings &gt; Data &gt; "Delete all receipts" permanently removes every receipt, its photo, and your custom categories. To also reset your preferences, use Android system settings (Settings &gt; Apps &gt; Chit &gt; Storage &gt; Clear storage).</li>
+      <li><strong>Backups Stay With You:</strong> Chit is excluded from Android's automatic Google Drive backup. If you want a copy, Settings &gt; Data &gt; "Backup (JSON)" creates a file that you choose where to save or send; "Restore Backup" imports it again.</li>
       <li><strong>Uninstalling the App:</strong> Uninstalling Chit immediately and irreversibly deletes all receipts and database files stored within the application sandbox.</li>
     </ul>
 
     <h2>5. Third-Party Libraries & Services</h2>
-    <p>Chit utilizes Google ML Kit for on-device text recognition. The OCR model executes entirely on your device hardware (CPU/GPU/NPU). No images or OCR text are transmitted to Google or any third party.</p>
+    <p>Chit utilizes Google ML Kit for on-device text recognition. The OCR model is bundled with the app and runs entirely on your device hardware, so scanning works offline. Your receipt images and the recognized text are never transmitted to Google or any third party.</p>
+    <p>As described in <a href="https://developers.google.com/ml-kit/android-data-disclosure" style="color: var(--primary-light);">Google's ML Kit data disclosure</a>, the ML Kit library itself may send Google limited diagnostic information when a network connection is available — such as device model and OS version, app package name and version, a per-installation identifier, and performance metrics like recognition latency. This information does not include your receipts, images, or recognized text, and is used by Google to maintain and improve ML Kit.</p>
 
     <h2>6. Children's Privacy (COPPA Compliance)</h2>
     <p>Chit is not directed toward children under the age of 13. Because the application collects no personal information whatsoever, it inherently complies with the Children's Online Privacy Protection Act (COPPA) and international child privacy regulations.</p>
