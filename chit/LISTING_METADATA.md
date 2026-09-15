@@ -137,12 +137,12 @@ All required Google Play visual assets have been compiled and generated into `pl
 |:---|:---|:---:|:---|
 | **App Icon** | `icon-512x512.png` | 512 x 512 px | 32-bit PNG, no alpha, under 1024 KB |
 | **Feature Graphic** | `feature-graphic-1024x500.png` | 1024 x 500 px | PNG, 2.048:1 aspect ratio, no transparency |
-| **Phone Slide 1** | `slide-1-scanner.png` | 1080 x 2400 px | Smart On-Device OCR Scanner |
-| **Phone Slide 2** | `slide-2-dashboard.png` | 1080 x 2400 px | Monthly Budgeting & Spending Trends |
-| **Phone Slide 3** | `slide-3-extraction.png` | 1080 x 2400 px | Automated Merchant & Item Extraction |
-| **Phone Slide 4** | `slide-4-library.png` | 1080 x 2400 px | Fast Receipts Library & Category Filters |
-| **Phone Slide 5** | `slide-5-document.png` | 1080 x 2400 px | High-Res Document Viewer & Full Zoom |
-| **Phone Slide 6** | `slide-6-privacy.png` | 1080 x 2400 px | 100% Private, Zero Cloud & Offline SQLite |
+| **Phone Slide 1** | `slide-1-scanner.png` | 1080 x 2160 px | Smart On-Device OCR Scanner |
+| **Phone Slide 2** | `slide-2-dashboard.png` | 1080 x 2160 px | Monthly Budgeting & Spending Trends |
+| **Phone Slide 3** | `slide-3-extraction.png` | 1080 x 2160 px | Automated Merchant & Item Extraction |
+| **Phone Slide 4** | `slide-4-library.png` | 1080 x 2160 px | Fast Receipts Library & Category Filters |
+| **Phone Slide 5** | `slide-5-document.png` | 1080 x 2160 px | High-Res Document Viewer & Full Zoom |
+| **Phone Slide 6** | `slide-6-privacy.png` | 1080 x 2160 px | 100% Private, Zero Cloud & Offline SQLite |
 
 ---
 
