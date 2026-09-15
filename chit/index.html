@@ -795,11 +795,13 @@
     }
     .footer-links {
       display: flex;
-      gap: 24px;
+      flex-wrap: wrap;
+      gap: 12px 24px;
     }
     .footer-links a {
       color: var(--text-muted);
       text-decoration: none;
+      white-space: nowrap;
     }
     .footer-links a:hover {
       color: #FFF;
@@ -814,11 +816,12 @@
   <!-- Navigation -->
   <div class="nav-wrapper">
     <nav>
-      <a href="#" class="brand">
+      <a href="./" class="brand">
         <img src="assets/icon-96.png" alt="Chit Icon" width="36" height="36" />
         Chit
       </a>
       <ul class="nav-links">
+        <li><a href="../">&larr; RapidOps Apps</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#showcase">Screens</a></li>
         <li><a href="#comparison">Why Chit</a></li>
@@ -1137,6 +1140,7 @@
         <strong>Chit</strong> &bull; Receipt Scanner & Expense Tracker &bull; v1.0.0
       </div>
       <div class="footer-links">
+        <a href="../">RapidOps Apps</a>
         <a href="privacy">Privacy Policy</a>
         <a href="terms">Terms of Service</a>
         <a href="play-store-slides">Play Store Slides</a>
