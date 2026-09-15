@@ -101,15 +101,14 @@
   <!-- RapidOps Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M54 22L84 39V73L54 90L24 73V39L54 22ZM54 34L34 45.5V66.5L54 78L74 66.5V45.5L54 34Z'/%3E%3C/svg%3E" />
 
-  <!-- Google Fonts: Urbanist (High-Performance Async Load) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" /></noscript>
+  <link rel="preload" href="/fonts/urbanist-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Inlined Critical CSS for 0ms Render-Blocking Load -->
   <style>
+    /* Self-hosted Urbanist (SIL Open Font License): same-origin fonts paint without extra connections. */
+    @font-face { font-family: 'Urbanist'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('/fonts/urbanist-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Urbanist'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('/fonts/urbanist-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
     @font-face {
       font-family: "Urbanist Fallback";
       src: local('Arial'), local('ArialMT');
@@ -367,7 +366,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
           <!-- Right Real Device Screenshot Preview -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative w-[280px] sm:w-[310px] rounded-[44px] p-3 bg-slate-900 shadow-2xl shadow-brand/20 border-4 border-slate-700/80 overflow-hidden group">
-              <img src="docket/screenshots/04_smart_organization_thumb.webp" srcset="docket/screenshots/04_smart_organization_thumb-320.webp 320w, docket/screenshots/04_smart_organization_thumb.webp 540w" sizes="(min-width: 640px) 278px, min(248px, calc(100vw - 114px))" decoding="async" alt="Docket Android Document Scanner app showing custom folders and smart categorization" width="540" height="1080" loading="lazy" class="w-full h-auto rounded-[32px] transform group-hover:scale-102 transition-transform duration-300" />
+              <img src="docket/screenshots/04_smart_organization_thumb.webp" srcset="docket/screenshots/04_smart_organization_thumb-160.webp 160w, docket/screenshots/04_smart_organization_thumb-320.webp 320w, docket/screenshots/04_smart_organization_thumb-440.webp 440w, docket/screenshots/04_smart_organization_thumb.webp 540w" sizes="(min-width: 640px) 278px, min(248px, calc(100vw - 114px))" decoding="async" alt="Docket Android Document Scanner app showing custom folders and smart categorization" width="540" height="1080" loading="lazy" class="w-full h-auto rounded-[32px] transform group-hover:scale-102 transition-transform duration-300" />
               <div class="absolute bottom-6 inset-x-6 py-2 px-3 rounded-xl bg-brand/90 backdrop-blur-md text-center text-white text-xs font-bold shadow-lg">
                 Authentic Samsung Galaxy Capture
               </div>
@@ -407,7 +406,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 1 -->
         <a href="docket/screenshots/01_instant_scanner.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/01_instant_scanner_thumb.webp?v=1.1.0" srcset="docket/screenshots/01_instant_scanner_thumb-320.webp 320w, docket/screenshots/01_instant_scanner_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Instant Neural Scanner with Edge Detection" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/01_instant_scanner_thumb.webp?v=1.1.0" srcset="docket/screenshots/01_instant_scanner_thumb-160.webp 160w, docket/screenshots/01_instant_scanner_thumb-320.webp 320w, docket/screenshots/01_instant_scanner_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Instant Neural Scanner with Edge Detection" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#1 Neural Scanner</div>
@@ -418,7 +417,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 2 -->
         <a href="docket/screenshots/02_livetext_ocr.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/02_livetext_ocr_thumb.webp?v=1.1.0" srcset="docket/screenshots/02_livetext_ocr_thumb-320.webp 320w, docket/screenshots/02_livetext_ocr_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Live Text OCR and Word Copy" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/02_livetext_ocr_thumb.webp?v=1.1.0" srcset="docket/screenshots/02_livetext_ocr_thumb-160.webp 160w, docket/screenshots/02_livetext_ocr_thumb-320.webp 320w, docket/screenshots/02_livetext_ocr_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Live Text OCR and Word Copy" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#2 Live Text OCR</div>
@@ -429,7 +428,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 3 -->
         <a href="docket/screenshots/03_fulltext_search.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/03_fulltext_search_thumb.webp?v=1.1.0" srcset="docket/screenshots/03_fulltext_search_thumb-320.webp 320w, docket/screenshots/03_fulltext_search_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket In-Document Full-Text Search and Instant Results" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/03_fulltext_search_thumb.webp?v=1.1.0" srcset="docket/screenshots/03_fulltext_search_thumb-160.webp 160w, docket/screenshots/03_fulltext_search_thumb-320.webp 320w, docket/screenshots/03_fulltext_search_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket In-Document Full-Text Search and Instant Results" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#3 Search & Results</div>
@@ -440,7 +439,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 4 -->
         <a href="docket/screenshots/04_smart_organization.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/04_smart_organization_thumb.webp?v=1.1.0" srcset="docket/screenshots/04_smart_organization_thumb-320.webp 320w, docket/screenshots/04_smart_organization_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Smart Folders and Category Filters" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/04_smart_organization_thumb.webp?v=1.1.0" srcset="docket/screenshots/04_smart_organization_thumb-160.webp 160w, docket/screenshots/04_smart_organization_thumb-320.webp 320w, docket/screenshots/04_smart_organization_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Smart Folders and Category Filters" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#4 Smart Folders</div>
@@ -451,7 +450,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 5 -->
         <a href="docket/screenshots/05_encrypted_backup.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/05_encrypted_backup_thumb.webp?v=1.1.0" srcset="docket/screenshots/05_encrypted_backup_thumb-320.webp 320w, docket/screenshots/05_encrypted_backup_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Local Passphrase Encrypted Backup" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/05_encrypted_backup_thumb.webp?v=1.1.0" srcset="docket/screenshots/05_encrypted_backup_thumb-160.webp 160w, docket/screenshots/05_encrypted_backup_thumb-320.webp 320w, docket/screenshots/05_encrypted_backup_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Local Passphrase Encrypted Backup" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#5 Local Backup</div>
@@ -462,7 +461,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 6 -->
         <a href="docket/screenshots/06_lifetime_pricing.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/06_lifetime_pricing_thumb.webp?v=1.1.0" srcset="docket/screenshots/06_lifetime_pricing_thumb-320.webp 320w, docket/screenshots/06_lifetime_pricing_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Lifetime Purchase Unlock" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/06_lifetime_pricing_thumb.webp?v=1.1.0" srcset="docket/screenshots/06_lifetime_pricing_thumb-160.webp 160w, docket/screenshots/06_lifetime_pricing_thumb-320.webp 320w, docket/screenshots/06_lifetime_pricing_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Lifetime Purchase Unlock" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#6 Lifetime Buy</div>
@@ -473,7 +472,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 7 -->
         <a href="docket/screenshots/07_document_watermark.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/07_document_watermark_thumb.webp?v=1.1.0" srcset="docket/screenshots/07_document_watermark_thumb-320.webp 320w, docket/screenshots/07_document_watermark_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Document Watermark Protection" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/07_document_watermark_thumb.webp?v=1.1.0" srcset="docket/screenshots/07_document_watermark_thumb-160.webp 160w, docket/screenshots/07_document_watermark_thumb-320.webp 320w, docket/screenshots/07_document_watermark_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Document Watermark Protection" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#7 Watermark</div>
@@ -484,7 +483,7 @@ body { font-family: 'Urbanist', "Urbanist Fallback", sans-serif; }
         <!-- Slide 8 -->
         <a href="docket/screenshots/08_sign_document.png?v=1.1.0" target="_blank" class="group block bg-white dark:bg-[#151924] rounded-2xl p-2.5 border border-slate-200 dark:border-white/10 hover:border-brand/50 shadow-sm transition-all transform hover:-translate-y-1">
           <div class="overflow-hidden rounded-xl bg-slate-900 aspect-[1/2] relative">
-            <img src="docket/screenshots/08_sign_document_thumb.webp?v=1.1.0" srcset="docket/screenshots/08_sign_document_thumb-320.webp 320w, docket/screenshots/08_sign_document_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Document In-App Signing" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            <img src="docket/screenshots/08_sign_document_thumb.webp?v=1.1.0" srcset="docket/screenshots/08_sign_document_thumb-160.webp 160w, docket/screenshots/08_sign_document_thumb-320.webp 320w, docket/screenshots/08_sign_document_thumb.webp?v=1.1.0 540w" sizes="(min-width: 1280px) 116px, (min-width: 1024px) calc(12.5vw - 44px), (min-width: 640px) calc(25vw - 46px), calc(50vw - 46px)" decoding="async" alt="Docket Document In-App Signing" width="540" height="1080" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           </div>
           <div class="mt-2 px-1 text-center">
             <div class="text-[11px] font-black text-slate-900 dark:text-white truncate">#8 Sign Page</div>
