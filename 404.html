@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — RapidOps Apps</title>
+  <meta name="description" content="The page you were looking for doesn't exist on RapidOps Apps." />
+  <!-- Cloudflare Pages serves this file with a real 404 status for any unknown URL.
+       Without a top-level 404.html, Pages treats the site as a single-page app and
+       answers every missing URL with the home page and a 200 status. -->
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#0B57D0" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%230B57D0'/%3E%3Cpath fill='%23FFFFFF' d='M54 22L84 39V73L54 90L24 73V39L54 22ZM54 34L34 45.5V66.5L54 78L74 66.5V45.5L54 34Z'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500;700;800;900&display=swap" />
+  <style>
+    :root {
+      --brand: #0B57D0;
+      --brand-hover: #0842A0;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --border: rgba(15, 23, 42, 0.08);
+      --text: #0F172A;
+      --muted: #475569;
+      --chip: rgba(11, 87, 208, 0.1);
+      --chip-text: #0B57D0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0D13;
+        --card: #121620;
+        --border: rgba(255, 255, 255, 0.1);
+        --text: #F1F5F9;
+        --muted: #94A3B8;
+        --chip: rgba(11, 87, 208, 0.25);
+        --chip-text: #D3E3FD;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-image: radial-gradient(circle 600px at 50% -120px, rgba(11, 87, 208, 0.18), transparent 70%);
+    }
+    header {
+      max-width: 80rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 24px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(11, 87, 208, 0.3);
+    }
+    .logo-mark svg { width: 24px; height: 24px; }
+    .logo-name { font-size: 20px; font-weight: 800; letter-spacing: -0.025em; }
+    .logo-name span { color: var(--brand); }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px 64px;
+    }
+    .card {
+      width: 100%;
+      max-width: 560px;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px 32px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+    }
+    .code {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--chip-text);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: clamp(32px, 7vw, 44px);
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    p {
+      margin: 16px auto 0;
+      max-width: 420px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--brand); color: #FFFFFF; box-shadow: 0 8px 20px -6px rgba(11, 87, 208, 0.45); }
+    .btn-primary:hover { background: var(--brand-hover); }
+    .btn-secondary { background: var(--chip); color: var(--chip-text); }
+    .btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Root-relative links: this page is served at whatever missing URL was requested,
+         at any folder depth, so relative links would resolve to the wrong place. -->
+    <a href="/" class="logo" aria-label="RapidOps Apps Home">
+      <span class="logo-mark">
+        <svg viewBox="0 0 108 108" fill="none" aria-hidden="true">
+          <path d="M54 22L84 39V73L54 90L24 73V39L54 22ZM54 34L34 45.5V66.5L54 78L74 66.5V45.5L54 34Z" fill="#FFFFFF"/>
+        </svg>
+      </span>
+      <span class="logo-name">RapidOps<span>.Apps</span></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="title">
+      <span class="code">Error 404</span>
+      <h1 id="title">Page not found</h1>
+      <p>The page you're looking for doesn't exist or has moved. Try one of our apps below, or head back to the home page.</p>
+      <div class="actions">
+        <a href="/" class="btn btn-primary">Back to home</a>
+        <a href="/docket/" class="btn btn-secondary">Docket</a>
+        <a href="/chit/" class="btn btn-secondary">Chit</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>RapidOps Apps &bull; Privacy-first Android utilities</footer>
+</body>
+</html>
