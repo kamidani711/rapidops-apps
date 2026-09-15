@@ -51,7 +51,7 @@ Unlike other expense tracking apps that force you to create an account, pay mont
 • Edit merchant names, dates, categories, or totals whenever needed.
 
 🔒 100% PRIVATE, SECURE & OFFLINE-FIRST
-• Biometric App Lock: Protect your private expenses with fingerprint or Face ID authentication.
+• Biometric App Lock: Protect your private expenses with your fingerprint, face unlock or screen lock.
 • Zero cloud uploads: All data is saved inside a local SQLite database on your device.
 • Zero tracking or analytics SDKs: No advertising trackers, no telemetry profiling your financial habits.
 • No account or login required: Install the app and start scanning immediately.
