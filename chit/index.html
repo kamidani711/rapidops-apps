@@ -159,20 +159,20 @@
   </script>
 
   <link rel="icon" type="image/png" sizes="48x48" href="assets/icon-48.png" />
-  <link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/urbanist-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <style>
-    /* Self-hosted Plus Jakarta Sans (SIL Open Font License): same-origin fonts paint without extra connections. */
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('/fonts/plus-jakarta-sans-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('/fonts/plus-jakarta-sans-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    /* Self-hosted Urbanist (SIL Open Font License): same-origin fonts paint without extra connections. */
+    @font-face { font-family: 'Urbanist'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('/fonts/urbanist-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+    @font-face { font-family: 'Urbanist'; font-style: normal; font-weight: 400 800; font-display: swap; src: url('/fonts/urbanist-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
     @font-face {
-      font-family: "Plus Jakarta Sans Fallback";
+      font-family: "Urbanist Fallback";
       src: local('Arial'), local('ArialMT');
-      ascent-override: 98.8763%;
-      descent-override: 21.147%;
+      ascent-override: 95.9254%;
+      descent-override: 25.2435%;
       line-gap-override: 0%;
-      size-adjust: 104.9796%;
+      size-adjust: 99.0353%;
     }
     :root {
       --bg: #0B0A14;
@@ -192,7 +192,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-x: hidden; overflow-x: clip; }
     body {
-      font-family: 'Plus Jakarta Sans', "Plus Jakarta Sans Fallback", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Urbanist', "Urbanist Fallback", -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -268,7 +268,7 @@
       width: 36px;
       height: 36px;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(124, 92, 255, 0.4);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
     }
     .nav-links {
       display: flex;
@@ -310,20 +310,20 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--primary) 0%, #5849BE 100%);
       color: white;
-      box-shadow: 0 4px 20px rgba(124, 92, 255, 0.4);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(124, 92, 255, 0.6);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
     }
     .btn-accent {
       background: linear-gradient(135deg, var(--accent) 0%, #E05335 100%);
       color: white;
-      box-shadow: 0 4px 20px rgba(255, 122, 89, 0.35);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
     }
     .btn-accent:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(255, 122, 89, 0.55);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
     }
     .btn-secondary {
       background: rgba(255, 255, 255, 0.06);
@@ -345,20 +345,6 @@
       padding: 100px 0 80px;
       text-align: center;
     }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 18px;
-      background: rgba(124, 92, 255, 0.15);
-      border: 1px solid rgba(124, 92, 255, 0.35);
-      border-radius: 999px;
-      color: var(--primary-light);
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 24px;
-      animation: pulse 3s infinite;
-    }
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.02); }
@@ -372,11 +358,6 @@
       max-width: 960px;
       margin-left: auto;
       margin-right: auto;
-    }
-    .hero h1 .gradient-text {
-      background: linear-gradient(135deg, #FFF 20%, var(--primary-light) 60%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
     .hero p.lead {
       font-size: 20px;
@@ -430,7 +411,7 @@
       background: #121020;
       padding: 12px;
       border: 4px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(124, 92, 255, 0.25);
+      box-shadow: 0 14px 30px -14px rgba(0, 0, 0, 0.65);
       position: relative;
       z-index: 2;
     }
@@ -479,11 +460,11 @@
       animation: float 4s ease-in-out infinite;
     }
     .badge-left {
-      left: -120px;
+      left: 0;
       top: 140px;
     }
     .badge-right {
-      right: -100px;
+      right: 0;
       top: 240px;
       animation-delay: 2s;
     }
@@ -834,14 +815,9 @@
     <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-badge">
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:-2px;margin-right:4px"><path d="M12 2l1.8 5.9L19.5 9l-5.7 1.9L12 16.8l-1.8-5.9L4.5 9l5.7-1.1L12 2z"/></svg>Version 1.0.0 &middot; Coming soon</span>
-        <span>•</span>
-        <span>100% Offline & Private</span>
-      </div>
       <h1>
-        Track Expenses Privately.<br>
-        <span class="gradient-text">Scan Receipts Instantly.</span>
+        Track expenses privately.<br>
+        Scan receipts instantly.
       </h1>
       <p class="lead">
         The zero-cloud, on-device receipt scanner and expense tracker. No accounts, no subscriptions, zero data profiling. Lightning-fast optical OCR right on your phone.
@@ -852,10 +828,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
           Coming soon on Google Play
         </span>
-        <a href="play-store-slides" class="btn btn-secondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          Play Store Assets
-        </a>
+        <a href="#features" class="btn btn-secondary">See how it works</a>
       </div>
 
       <div class="hero-trust">
@@ -1137,7 +1110,6 @@
         <a href="../">RapidOps Apps</a>
         <a href="privacy">Privacy Policy</a>
         <a href="terms">Terms of Service</a>
-        <a href="play-store-slides">Play Store Slides</a>
       </div>
     </footer>
   </div>
