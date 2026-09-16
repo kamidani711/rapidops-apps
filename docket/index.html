@@ -281,11 +281,13 @@ body {
 
   <!-- Instant Theme Script to prevent flash of wrong theme -->
   <script>
-    if (localStorage.getItem('docket_theme') === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    // A stored choice wins; otherwise follow the operating system, so a visitor
+    // in dark mode doesn't land on a light page.
+    try {
+      var stored = localStorage.getItem('docket_theme');
+      var dark = stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.classList.toggle('dark', dark);
+    } catch (e) {}
   </script>
 </head>
 
@@ -758,9 +760,9 @@ body {
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         
         <!-- Bento Card 1: Instant In-Document Search -->
-        <div class="md:col-span-7 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <div class="md:col-span-7 py-2 flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-brand/10 border border-brand/20 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             </div>
             <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Search by what a document says, not where you filed it</h3>
@@ -793,12 +795,12 @@ body {
         </div>
 
         <!-- Bento Card 2: Studio Quality Image Processing & Filters -->
-        <div class="md:col-span-5 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <div class="md:col-span-5 py-2 flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-amber/15 border border-amber/30 flex items-center justify-center text-amber mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Studio-Grade Enhancements</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Studio-grade enhancements</h3>
             <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
               Turn crumpled receipts and yellowed paper into laser-crisp documents. Crop perspective distortions, rotate, and choose tailored filters.
             </p>
@@ -827,13 +829,13 @@ body {
           </div>
         </div>
 
-        <!-- Bento Card 3: Pro Export with Embedded Searchable PDF Layer -->
-        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <!-- Bento Card 3: Pro Export with Embedded Searchable PDF layer -->
+        <div class="md:col-span-6 py-2 flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-violet/15 border border-violet/30 flex items-center justify-center text-violet mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Searchable PDF Layer</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Searchable PDF layer</h3>
             <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
               Export multi-page documents as standard PDFs with an invisible, selectable text layer embedded directly beneath the image. Select, copy, and search inside exported PDFs in Acrobat, Chrome, or any viewer.
             </p>
@@ -850,12 +852,12 @@ body {
         </div>
 
         <!-- Bento Card 4: Local Encrypted Backups -->
-        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <div class="md:col-span-6 py-2 flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-mint/15 border border-mint/30 flex items-center justify-center text-mint mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Your Backup, Under Your Key</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Your backup, under your key</h3>
             <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
               Never get locked into a proprietary cloud. Export your entire library into an encrypted archive with a passphrase only you hold. Store it on your SD card, USB drive, or personal storage.
             </p>
@@ -869,17 +871,17 @@ body {
               <div class="font-bold text-slate-800 dark:text-white">Zero-Knowledge Architecture</div>
               <div class="text-[10px] text-slate-500 dark:text-gray-400">Even the Docket developers cannot read your archives</div>
             </div>
-            <span class="text-[10px] font-bold text-mint-dark dark:text-mint bg-mint-tint px-2 py-1 rounded-full">AES Encrypted</span>
+            <span class="text-[10px] font-bold text-brand bg-brand-tint px-2 py-1 rounded-full">AES Encrypted</span>
           </div>
         </div>
 
-        <!-- Bento Card 5: Digital Handwritten Signatures -->
-        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <!-- Bento Card 5: Digital handwritten signatures -->
+        <div class="md:col-span-6 py-2 flex flex-col justify-between group">
           <div>
             <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Digital Handwritten Signatures</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Digital handwritten signatures</h3>
             <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
               Sign contracts and forms without a pen or printer. Draw your signature on screen, reposition it, resize it freely, and stamp it onto any scanned page before exporting.
             </p>
@@ -898,12 +900,12 @@ body {
         </div>
 
         <!-- Bento Card 6: Custom Watermarks & 30-Day Trash Safety -->
-        <div class="md:col-span-6 bg-white dark:bg-[#121626] rounded-3xl p-8 border border-slate-200/80 dark:border-white/5 shadow-card-light dark:shadow-none flex flex-col justify-between group">
+        <div class="md:col-span-6 py-2 flex flex-col justify-between group">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-coral/15 border border-coral/30 flex items-center justify-center text-coral mb-6 group-hover:scale-110 transition-transform">
+            <div class="w-12 h-12 rounded-2xl bg-brand/15 border border-brand/30 flex items-center justify-center text-brand mb-6 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
-            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Custom Watermarks & Trash Safety</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Custom watermarks and trash safety</h3>
             <p class="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
               Stamp custom confidential or draft watermarks onto PDF and image exports with automatic text fitting. Deleted scans stay in Recently Deleted for 30 days for instant recovery.
             </p>
@@ -917,7 +919,7 @@ body {
               <div class="font-bold text-slate-800 dark:text-white">Smart Export Branding & Recovery</div>
               <div class="text-[10px] text-slate-500 dark:text-gray-400">PDF & Image watermarks · One-tap restore</div>
             </div>
-            <span class="text-[10px] font-bold text-coral bg-coral/15 px-2 py-1 rounded-full">Safety Net</span>
+            <span class="text-[10px] font-bold text-brand bg-brand-tint px-2 py-1 rounded-full">Safety Net</span>
           </div>
         </div>
 
