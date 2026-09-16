@@ -198,9 +198,9 @@ html.dark {
 .hero h1 { max-width: 19ch; }
 .hero .lede { margin-top: var(--s-5); max-width: 54ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
-.hero__facts { max-width: none; width: 100%; display: flex; flex-wrap: wrap; gap: var(--s-4) var(--s-6); margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--line-soft); font-size: var(--step--1); color: var(--ink-3); }
-.hero__facts span { white-space: nowrap; }
-@media (min-width: 900px) { .hero__facts { justify-content: space-between; gap: var(--s-4); } }
+
+
+@media (min-width: 900px) {  }
 .hero__facts b { color: var(--ink); font-weight: 700; }
 
 .spot { display: grid; gap: var(--s-8); align-items: center; }
@@ -235,6 +235,18 @@ html.dark .tag--muted { color: #B6C0D4; }
 .about p { margin-inline: auto; }
 .about__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); margin-top: var(--s-6); }
 .spot__lede { margin-top: var(--s-5); }
+
+/* Even columns rather than a stretched row: wrapping stays tidy at every width. */
+.sys .hero__facts {
+  max-width: none; width: 100%;
+  display: grid; grid-template-columns: 1fr;
+  gap: var(--s-4) var(--s-6);
+  margin-top: var(--s-8); padding-top: var(--s-5);
+  border-top: 1px solid var(--line-soft);
+  font-size: var(--step--1); color: var(--ink-3);
+}
+@media (min-width: 620px) { .sys .hero__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1020px) { .sys .hero__facts { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-5); } }
 
   </style>
   <script>
