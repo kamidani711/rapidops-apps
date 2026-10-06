@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeadRadar — B2B Google Maps Lead Extractor & Cold Outreach Engine</title>
+  <meta name="description" content="Extract unlimited verified B2B leads from Google Maps with phone numbers, emails, websites, reviews, and 1-click cold outreach scripts. Lifetime license, zero monthly subscriptions." />
+  <meta name="keywords" content="google maps scraper, b2b lead generation, google maps lead extractor, cold outreach generator, extract local business leads, scrape business phone numbers, verified b2b emails, local business marketing, no subscription lead scraper, apollo alternative" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="RapidOps Labs" />
+  <meta name="application-name" content="LeadRadar" />
+  <meta name="apple-mobile-web-app-title" content="LeadRadar" />
+  <link rel="canonical" href="https://apps.rapidops.io/leadradar/" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LeadRadar by RapidOps" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="LeadRadar — B2B Google Maps Lead Extractor & Outreach Generator" />
+  <meta property="og:description" content="Stop paying $100+/mo for stale databases. Extract fresh, verified B2B leads directly from Google Maps with emails, phone numbers, and tailored cold outreach pitches." />
+  <meta property="og:url" content="https://apps.rapidops.io/leadradar/" />
+  <meta property="og:image" content="https://apps.rapidops.io/leadradar/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LeadRadar Desktop Application Interface and Lead Extraction" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LeadRadar — Unlimited Google Maps B2B Lead Generator" />
+  <meta name="twitter:description" content="Extract verified local business phone numbers, emails, addresses, and AI outreach hooks with zero monthly subscriptions. Pay once, own forever." />
+  <meta name="twitter:image" content="https://apps.rapidops.io/leadradar/assets/og-cover.png" />
+
+  <meta name="theme-color" content="#2563EB" />
+  
+  <!-- Favicon (LeadRadar Radar Crosshair Mark) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='28' fill='%232563EB'/%3E%3Ccircle cx='54' cy='48' r='30' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='3' stroke-dasharray='4 4'/%3E%3Ccircle cx='54' cy='48' r='20' fill='none' stroke='rgba(255,255,255,0.5)' stroke-width='3'/%3E%3Cpath d='M54 26 C41.85 26 32 35.85 32 48 C32 64 54 82 54 82 C54 82 76 64 76 48 C76 35.85 66.15 26 54 26 Z' fill='%23FFFFFF'/%3E%3Ccircle cx='54' cy='46' r='7' fill='%232563EB'/%3E%3C/svg%3E" />
+  <link rel="preload" href="/fonts/urbanist-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://apps.rapidops.io/leadradar/#app",
+        "name": "LeadRadar",
+        "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Sales Intelligence & B2B Lead Generation",
+        "url": "https://apps.rapidops.io/leadradar/",
+        "author": {
+          "@type": "Organization",
+          "name": "RapidOps Labs",
+          "url": "https://apps.rapidops.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "RapidOps Labs",
+          "url": "https://apps.rapidops.io/"
+        },
+        "description": "Commercial-grade desktop application for extracting verified business leads from Google Maps. Includes phone numbers, verified emails, addresses, review metrics, smart deduplication, proxy testing, and 1-click cold outreach pitch generation.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "49.00",
+            "priceCurrency": "USD",
+            "name": "LeadRadar Starter (Lifetime License)"
+          },
+          {
+            "@type": "Offer",
+            "price": "99.00",
+            "priceCurrency": "USD",
+            "name": "LeadRadar Agency Pro (Lifetime License)"
+          },
+          {
+            "@type": "Offer",
+            "price": "199.00",
+            "priceCurrency": "USD",
+            "name": "LeadRadar Agency VIP / Multi-Device (Lifetime License)"
+          }
+        ],
+        "featureList": [
+          "Live real-time Google Maps directory extraction worldwide",
+          "Verified business phone numbers, addresses, ratings, and websites",
+          "Automated deep email scraping and social profile links",
+          "1-Click cold outreach pitch generator (Phone script, SMS, Cold email)",
+          "Smart cross-search duplicate filtering by phone and address",
+          "Built-in rotating proxy testing engine with live latency check",
+          "Direct CRM and Webhook synchronization (Zapier, Make, GoHighLevel)",
+          "Offline Scrape Vault to save, load, and re-export past campaigns",
+          "Anti-detect human browsing pacing to prevent blocks",
+          "Hardware-locked single-device license protection",
+          "100% on-device private data execution with zero third-party telemetry"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://apps.rapidops.io/leadradar/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is extracting leads from Google Maps legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Google Maps consists of publicly listed commercial business data intended for discovery. LeadRadar extracts only public commercial contact details (business name, phone, address, website) without bypassing private login portals, fully complying with US courts precedent (hiQ Labs v. LinkedIn) and GDPR/CCPA commercial directory rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does LeadRadar compare to Apollo.io or ZoomInfo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apollo and ZoomInfo charge $99 to $500+ every single month for access to static databases that are frequently 1 to 3 years outdated. LeadRadar connects directly to live Google Maps in real time, giving you 100% current listings for a one-time purchase without monthly subscription lock-in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my IP address get banned or rate-limited by Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For small to moderate daily searches, LeadRadar includes automated anti-detect human pacing with randomized scrolling. For agency scale (1,000 to 5,000+ leads daily), LeadRadar features a built-in proxy tunnel engine with an integrated ping test that connects seamlessly with rotating residential proxies (Webshare, Bright Data, IPRoyal)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are there recurring monthly fees or per-lead credit limits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. LeadRadar is sold as a perpetual lifetime license. You buy it once and run unlimited searches on your computer forever without per-lead credit deductibles or renewal bills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I push extracted leads directly to my CRM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. With LeadRadar Agency Pro, you can push selected leads or entire campaigns with one click to any Zapier, Make.com, GoHighLevel, or custom API webhook URL formatted in clean JSON."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://apps.rapidops.io/leadradar/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "RapidOps Apps",
+            "item": "https://apps.rapidops.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "LeadRadar",
+            "item": "https://apps.rapidops.io/leadradar/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Urbanist';
+      font-style: normal;
+      font-weight: 400 900;
+      font-display: swap;
+      src: url('/fonts/urbanist-latin.woff2') format('woff2');
+    }
+
+    :root {
+      --ink: #0B1020;
+      --ink-2: #384252;
+      --ink-3: #64748B;
+      --surface: #FFFFFF;
+      --surface-2: #F8FAFC;
+      --surface-3: #EEF2F6;
+      --line: rgba(11, 16, 32, 0.08);
+      --line-strong: rgba(11, 16, 32, 0.16);
+      --accent: #2563EB;
+      --accent-press: #1D4ED8;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-border: rgba(37, 99, 235, 0.25);
+      --on-accent: #FFFFFF;
+      --emerald: #059669;
+      --emerald-soft: #ECFDF5;
+
+      --step--1: 0.875rem;
+      --step-0: 1rem;
+      --step-1: 1.1875rem;
+      --step-2: clamp(1.4rem, 1.1rem + 1.1vw, 1.85rem);
+      --step-3: clamp(1.9rem, 1.4rem + 1.8vw, 2.6rem);
+      --step-4: clamp(2.4rem, 1.8rem + 2.4vw, 3.5rem);
+
+      --r-sm: 8px;
+      --r-md: 14px;
+      --r-lg: 20px;
+      --r-xl: 28px;
+      --r-pill: 999px;
+      
+      --shadow-sm: 0 1px 3px rgba(11, 16, 32, 0.05);
+      --shadow-md: 0 12px 28px -10px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(11, 16, 32, 0.04);
+      --shadow-lg: 0 24px 48px -14px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(11, 16, 32, 0.04);
+      --shadow-card: 0 10px 30px -8px rgba(11, 16, 32, 0.06), 0 1px 3px rgba(11, 16, 32, 0.04);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html.dark {
+      --ink: #F8FAFC;
+      --ink-2: #CBD5E1;
+      --ink-3: #94A3B8;
+      --surface: #0B0E14;
+      --surface-2: #121620;
+      --surface-3: #1B2232;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.18);
+      --accent-soft: rgba(37, 99, 235, 0.20);
+      --accent-border: rgba(37, 99, 235, 0.45);
+      --emerald-soft: rgba(5, 150, 105, 0.18);
+      --shadow-md: 0 14px 30px -10px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Urbanist', system-ui, -apple-system, sans-serif;
+      font-size: var(--step-0);
+      line-height: 1.6;
+      color: var(--ink-2);
+      background-color: var(--surface);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--ink);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 0;
+    }
+    h1 { font-size: var(--step-4); font-weight: 800; }
+    h2 { font-size: var(--step-3); font-weight: 800; }
+    h3 { font-size: var(--step-2); font-weight: 700; }
+    p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+
+    .shell { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+    .section { padding-block: clamp(64px, 7vw, 110px); }
+    .section--tint { background-color: var(--surface-2); border-block: 1px solid var(--line); }
+
+    /* Navigation */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--surface) 86%, transparent);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 20px; }
+    .nav__brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--ink); font-size: 1.125rem; }
+    .nav__mark {
+      width: 36px; height: 36px; border-radius: 10px; background: var(--accent);
+      display: grid; place-items: center; color: #fff; flex-shrink: 0;
+    }
+    .nav__links { display: none; align-items: center; gap: 28px; }
+    @media (min-width: 860px) { .nav__links { display: flex; } }
+    .nav__links a { font-size: 0.9375rem; font-weight: 600; color: var(--ink-2); transition: color 0.15s; }
+    .nav__links a:hover { color: var(--accent); }
+    .nav__cta { display: flex; align-items: center; gap: 12px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 44px; padding: 0 22px; border-radius: var(--r-pill);
+      font-size: 0.9375rem; font-weight: 700; cursor: pointer; border: 1px solid transparent;
+      transition: all 0.18s var(--ease); white-space: nowrap;
+    }
+    .btn--primary { background: var(--accent); color: var(--on-accent); box-shadow: var(--shadow-md); }
+    .btn--primary:hover { background: var(--accent-press); transform: translateY(-1px); }
+    .btn--ghost { border-color: var(--line-strong); background: var(--surface); color: var(--ink); }
+    .btn--ghost:hover { background: var(--surface-2); border-color: var(--accent); color: var(--accent); }
+    .btn--sm { min-height: 38px; padding: 0 16px; font-size: 0.875rem; }
+    .btn--icon { width: 38px; height: 38px; padding: 0; min-height: 38px; border-radius: 10px; }
+
+    /* Eyebrows & Badges */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px;
+      border-radius: var(--r-pill); font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-border);
+    }
+    .badge--emerald { background: var(--emerald-soft); color: var(--emerald); border-color: rgba(5, 150, 105, 0.3); }
+
+    /* Hero Section */
+    .hero { padding-top: clamp(48px, 6vw, 84px); padding-bottom: clamp(56px, 7vw, 96px); text-align: center; }
+    .hero__content { max-width: 840px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .hero__lede { font-size: var(--step-1); max-width: 680px; color: var(--ink-2); line-height: 1.55; }
+    .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px; }
+    .hero__trust {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 32px;
+      margin-top: 28px; font-size: var(--step--1); color: var(--ink-3);
+    }
+    .hero__trust span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero__trust svg { color: var(--emerald); }
+
+    /* Interactive Live Simulator */
+    .sim {
+      margin-top: 48px; border-radius: var(--r-xl); background: var(--surface);
+      border: 1px solid var(--line-strong); box-shadow: var(--shadow-lg); overflow: hidden;
+      text-align: left;
+    }
+    .sim__bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px; background: var(--surface-2); border-bottom: 1px solid var(--line);
+    }
+    .sim__dots { display: flex; gap: 6px; }
+    .sim__dot { width: 10px; height: 10px; border-radius: 50%; background: #CBD5E1; }
+    html.dark .sim__dot { background: #334155; }
+    .sim__querybox {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      padding: 16px 20px; border-bottom: 1px solid var(--line);
+    }
+    .sim__pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sim__pill {
+      font-size: 0.8125rem; font-weight: 600; padding: 5px 12px; border-radius: var(--r-pill);
+      border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .sim__pill:hover, .sim__pill.active { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+    .sim__content { padding: 20px; overflow-x: auto; }
+    .sim__table { width: 100%; border-collapse: collapse; font-size: 0.875rem; min-width: 680px; }
+    .sim__table th {
+      text-align: left; padding: 10px 12px; font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--ink-3); border-bottom: 1px solid var(--line);
+    }
+    .sim__table td { padding: 12px; border-bottom: 1px solid var(--line); color: var(--ink-2); vertical-align: middle; }
+    .sim__bizname { font-weight: 700; color: var(--ink); }
+    .sim__tag { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; }
+    .sim__tag--verified { background: var(--emerald-soft); color: var(--emerald); }
+    .sim__tag--phone { background: var(--accent-soft); color: var(--accent); }
+
+    /* Features Grid */
+    .grid-3 { display: grid; gap: 24px; }
+    @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .card {
+      padding: 32px 28px; border-radius: var(--r-lg); background: var(--surface);
+      border: 1px solid var(--line); box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .card__icon {
+      width: 48px; height: 48px; border-radius: 14px; background: var(--accent-soft);
+      color: var(--accent); display: grid; place-items: center; flex-shrink: 0;
+    }
+    .card h3 { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+    .card p { font-size: 0.9375rem; color: var(--ink-2); line-height: 1.6; }
+
+    /* Comparison Table */
+    .comp-box {
+      border-radius: var(--r-lg); border: 1px solid var(--line-strong);
+      background: var(--surface); overflow-x: auto; margin-top: 40px; box-shadow: var(--shadow-card);
+    }
+    .comp-table { width: 100%; border-collapse: collapse; min-width: 600px; text-align: left; font-size: 0.9375rem; }
+    .comp-table th, .comp-table td { padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .comp-table th { background: var(--surface-2); font-weight: 700; color: var(--ink); font-size: 0.875rem; }
+    .comp-table td:first-child { font-weight: 600; color: var(--ink); }
+    .comp-table tr.highlight td { background: var(--accent-soft); font-weight: 600; }
+    .comp-table .winner { color: var(--accent); font-weight: 800; }
+
+    /* Pricing Section */
+    .pricing-grid { display: grid; gap: 24px; margin-top: 48px; }
+    @media (min-width: 900px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; } }
+    .tier {
+      padding: 36px 30px; border-radius: var(--r-xl); background: var(--surface);
+      border: 1px solid var(--line); box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 28px; position: relative;
+    }
+    .tier--pop {
+      border-color: var(--accent); box-shadow: var(--shadow-md);
+      background: color-mix(in srgb, var(--surface) 96%, var(--accent));
+    }
+    .tier__head { display: flex; flex-direction: column; gap: 8px; }
+    .tier__name { font-size: 1.125rem; font-weight: 800; color: var(--ink); }
+    .tier__price { display: flex; align-items: baseline; gap: 6px; margin-top: 8px; }
+    .tier__amount { font-size: 2.75rem; font-weight: 900; color: var(--ink); line-height: 1; }
+    .tier__period { font-size: 0.875rem; color: var(--ink-3); font-weight: 600; }
+    .tier__desc { font-size: 0.875rem; color: var(--ink-2); line-height: 1.5; min-height: 42px; }
+    .tier__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.875rem; }
+    .tier__list li { display: flex; align-items: center; gap: 10px; color: var(--ink-2); }
+    .tier__list li svg { color: var(--emerald); flex-shrink: 0; }
+
+    /* FAQ Section */
+    .faq-list { max-width: 800px; margin-inline: auto; margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface);
+      overflow: hidden; transition: border-color 0.15s;
+    }
+    .faq-item summary {
+      padding: 20px 24px; font-weight: 700; color: var(--ink); cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; list-style: none;
+      font-size: 1.0625rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item p { padding: 0 24px 20px; font-size: 0.9375rem; color: var(--ink-2); line-height: 1.65; }
+
+    /* Footer */
+    .foot { border-top: 1px solid var(--line); padding-block: 50px; background: var(--surface); font-size: 0.875rem; }
+    .foot__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; }
+    .foot__links { display: flex; gap: 24px; font-weight: 600; color: var(--ink-3); }
+    .foot__links a:hover { color: var(--accent); }
+
+    /* Pitch Drawer Modal in Simulator */
+    .pitch-box {
+      margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--surface-2);
+      border: 1px dashed var(--line-strong); display: none; animation: fadeIn 0.2s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+
+  <script>
+    try {
+      var t = localStorage.theme;
+      if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="nav">
+    <div class="shell nav__inner">
+      <a href="/leadradar/" class="nav__brand">
+        <span class="nav__mark">
+          <svg width="22" height="22" viewBox="0 0 108 108" fill="currentColor">
+            <circle cx="54" cy="48" r="30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-dasharray="4 4"/>
+            <circle cx="54" cy="48" r="20" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+            <path d="M54 26 C41.85 26 32 35.85 32 48 C32 64 54 82 54 82 C54 82 76 64 76 48 C76 35.85 66.15 26 54 26 Z" fill="#FFFFFF"/>
+            <circle cx="54" cy="46" r="7" fill="#2563EB"/>
+          </svg>
+        </span>
+        <span>LeadRadar</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Product Navigation">
+        <a href="#simulator">Live Demo</a>
+        <a href="#features">Features</a>
+        <a href="#comparison">ROI vs Subscriptions</a>
+        <a href="#pricing">Lifetime Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__cta">
+        <button id="themeToggle" class="btn btn--ghost btn--icon" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6a8.5 8.5 0 1 0 11.8 11.8z"/>
+          </svg>
+        </button>
+        <a href="#pricing" class="btn btn--primary btn--sm">
+          Get Desktop App
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="shell">
+        <div class="hero__content">
+          <div class="badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            No Monthly Subscriptions • Zero API Fees
+          </div>
+
+          <h1>Turn Google Maps into your unlimited B2B lead pipeline.</h1>
+
+          <p class="hero__lede">
+            Extract verified business phone numbers, websites, direct emails, reviews, and instant 1-click cold outreach pitch scripts. Run unlimited queries straight from your Windows desktop.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#pricing" class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Get LeadRadar for Windows
+            </a>
+            <a href="#simulator" class="btn btn--ghost">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Test Live Simulator
+            </a>
+          </div>
+
+          <div class="hero__trust">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              100% Live Directory Data
+            </span>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero Cloud Telemetry
+            </span>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Direct CRM Webhook Push
+            </span>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Built-In Proxy Pinger
+            </span>
+          </div>
+        </div>
+
+        <!-- Interactive Lead Simulator / Visual Proof -->
+        <div class="sim" id="simulator">
+          <div class="sim__bar">
+            <div class="sim__dots">
+              <div class="sim__dot"></div>
+              <div class="sim__dot"></div>
+              <div class="sim__dot"></div>
+            </div>
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--ink-3);">
+              LeadRadar Interactive Simulator — Live Extraction Preview
+            </div>
+            <div class="badge badge--emerald" style="padding: 2px 8px; font-size: 0.7rem;">
+              ● Engine Ready
+            </div>
+          </div>
+
+          <div class="sim__querybox">
+            <span style="font-size: 0.8125rem; font-weight: 700; color: var(--ink-3);">Try Sample Niche:</span>
+            <div class="sim__pills" id="samplePills">
+              <button class="sim__pill active" data-niche="roofing">Roofing Contractors (Dallas, TX)</button>
+              <button class="sim__pill" data-niche="dental">Dental Clinics (Miami, FL)</button>
+              <button class="sim__pill" data-niche="cafe">Specialty Cafes (Dubai, UAE)</button>
+              <button class="sim__pill" data-niche="plumbing">Emergency Plumbers (London, UK)</button>
+            </div>
+          </div>
+
+          <div class="sim__content">
+            <table class="sim__table">
+              <thead>
+                <tr>
+                  <th>Business Name</th>
+                  <th>Contact & Phone</th>
+                  <th>Email & Web</th>
+                  <th>Reviews & Rating</th>
+                  <th>1-Click Outreach</th>
+                </tr>
+              </thead>
+              <tbody id="simTableBody">
+                <!-- Dynamically Rendered by JS below -->
+              </tbody>
+            </table>
+
+            <div id="simPitchDrawer" class="pitch-box">
+              <!-- Dynamically populated pitch script -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Pillars / Why LeadRadar Wins -->
+    <section class="section section--tint" id="features">
+      <div class="shell">
+        <div style="text-align: center; max-width: 680px; margin-inline: auto; margin-bottom: 56px;">
+          <div class="badge" style="margin-bottom: 12px;">Engineered For High-Performance Outreach</div>
+          <h2>Everything sales reps & agency owners need to close deals.</h2>
+          <p style="margin-top: 12px; font-size: var(--step-0);">
+            Built from scratch to overcome Google's anti-scraping defenses, prevent IP bans, and turn raw map listings into ready-to-contact sales prospects.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <h3>100% Live Map Intelligence</h3>
+            <p>Don't burn your domain emailing dead inboxes. LeadRadar scrapes live listings directly from Google Maps in real-time, capturing new businesses opened just days ago.</p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>1-Click Cold Pitch Hooks</h3>
+            <p>Every lead comes with auto-crafted cold outreach: cold call opener, punchy SMS text, and tailored cold email pitch based on their review count and website status.</p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Rotating Proxy Ping Tester</h3>
+            <p>Bring your own HTTP/SOCKS5 proxies. Test connection tunnel and live ping latency directly to Google before running large sweeps to ensure 5,000+ leads/day with 0 blocks.</p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+            </div>
+            <h3>Smart Cross-Search Deduplication</h3>
+            <p>Extract across adjacent zip codes or multiple keywords without paying for duplicates. The smart filter detects duplicate phone numbers and addresses instantly.</p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3>Instant CRM & Webhook Sync</h3>
+            <p>Push filtered leads with a single click straight to Zapier, Make.com, GoHighLevel, HubSpot, or any custom endpoint formatted with verified contact payloads.</p>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Offline Scrape Vault</h3>
+            <p>Store your lead campaigns locally without recurring storage costs. Restore past sweeps into the table, re-filter, and re-export anytime without burning extra data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison / The Math -->
+    <section class="section" id="comparison">
+      <div class="shell">
+        <div style="text-align: center; max-width: 680px; margin-inline: auto;">
+          <div class="badge badge--emerald" style="margin-bottom: 12px;">Save $1,200+ Per Year</div>
+          <h2>Stop renting lead access. Own your data engine.</h2>
+          <p style="margin-top: 12px; font-size: var(--step-0);">
+            Compare LeadRadar against SaaS databases and pay-per-lead cloud scrapers.
+          </p>
+        </div>
+
+        <div class="comp-box">
+          <table class="comp-table">
+            <thead>
+              <tr>
+                <th>Feature / Pricing Model</th>
+                <th style="color: var(--accent);">LeadRadar Desktop</th>
+                <th>Apollo / ZoomInfo</th>
+                <th>Outscraper Cloud</th>
+                <th>Google Places API</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight">
+                <td>Cost Structure</td>
+                <td class="winner">One-Time ($99 Lifetime)</td>
+                <td>$99 to $399 / month</td>
+                <td>$0.03 per lead ($150 / 5k)</td>
+                <td>$0.017-$0.05 / request</td>
+              </tr>
+              <tr>
+                <td>Data Freshness</td>
+                <td><strong>100% Real-Time Live Google Maps</strong></td>
+                <td>Cached DB (often 1-3 yrs old)</td>
+                <td>Batch Cloud Queue</td>
+                <td>Real-time (strict quota)</td>
+              </tr>
+              <tr>
+                <td>Daily Export Limit</td>
+                <td><strong>Unlimited (Runs on your PC)</strong></td>
+                <td>Strict Monthly Credit Limit</td>
+                <td>Pay per lead</td>
+                <td>Hard Daily Quotas</td>
+              </tr>
+              <tr>
+                <td>Cold Outreach Pitch Scripts</td>
+                <td><strong>Included (Phone, SMS, Email)</strong></td>
+                <td>Generic AI add-on</td>
+                <td>Not included</td>
+                <td>Not included</td>
+              </tr>
+              <tr>
+                <td>Direct Webhook / CRM Sync</td>
+                <td><strong>1-Click (GHL, Zapier, Make)</strong></td>
+                <td>Enterprise tiers only</td>
+                <td>Webhook only</td>
+                <td>Custom Code Required</td>
+              </tr>
+              <tr>
+                <td>Annual Cost (10k Leads/mo)</td>
+                <td class="winner"><strong>$99 Flat</strong></td>
+                <td><strong>$1,188 - $4,788 / yr</strong></td>
+                <td><strong>$3,600 / yr</strong></td>
+                <td><strong>$2,000+ / yr</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Lifetime Pricing -->
+    <section class="section section--tint" id="pricing">
+      <div class="shell">
+        <div style="text-align: center; max-width: 680px; margin-inline: auto;">
+          <div class="badge" style="margin-bottom: 12px;">Lifetime License • 30-Day Guarantee</div>
+          <h2>Simple, honest pricing. Pay once, use forever.</h2>
+          <p style="margin-top: 12px; font-size: var(--step-0);">
+            No monthly subscription traps. No hidden credit charges. Instant license key delivered to your email.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter Tier -->
+          <div class="tier">
+            <div class="tier__head">
+              <span class="tier__name">Starter Solo</span>
+              <div class="tier__price">
+                <span class="tier__amount">$49</span>
+                <span class="tier__period">/ one-time</span>
+              </div>
+              <p class="tier__desc">Ideal for solo freelancers and single consultants prospecting locally.</p>
+            </div>
+
+            <ul class="tier__list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Google Maps Searches</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Verified Phones, Emails & Websites</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>CSV & Google Sheets 1-Click Copy</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>1 Windows PC Hardware License</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Lifetime App Updates</li>
+            </ul>
+
+            <a href="https://buy.stripe.com/test_placeholder_starter" class="btn btn--ghost">
+              Buy Starter ($49)
+            </a>
+          </div>
+
+          <!-- Agency Pro (Popular) -->
+          <div class="tier tier--pop">
+            <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%);">
+              <span class="badge" style="background: var(--accent); color: #fff; border: none; font-size: 0.7rem; padding: 4px 12px;">
+                MOST POPULAR FOR AGENCIES
+              </span>
+            </div>
+
+            <div class="tier__head">
+              <span class="tier__name" style="color: var(--accent);">Agency Pro</span>
+              <div class="tier__price">
+                <span class="tier__amount">$99</span>
+                <span class="tier__period">/ one-time</span>
+              </div>
+              <p class="tier__desc">For outreach agencies and SDRs extracting 5,000+ leads daily with CRM workflows.</p>
+            </div>
+
+            <ul class="tier__list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Everything in Starter Solo</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>1-Click Cold Pitch Hooks (Call/SMS/Email)</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Direct CRM Webhook Sync (GHL, Zapier)</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Built-In Proxy Pinger & Latency Tester</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Smart Multi-City Deduplication Engine</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Offline Scrape Vault Campaign Storage</strong></li>
+            </ul>
+
+            <a href="https://buy.stripe.com/test_placeholder_agency" class="btn btn--primary">
+              Get Agency Pro ($99)
+            </a>
+          </div>
+
+          <!-- Agency VIP / Multi-Device -->
+          <div class="tier">
+            <div class="tier__head">
+              <span class="tier__name">Agency VIP / Team</span>
+              <div class="tier__price">
+                <span class="tier__amount">$199</span>
+                <span class="tier__period">/ one-time</span>
+              </div>
+              <p class="tier__desc">For growth teams and agencies running multiple dedicated extraction workstations.</p>
+            </div>
+
+            <ul class="tier__list">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>Everything in Agency Pro</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><strong>3 Windows Workstation Machine Licenses</strong></li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Automated Background Headless Execution</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>VIP Dedicated Email Support Channel</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Private Discord / Priority Feature Requests</li>
+            </ul>
+
+            <a href="https://buy.stripe.com/test_placeholder_vip" class="btn btn--ghost">
+              Get Agency VIP ($199)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" id="faq">
+      <div class="shell">
+        <div style="text-align: center; max-width: 680px; margin-inline: auto;">
+          <div class="badge" style="margin-bottom: 12px;">Frequently Asked Questions</div>
+          <h2>Got questions? We've got answers.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span>Is extracting leads from Google Maps legal?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>
+              Yes. Commercial listings on Google Maps are publicly published business records designed specifically for public discovery. Scraping publicly available commercial directory data is protected under established US judicial rulings (such as hiQ Labs v. LinkedIn) and complies with commercial GDPR/CCPA regulations, provided you respect local outreach laws (CAN-SPAM, opt-out requests).
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How does LeadRadar prevent Google IP bans and CAPTCHAs?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>
+              LeadRadar combines two protective layers: First, built-in <strong>Anti-Detect Human Pacing</strong> mimics realistic browser interactions with randomized delays. Second, for agencies extracting 1,000–5,000+ leads daily, LeadRadar includes a <strong>Built-In Proxy Tunnel</strong> with a live latency pinger. You can plug in any standard rotating residential proxy (Webshare, Bright Data, IPRoyal) to cycle exit IPs seamlessly.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How do the 1-Click Cold Pitch Hooks work?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>
+              LeadRadar analyzes the listing's public profile (website presence, star rating, total review volume, and niche category). It instantly crafts tailored outreach angles: if they lack a website, it generates web design pitches; if their reviews are below 4.0, it generates reputation management scripts; if they are top-rated, it generates local scaling offers.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What are the system requirements?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>
+              LeadRadar runs natively on Windows 10 and Windows 11 (64-bit). It utilizes an isolated Chromium backend that operates with minimal system memory (~270MB RAM) without slowing down your everyday computer tasks.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How does the hardware licensing work?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>
+              When you purchase LeadRadar, you receive a cryptographic license key. The first time you activate the desktop app, it securely ties to your computer's unique hardware identifier (HWID). If you need to transfer your license to a new PC, our support team can reset your hardware binding instantly upon request.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="shell foot__inner">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="nav__mark" style="width: 28px; height: 28px; border-radius: 8px;">
+          <svg width="16" height="16" viewBox="0 0 108 108" fill="currentColor">
+            <path d="M54 26 C41.85 26 32 35.85 32 48 C32 64 54 82 54 82 C54 82 76 64 76 48 C76 35.85 66.15 26 54 26 Z" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span style="font-weight: 700; color: var(--ink);">LeadRadar</span>
+        <span style="color: var(--ink-3);">— Part of the <a href="/" style="color: var(--accent); font-weight: 600;">RapidOps Apps Studio</a></span>
+      </div>
+
+      <div class="foot__links">
+        <a href="/leadradar/privacy">Privacy Policy</a>
+        <a href="/docket/">Docket Scanner</a>
+        <a href="/chit/">Chit Expense</a>
+        <a href="mailto:support@rapidops.io">Support</a>
+      </div>
+
+      <div style="width: 100%; color: var(--ink-3); font-size: 0.8125rem; margin-top: 10px;">
+        © 2026 RapidOps Labs. All rights reserved. Google and Google Maps are trademarks of Google LLC. LeadRadar is an independent software tool.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Simulator Client-Side Script -->
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+    });
+
+    // Mock dataset for interactive simulator
+    const sampleData = {
+      roofing: [
+        {
+          name: "Apex Elite Roofing & Solar",
+          phone: "+1 (214) 555-0192",
+          email: "contact@apexroofingtx.com",
+          web: "apexroofingtx.com",
+          rating: "4.9",
+          reviews: 142,
+          addr: "1824 Elm St, Dallas, TX",
+          opener: "Hey, saw Apex Elite has 142 5-star reviews on Elm St! We're helping top Dallas roofers book 15+ storm replacement inspections every month with zero ad spend.",
+          angle: "Top-Rated Storm Expansion"
+        },
+        {
+          name: "Lone Star Commercial Roofing",
+          phone: "+1 (972) 555-8371",
+          email: "bids@lonestarroofing.net",
+          web: "lonestarroofing.net",
+          rating: "4.7",
+          reviews: 86,
+          addr: "3400 Oak Lawn Ave, Dallas, TX",
+          opener: "Hi, I was looking at commercial roofers in Dallas and noticed your bid page. We provide direct pre-qualified property managers looking for roof retrofits.",
+          angle: "Commercial Property B2B"
+        },
+        {
+          name: "Dallas Precision Shingle Pro",
+          phone: "+1 (469) 555-2244",
+          email: "info@dallasprecisionroof.com",
+          web: "None (Google Page only)",
+          rating: "3.8",
+          reviews: 19,
+          addr: "710 Commerce St, Dallas, TX",
+          opener: "Hey team, saw you have a solid local crew on Commerce St, but no dedicated mobile website. We build high-converting roofing booking funnels in 48 hours.",
+          angle: "Website & Reputation Uplift"
+        }
+      ],
+      dental: [
+        {
+          name: "Biscayne Bay Cosmetic Dentistry",
+          phone: "+1 (305) 555-4921",
+          email: "smile@biscaynecosmetic.com",
+          web: "biscaynedentistry.com",
+          rating: "5.0",
+          reviews: 312,
+          addr: "1200 Brickell Ave, Miami, FL",
+          opener: "Hi Dr. Roberts! Saw Biscayne Bay has over 300 5-star reviews on Brickell. We help premier cosmetic dentists fill open slots for high-ticket Invisalign & veneers.",
+          angle: "High-Ticket Cosmetic Cases"
+        },
+        {
+          name: "Ocean Drive Family Dental Care",
+          phone: "+1 (305) 555-9182",
+          email: "appointments@oceandentalmiami.com",
+          web: "oceandentalmiami.com",
+          rating: "4.6",
+          reviews: 94,
+          addr: "840 Ocean Dr, Miami Beach, FL",
+          opener: "Hello team, noticed you're right on Ocean Dr. We set up automated SMS patient recall and Google review booster systems for Miami practices.",
+          angle: "Patient Recall Automation"
+        }
+      ],
+      cafe: [
+        {
+          name: "Qahwa Artisan Specialty Roasters",
+          phone: "+971 4 555 3829",
+          email: "hello@qahwaroasters.ae",
+          web: "qahwaroasters.ae",
+          rating: "4.8",
+          reviews: 420,
+          addr: "Alserkal Avenue, Al Quoz, Dubai",
+          opener: "Salam! Love your specialty single-origin roast at Alserkal Avenue. We partner with luxury corporate offices across DIFC looking for weekly wholesale bean supply.",
+          angle: "B2B Corporate Wholesale"
+        },
+        {
+          name: "Mirage Botanical Cafe & Matcha",
+          phone: "+971 4 555 7710",
+          email: "events@miragebotanical.ae",
+          web: "miragecafe.ae",
+          rating: "4.7",
+          reviews: 185,
+          addr: "City Walk, Al Wasl, Dubai",
+          opener: "Hey! Saw your stunning botanical patio at City Walk. We connect event planners and corporate brand launches with exclusive venue buyouts.",
+          angle: "Private Event Buyouts"
+        }
+      ],
+      plumbing: [
+        {
+          name: "Thames Emergency 24/7 Plumbers",
+          phone: "+44 20 7946 0912",
+          email: "dispatch@thamesplumbing.co.uk",
+          web: "thamesplumbing.co.uk",
+          rating: "4.8",
+          reviews: 215,
+          addr: "45 Borough High St, London",
+          opener: "Hi team, saw your 24/7 dispatch across Southwark. We run pay-per-call emergency boiler repair campaigns sending qualified residential calls directly to your dispatchers.",
+          angle: "Emergency Boiler Calls"
+        }
+      ]
+    };
+
+    const tbody = document.getElementById('simTableBody');
+    const drawer = document.getElementById('simPitchDrawer');
+    const pills = document.querySelectorAll('.sim__pill');
+
+    function renderSimulator(nicheKey) {
+      const items = sampleData[nicheKey] || sampleData.roofing;
+      tbody.innerHTML = '';
+      drawer.style.display = 'none';
+
+      items.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>
+            <div class="sim__bizname">${item.name}</div>
+            <div style="font-size: 0.75rem; color: var(--ink-3);">${item.addr}</div>
+          </td>
+          <td>
+            <span class="sim__tag sim__tag--phone">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              ${item.phone}
+            </span>
+          </td>
+          <td>
+            <div style="font-size: 0.8125rem; font-weight: 600;">${item.email}</div>
+            <div style="font-size: 0.75rem; color: var(--accent);">${item.web}</div>
+          </td>
+          <td>
+            <span style="color: #F59E0B; font-weight: 700;">★ ${item.rating}</span>
+            <span style="font-size: 0.75rem; color: var(--ink-3);">(${item.reviews} reviews)</span>
+          </td>
+          <td>
+            <button class="btn btn--ghost btn--sm" onclick="showPitch('${nicheKey}', ${index})">
+              Pitch Hook ▾
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    window.showPitch = function(nicheKey, idx) {
+      const item = sampleData[nicheKey][idx];
+      drawer.style.display = 'block';
+      drawer.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--accent);">
+            ● Auto-Generated Cold Outreach for: ${item.name} (${item.angle})
+          </span>
+          <button onclick="document.getElementById('simPitchDrawer').style.display='none'" style="background:none; border:none; cursor:pointer; color: var(--ink-3); font-weight: 700;">✕</button>
+        </div>
+        <div style="font-size: 0.875rem; color: var(--ink); line-height: 1.5; font-family: monospace; background: var(--surface); padding: 12px; border-radius: 8px; border: 1px solid var(--line);">
+          <strong>Cold Call Opener / SMS:</strong><br/>
+          "${item.opener}"
+        </div>
+        <div style="margin-top: 8px; font-size: 0.75rem; color: var(--emerald); font-weight: 600;">
+          ✓ Ready to push directly into GoHighLevel / Zapier / CSV export
+        </div>
+      `;
+    };
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        renderSimulator(pill.dataset.niche);
+      });
+    });
+
+    // Initial render
+    renderSimulator('roofing');
+  </script>
+</body>
+</html>

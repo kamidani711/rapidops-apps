@@ -27,15 +27,19 @@ apps.rapidops.io/
 │       ├── 07_document_watermark.png
 │       └── 08_sign_document.png
 │
-└── chit/                        # Chit — Offline Receipt Scanner & Expense Tracker
-    ├── index.html                # Product landing page
-    ├── privacy.html              # Google Play Store compliant Privacy Policy
-    ├── terms.html                # Terms of Service
-    ├── play-store-slides.html    # Play Store marketing asset gallery
-    ├── LISTING_METADATA.md       # Play Store listing copy & submission checklist
-    ├── downloads/chit-v1.0.0.apk # Direct-download signed release APK (no Play Store listing yet)
-    ├── graphics/                 # Play Store icon, feature graphic & 6 phone screenshot slides
-    └── assets/                   # Landing page images (icon, feature graphic, in-app screenshots)
+├── chit/                        # Chit — Offline Receipt Scanner & Expense Tracker
+│   ├── index.html                # Product landing page
+│   ├── privacy.html              # Google Play Store compliant Privacy Policy
+│   ├── terms.html                # Terms of Service
+│   ├── play-store-slides.html    # Play Store marketing asset gallery
+│   ├── LISTING_METADATA.md       # Play Store listing copy & submission checklist
+│   ├── downloads/chit-v1.0.0.apk # Direct-download signed release APK (no Play Store listing yet)
+│   ├── graphics/                 # Play Store icon, feature graphic & 6 phone screenshot slides
+│   └── assets/                   # Landing page images (icon, feature graphic, in-app screenshots)
+│
+└── leadradar/                   # LeadRadar — B2B Google Maps Lead Extractor & Outreach Engine
+    ├── index.html               # High-conversion product landing page & live UI simulator
+    └── privacy.html             # Privacy Policy (100% On-Device & Zero Telemetry)
 ```
 
 ---
@@ -77,3 +81,5 @@ apps.rapidops.io/
 | **Chit Privacy Policy** | `https://apps.rapidops.io/chit/privacy` |
 | **Chit Terms of Service** | `https://apps.rapidops.io/chit/terms` |
 | **Chit Direct APK Download** | `https://apps.rapidops.io/chit/downloads/chit-v1.0.0.apk` |
+| **LeadRadar Product Page** | `https://apps.rapidops.io/leadradar/` |
+| **LeadRadar Privacy Policy** | `https://apps.rapidops.io/leadradar/privacy` |
