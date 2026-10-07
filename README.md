@@ -83,3 +83,4 @@ apps.rapidops.io/
 | **Chit Direct APK Download** | `https://apps.rapidops.io/chit/downloads/chit-v1.0.0.apk` |
 | **LeadRadar Product Page** | `https://apps.rapidops.io/leadradar/` |
 | **LeadRadar Privacy Policy** | `https://apps.rapidops.io/leadradar/privacy` |
+| **OrderKeeper (B2B SaaS)** | `https://orderkeeper.rapidops.io/` |
