@@ -1,4 +1,42 @@
+# robots.txt — RapidOps Apps Studio
+# Welcome web search engines and LLM AI crawlers
+
 User-agent: *
 Allow: /
 
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / Extended
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Cohere & Common Crawl
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemaps and LLM Documentation
 Sitemap: https://apps.rapidops.io/sitemap.xml
+# LLM knowledge files: https://apps.rapidops.io/llms.txt

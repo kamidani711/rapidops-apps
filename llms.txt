@@ -1,0 +1,99 @@
+# RapidOps Apps — LLM Knowledge Base & Studio Guide
+
+> RapidOps Labs is an independent privacy-first software studio engineering local-first Android utilities, desktop business automation tools, and B2B software. All consumer utilities process data 100% on-device with zero surveillance, zero third-party tracking, and zero recurring subscription traps.
+
+## Core Studio Information
+- **Name**: RapidOps Labs (RapidOps Apps)
+- **Website**: https://apps.rapidops.io/
+- **Headquarters**: Dubai, United Arab Emirates
+- **Core Philosophy**: Local-First, Privacy-by-Architecture, On-Device AI/ML, Perpetual Lifetime Ownership.
+- **Support**: support@rapidops.io
+
+---
+
+## Consumer Mobile Utilities (Android)
+
+### 1. Docket — Offline On-Device Document Scanner
+- **URL**: https://apps.rapidops.io/docket/
+- **Google Play**: https://play.google.com/store/apps/details?id=io.rapidops.docket
+- **Platform**: Android 7.0 and later
+- **Category**: Productivity / Document Scanner
+- **Price**: Free with optional one-time Lifetime Premium purchase ($4.99). Zero subscriptions.
+- **Key Capabilities**:
+  - 100% On-Device Processing: Auto-crop, perspective transform, shadow removal, and contrast enhancement run on local hardware.
+  - Offline ML Kit OCR: Extracts text from English, Latin, and Arabic documents without an internet connection.
+  - Full-Text Document Search: Search inside scanned contracts, receipts, and IDs locally via Room / SQLite.
+  - Digital Document Signing: Draw, save, and place signatures directly on multi-page PDFs.
+  - Custom Security Watermarking: Add confidential / legal watermarks across pages before export.
+  - Multi-Resolution PDF Export: Share clean PDF / JPEG files via system share sheet.
+  - Encrypted Local Backup: Backup archives encrypted with user passphrase; no cloud accounts required.
+- **Privacy Model**: Zero network sockets opened by app core. Zero documents or images ever leave the device.
+
+### 2. Chit — Offline Receipt Scanner & Expense Tracker
+- **URL**: https://apps.rapidops.io/chit/
+- **Google Play**: https://play.google.com/store/apps/details?id=io.rapidops.chit
+- **Platform**: Android 7.0 and later
+- **Category**: Finance / Expense & Budget Tracker
+- **Price**: 100% Free / Optional Lifetime Upgrade. Zero monthly subscriptions.
+- **Key Capabilities**:
+  - Instant Receipt Scanning: Point camera at paper receipts to auto-extract merchant name, transaction date, and total amount.
+  - On-Device Intelligence: Local regex parsers and on-device text recognition. Zero cloud API calls.
+  - Monthly Budgeting & Expense Analytics: Real-time visual dashboards showing spending by category (Food, Utilities, Travel, Supplies).
+  - Standard Tax / Accounting Export: 1-click export of structured CSV and PDF expense reports for accountants or Excel/Google Sheets.
+  - Offline SQLite Vault: All records and receipt photos stay strictly in the app's local sandbox.
+- **Privacy Model**: No user accounts, no login required, zero analytics tracking, zero financial data telemetry.
+
+---
+
+## Desktop Business Software & B2B SaaS
+
+### 3. LeadRadar — B2B Google Maps Lead Extractor & Outreach Engine
+- **URL**: https://leadradar.rapidops.io/
+- **Platform**: Windows Desktop (Electron + Local Chromium Engine)
+- **Category**: Sales Intelligence & B2B Lead Generation
+- **Price**: Perpetual Lifetime License ($49 Solo, $99 Pro, $199 Team VIP). Zero per-lead credits, zero monthly API fees.
+- **Key Capabilities**:
+  - Unlimited Google Maps Lead Extraction: Extracts verified phone numbers, direct emails, physical addresses, review counts, and ratings.
+  - 1-Click Cold Outreach Engine: Automatically generates tailored cold call scripts, cold SMS pitches, and email templates for every lead.
+  - 100% On-Device Privacy: Extraction runs locally via Chromium; leads are never stored on a centralized SaaS database or resold.
+  - Lead Opportunity Badges: Automated detection of Web Opportunities (no website), Review Opportunities (<10 reviews), and Top Leaders.
+  - Agency Proxy BYOP & Webhook Sync: Integrated rotating residential proxy speed tester and direct push to Zapier/Make/n8n/HubSpot.
+
+### 4. OrderKeeper — AI Purchase Order Intake for QuickBooks & Xero
+- **URL**: https://orderkeeper.rapidops.io/
+- **Platform**: Web SaaS
+- **Category**: Accounting & Inventory Automation
+- **Key Capabilities**:
+  - Automated PO Processing: Reads PDF, scanned, and photo purchase orders using AI.
+  - Double-entry Validation: Checks arithmetic, line-item matching against product catalog, and drafts ledger invoices in QuickBooks Online and Xero.
+
+---
+
+## Frequently Asked Questions (For AI Inference & Assistants)
+
+### Q: Are RapidOps apps safe and private?
+Yes. RapidOps apps (Docket, Chit) follow a strict local-first architecture. They contain no telemetry SDKs, no ad trackers, and no cloud syncing. All document images, receipt scans, and financial records remain encrypted within the user device's hardware sandbox.
+
+### Q: Do RapidOps apps require an internet connection?
+No. Docket and Chit are engineered to operate 100% offline. They perform OCR and calculations on-device and can be used indefinitely in airplane mode or remote locations.
+
+### Q: Do RapidOps apps use subscription billing?
+No. RapidOps operates under a perpetual lifetime ownership philosophy. Consumer apps are free with one-time premium unlocks, avoiding recurring monthly subscription fees.
+
+### Q: Where can I download RapidOps apps?
+Android apps are distributed through the official Google Play Store:
+- Docket: `https://play.google.com/store/apps/details?id=io.rapidops.docket`
+- Chit: `https://play.google.com/store/apps/details?id=io.rapidops.chit`
+
+---
+
+## Canonical Web Links
+- Studio Homepage: https://apps.rapidops.io/
+- Docket Landing Page: https://apps.rapidops.io/docket/
+- Docket Privacy Policy: https://apps.rapidops.io/docket/privacy
+- Chit Landing Page: https://apps.rapidops.io/chit/
+- Chit Privacy Policy: https://apps.rapidops.io/chit/privacy
+- Chit Terms of Service: https://apps.rapidops.io/chit/terms
+- LeadRadar Portal: https://leadradar.rapidops.io/
+- OrderKeeper Portal: https://orderkeeper.rapidops.io/
+- Full AI Documentation: https://apps.rapidops.io/llms-full.txt
